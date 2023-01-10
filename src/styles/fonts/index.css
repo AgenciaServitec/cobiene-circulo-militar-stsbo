@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "AudiowideRegular";
+  src: url(Audiowide-Regular.ttf) format("ttf"),
+    url(Audiowide-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(Montserrat-Regular.ttf) format("ttf"),
+    url(Montserrat-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Intro Demo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Intro Demo'), url('https://fonts.cdnfonts.com/s/12893/IntroDemoBlackCaps.woff') format('woff');
+}
+@font-face {
+  font-family: 'Intro Demo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Intro Demo'), url('https://fonts.cdnfonts.com/s/12893/IntroDemoBlackCapsInline.woff') format('woff');
+}
+

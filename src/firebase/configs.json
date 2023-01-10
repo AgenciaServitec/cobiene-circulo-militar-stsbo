@@ -1,0 +1,58 @@
+{
+  "common": {
+    "contactData": {
+      "name": "servitec facil factura",
+      "emails": {
+        "sales": "contactos@servitec-peru.com"
+      },
+      "numbers": {
+        "phone": ["941 801 827"],
+        "wsp": ["941 801 827"]
+      },
+      "officeHour": "Lun-Dom / 9am-6pm",
+      "socialLinks": {
+        "facebook": "https://www.facebook.com/Servitec.chorrillos/",
+        "instagram": "-",
+        "whatsapp": "https://api.whatsapp.com/send/?phone=+51941801827&text=Estoy+interesado+en+su+producto+%2F+servicio&app_absent=0",
+        "messenger": "-",
+        "youtube": "https://www.youtube.com/watch?v=FNMfFy4iKvg"
+      },
+      "directions": {
+        "local1": "Chorrillos, Perú - Pastor Davila 117",
+        "local2": "-"
+      },
+      "poweredBy": {
+        "name": "ServitecSite",
+        "webUrl": "https://servitec.site"
+      }
+    }
+  },
+  "development": {
+    "version": "0.0.2",
+    "firebaseApp": {
+      "apiKey": "AIzaSyCmXqrTJjNxX-7gEby6fXH0pTkrQjmeEsc",
+      "authDomain": "all-in-one-364723.firebaseapp.com",
+      "projectId": "all-in-one-364723",
+      "storageBucket": "all-in-one-364723.appspot.com",
+      "messagingSenderId": "104300187793",
+      "appId": "1:104300187793:web:b4f6c781557a58147f2f30",
+      "measurementId": "G-FTDQHJLNHS"
+    },
+    "sendingEmailsApiUrl": "-",
+    "buckets": {}
+  },
+  "production": {
+    "version": "0.0.2",
+    "firebaseApp": {
+      "apiKey": "AIzaSyCmXqrTJjNxX-7gEby6fXH0pTkrQjmeEsc",
+      "authDomain": "all-in-one-364723.firebaseapp.com",
+      "projectId": "all-in-one-364723",
+      "storageBucket": "all-in-one-364723.appspot.com",
+      "messagingSenderId": "104300187793",
+      "appId": "1:104300187793:web:b4f6c781557a58147f2f30",
+      "measurementId": "G-FTDQHJLNHS"
+    },
+    "sendingEmailsApiUrl": "https://us-central1-sendingemails-348505.cloudfunctions.net/api",
+    "buckets": {}
+  }
+}
