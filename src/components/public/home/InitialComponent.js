@@ -45,7 +45,7 @@ const Container = styled.section`
   // }
 
   ${mediaQuery.minTablet} {
-    padding: 19rem 0;
+    padding: 21.5rem 0;
   }
 
   .content-items {

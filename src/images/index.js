@@ -49,3 +49,4 @@ export * from "./svg/Location";
 
 // -------Multimedia------
 export { default as videoAllinOne } from "./multimedia/video1.mp4";
+export { default as videAboutUs} from './multimedia/vid-about-us.mp4';
