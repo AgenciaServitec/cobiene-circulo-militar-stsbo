@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { InitialComponent, AboutUs, Services } from "../../components/public";
+import { InitialComponent, AboutUs, Sedes } from "../../components/public";
 import { FormContact } from "../../components/public/ui";
-import {CustomImage} from "../../components/public/home/CustomImage";
+import {Services} from "../../components/public/home/Services";
 export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
   return (
     <>
@@ -16,11 +16,12 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
           visibleFormContact={visibleFormContact}
         />
         <AboutUs />
-          <CustomImage/>
-        <Services
+          {/*<CustomImage/>*/}
+        <Sedes
           onClickVisibleFormContact={onClickVisibleFormContact}
           visibleFormContact={visibleFormContact}
         />
+          <Services/>
         {/*<WrapperComponent>*/}
         {/*  <VideoSection*/}
         {/*    onClickVisibleFormContact={onClickVisibleFormContact}*/}
