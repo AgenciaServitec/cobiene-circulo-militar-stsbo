@@ -27,11 +27,11 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
             <img src={LogoCobiene} alt="Logo publicidad google" />
           </div>
           <div className="item-text">
-            <h3>CONTÁCTANOS</h3>
+            <h3>¡Trabajando por su bienestar!</h3>
             <h4 className="content-contact">
-              ¡SOLUCIÓN A UN CLICK DE DISTANCIA!
+              Contáctanos: 01 6449277
             </h4>
-            <span className="content-somos">¡SOMOS SOINEX FU!</span>
+            <span className="content-somos">Circulo de Sub Oficiales</span>
           </div>
           <div className="items-socials">
             <ul>
@@ -206,7 +206,7 @@ const Container = styled.footer`
       justify-content: center;
       img {
         //display: none;
-        width: 15rem;
+        width: 4rem;
         height: auto;
         //margin: 0.3rem 0 1.2rem 0;
       }
