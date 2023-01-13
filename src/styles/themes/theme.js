@@ -60,7 +60,7 @@ export const theme = {
     black: "#090B0D",
     white: "#EAECEF",
     dark: "#090B0D",
-    light: "#d7d8d9",
+    light: "#5C5B5F",
 
     rgba: "rgb(43, 49, 57)",
     gray: "rgb(121, 131, 140)",
