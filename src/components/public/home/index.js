@@ -1,6 +1,6 @@
 export * from "./Carousel";
 export * from "./InitialComponent";
-export * from "./Services";
+export * from "./Sedes";
 export * from "../layout/Footer";
 export * from "./VideoSection";
 export * from "./ItemServices";

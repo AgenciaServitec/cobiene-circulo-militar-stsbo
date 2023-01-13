@@ -1,111 +1,119 @@
-import React from "react";
+import React from 'react';
 import styled from "styled-components";
-import { Services1, Services2, Services3 } from "../../../images";
-import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import { Button } from "../ui";
-import { ItemServices } from "./ItemServices";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faHotel,
+    faUtensils,
+    faDumbbell,
+    faBaseball,
+    faWaterLadder,
+} from "@fortawesome/free-solid-svg-icons";
+import {mediaQuery} from "../../../styles/constants/mediaQuery";
+export const Services = () => {
 
-export const Services = ({ onClickVisibleFormContact, visibleFormContact }) => {
-  return (
-    <Container id="services">
-      <div className="content-items">
-        <div className="heading">
-          <h2 className="title">Círculo Militar Supervisores Técnicos de Sub Oficiales</h2>
-          <h5 className="subtitle">+ NUESTRAS SEDES</h5>
-        </div>
-        <div className="content-img">
-          <ItemServices
-            img={Services1}
-            title="CHORRILLOS"
-            content=""
-            onClick="productos"
-          />
-          <ItemServices
-            img={Services2}
-            title="TARAPACA"
-            content=""
-            onClick="services"
-          />
-          <ItemServices
-            img={Services3}
-            title="RIMAC"
-            content=""
-            onClickVisibleFormContact={onClickVisibleFormContact}
-          />
-        </div>
-        <div className="button">
-          <div>
-            <Button
-              text="¡Empezar Ahora!"
-              type="primary"
-              onClick={() => {
-                onClickVisibleFormContact(true);
-              }}
-              // onClick de google anality
-            />
-          </div>
-        </div>
-      </div>
-    </Container>
-  );
+    const contact = {
+        socialsRed:[
+            {icon:faHotel, name:"Hoteles"},
+            {icon: faUtensils, name:"Restaurantes"},
+            {icon: faBaseball, name: "Deportes"},
+            {icon:faDumbbell, name:"Gimnasio"},
+            {icon:faWaterLadder, name:"Recreación"},
+        ],
+    }
+
+    const {socialsRed} = contact;
+
+    return (
+        <Container id="contact">
+            <hr />
+            <div className="content-left">
+                <h2>NUESTROS SERVICIOS</h2>
+                <div className="items-socials">
+                    <ul>
+                        {socialsRed.map((socialRed, index) => (
+                            <li key={index}>
+                                   <div> <a rel="noreferrer"><FontAwesomeIcon icon={socialRed.icon}/></a></div>
+                                <div>
+                                    <p>{socialRed.name}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </Container>
+    );
 };
 
 const Container = styled.div`
   width: 100%;
-  height: auto;
-  background: ${({theme}) => theme.colors.basic};
-  padding: 1rem;
-
+  margin: 1rem auto;
+  padding: 2.7rem 2.7rem 0 2.7rem;
+  align-items: center;
   ${mediaQuery.minTablet} {
-    padding: 1rem 5rem;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 1fr;
   }
-
-  z-index: 9;
-
-  .content-items {
-    padding: 1em 0;
-
-    ${mediaQuery.minTablet} {
-      padding: 3em 0;
+  hr {
+    height: 2px;
+    width: 32%;
+    background: #010a06;
+    display: flex;
+    margin: auto;
+  }
+  .content-left {
+    text-align: center;
+    font-size: 1rem;
+    h2 {
+      color: #F6B63E;
+      font-weight: bolder;
+      font-size: 2.5rem;
+      margin-top: 6rem;
     }
-
-    .heading {
-      margin-bottom: 60px;
-      padding-top: 79px;
-      position: relative;
-      text-align: center;
+    .items-socials {
       width: 100%;
-
-      .title {
-        color: #F6B63E;
-        left: 0;
-        font-size: 3rem;
-        text-align: center;
-        width: 100%;
+      margin: 3rem auto;
+      ul {
+        list-style: none;
+        display: flex;
+        //justify-content: start;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        li {
+          text-align: center;
+          margin: 0 1rem 1.7rem 2rem;
+          div{
+            a {
+              color: white;
+              font-size: 5.4rem;
+              border-radius: 14rem;
+              width: 10rem;
+              height: 10rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: ${({ theme }) => theme.colors.light};
+            }
+          }
+          div{
+            p {
+              margin-top: 1rem;
+              margin-bottom: 1em;
+            }
+          }
+          &:last-child {
+            span {
+              border-right: none;
+            }
+          }
+        }
       }
-
-      .subtitle {
-        color: #030303;
-        font-family: "Intro Demo", sans-serif;
-        font-size: 26px;
-        letter-spacing: 0.3px;
-        text-align: center;
-        width: 100%;
-      }
     }
-
-    .content-img {
-      display: flex;
-      justify-content: space-evenly;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      padding-top: 3rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
+  }
+  .content-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
