@@ -34,28 +34,31 @@ export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
       />
       <Route
         exact
-        path="/productos"
+        path="/sede-chorrillos"
         element={
           <BaseLayout>
-            <PageProducts
-              onClickVisibleFormContact={onClickVisibleFormContact}
-              visibleFormContact={visibleFormContact}
-            />
+            <PageProducts/>
           </BaseLayout>
         }
       />
       <Route
         exact
-        path="/services"
+        path="/sede-tarapaca"
         element={
           <BaseLayout>
-            <ServicesExtinguisher
-              onClickVisibleFormContact={onClickVisibleFormContact}
-              visibleFormContact={visibleFormContact}
-            />
+            <ServicesExtinguisher/>
           </BaseLayout>
         }
       />
+        <Route
+            exact
+            path="/sede-rimac"
+            element={
+                <BaseLayout>
+                    <ServicesExtinguisher/>
+                </BaseLayout>
+            }
+        />
       <Route path="*" element={<Page404 />} />
     </Routes>
   );
