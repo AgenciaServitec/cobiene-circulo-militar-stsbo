@@ -18,19 +18,19 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
             img={Services1}
             title="CHORRILLOS"
             content=""
-            onClick="productos"
+            onClick="sede-chorrillos"
           />
           <ItemServices
             img={Services2}
             title="TARAPACA"
             content=""
-            onClick="services"
+            onClick="sede-tarapaca"
           />
           <ItemServices
             img={Services3}
             title="RIMAC"
             content=""
-            onClickVisibleFormContact={onClickVisibleFormContact}
+            onClick="sede-Rimac"
           />
         </div>
         {/*<div className="button">*/}
