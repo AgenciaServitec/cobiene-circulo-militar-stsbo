@@ -51,3 +51,20 @@ export * from "./svg/Location";
 // -------Multimedia------
 export { default as videoAllinOne } from "./multimedia/video1.mp4";
 export { default as videAboutUs} from './multimedia/vid-about-us.mp4';
+
+// ----- SEDE CHORRILLOS------
+export {default as Chorrillos1} from './others/1chorillos.webp';
+export {default as Chorrillos2} from './others/2chorrillos.webp';
+export {default as Chorrillos3} from './others/3chorrillos.webp';
+export {default as Chorrillos4} from './others/4chorrillos.webp';
+export {default as Chorrillos5} from './others/7choriillos.webp';
+export {default as Chorrillos6} from './others/6chorrillos.webp';
+export {default as Chorrillos7} from './others/8chorrillos.webp';
+
+//---------SEDE RIMAC -------
+export {default as Rimac1} from './others/1rimac.webp';
+export {default as Rimac2} from './others/2rimac.webp';
+export {default as Rimac3} from './others/3rimac.webp';
+export {default as Rimac4} from './others/4rimac.webp';
+export {default as Rimac5} from './others/5rimac.webp';
+export {default as Rimac6} from './others/6rimac.webp';

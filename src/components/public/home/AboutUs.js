@@ -8,21 +8,6 @@ export const AboutUs = () => {
   // const { isMobile } = useDevice();
   return (
     <Container id="about-us">
-      {/*<div className="wrapper-logos-mobile">*/}
-      {/*  <AntCarousel*/}
-      {/*    autoplay*/}
-      {/*    autoplaySpeed={3 * 1000}*/}
-      {/*    arrows={!isMobile}*/}
-      {/*    prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}*/}
-      {/*    nextArrow={<FontAwesomeIcon icon={faChevronRight} />}*/}
-      {/*  >*/}
-      {/*    {logoLists.map((logoList, index) => (*/}
-      {/*      <div className="wrapper-logo-mobile" key={index}>*/}
-      {/*        <img src={logoList.image} alt={logoList.name} />*/}
-      {/*      </div>*/}
-      {/*    ))}*/}
-      {/*  </AntCarousel>*/}
-      {/*</div>*/}
         <h2 className="title">SOBRE NOSOTROS</h2>
       <div className="wrapper-text">
         <div className="content-text">

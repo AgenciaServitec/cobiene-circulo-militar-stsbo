@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { InitialComponent, AboutUs, Sedes } from "../../components/public";
 import { FormContact } from "../../components/public/ui";
 import {Services} from "../../components/public/home/Services";
+import {ExtintoresBackground} from "../../images";
 export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
   return (
     <>
@@ -14,6 +15,7 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
         <InitialComponent
           onClickVisibleFormContact={onClickVisibleFormContact}
           visibleFormContact={visibleFormContact}
+          bgImage={ExtintoresBackground}
         />
         <AboutUs />
           {/*<CustomImage/>*/}
