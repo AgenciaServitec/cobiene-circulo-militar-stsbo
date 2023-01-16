@@ -32,6 +32,7 @@ export const CustomImage = () => {
         </Container>
     );
 };
+
 const Container = styled.div`
 text-align: center;
   .wrapper-slider{

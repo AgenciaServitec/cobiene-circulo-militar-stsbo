@@ -10,7 +10,7 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
     <Container id="services">
       <div className="content-items">
         <div className="heading">
-          <h2 className="title">Círculo Militar Supervisores Técnicos de Sub Oficiales</h2>
+          <h2 className="title">Círculo Militar De Supervisores, Técnicos y Sub Oficiales</h2>
           <h5 className="subtitle">+ NUESTRAS SEDES</h5>
         </div>
         <div className="content-img">

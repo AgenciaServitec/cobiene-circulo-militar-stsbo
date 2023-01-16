@@ -5,3 +5,6 @@ export * from "../layout/Footer";
 export * from "./VideoSection";
 export * from "./ItemServices";
 export * from "./AboutUs";
+export * from "./Contact";
+
+
