@@ -13,9 +13,8 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
         {/*  onEventGaClickButton={onEventGaClickButton}*/}
         {/*/>*/}
         <InitialComponent
-          onClickVisibleFormContact={onClickVisibleFormContact}
-          visibleFormContact={visibleFormContact}
           bgImage={ExtintoresBackground}
+          description="PATRIA, SOCIEDAD Y FAMILIA."
         />
         <AboutUs />
           {/*<CustomImage/>*/}

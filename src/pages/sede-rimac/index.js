@@ -1,5 +1,5 @@
 import React from 'react';
-import {Rimac1, Services1,Rimac2,Rimac3,Rimac4,Rimac5,Rimac6} from "../../images";
+import {Rimac1, Rimac2, Rimac3, Rimac4, Rimac5, Rimac6, BackgroundRimac} from "../../images";
 import {InitialComponent} from "../../components/public";
 import {Gallery} from "../../components/public/home/Gallery";
 import styled from "styled-components";
@@ -31,8 +31,8 @@ export const PageSedeRimac = () => {
     return (
         <div>
             <Container>
-                <InitialComponent bgImage={Services1}/>
-                <Gallery images={images} title="Sede Chorrillos"/>
+                <InitialComponent bgImage={BackgroundRimac} description=""/>
+                <Gallery images={images} title="Sede Rimac"/>
             </Container>
         </div>
     );

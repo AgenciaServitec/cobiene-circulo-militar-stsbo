@@ -82,7 +82,7 @@ export const BaseLayout = ({ children }) => {
                       </Link>
                   </li>
 
-                      <a href="#departments"><li>DEPARTAMENTOS</li></a>
+                      <a href="#sedes"><li>DEPARTAMENTOS</li></a>
 
 
                       <a href="#contact"><li>CONTÁCTO</li></a>
