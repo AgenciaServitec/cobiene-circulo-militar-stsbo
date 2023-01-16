@@ -1,30 +1,27 @@
 import React from "react";
-import { AboutService } from "../../components/public/home/AboutService";
 import styled from "styled-components";
-import { FormContact } from "../../components/public";
+import { InitialComponent} from "../../components/public";
+import {Services1, Services2} from "../../images";
+import {Gallery} from "../../components/public/home/Gallery";
 
-export const ServicesExtinguisher = ({
-  onClickVisibleFormContact,
-  visibleFormContact,
-}) => {
+export const PageSedeTarapaca = () => {
+    const images = [
+        {
+            src: Services2, title:"Sede"
+        },
+    ]
   return (
-    <>
-      <Container>
-        <AboutService
-          onClickVisibleFormContact={onClickVisibleFormContact}
-          visibleFormContact={visibleFormContact}
-        />
-      </Container>
-      <FormContact
-        visibleFormContact={visibleFormContact}
-        onClickVisibleFormContact={onClickVisibleFormContact}
-      />
-    </>
+      <div>
+          <Container>
+              <InitialComponent bgImage={Services1}/>
+              <Gallery images={images} title="Sede Chorrillos"/>
+          </Container>
+      </div>
   );
 };
 
 const Container = styled.div`
   width: 100%;
   height: auto;
-  background: #fff;
+  background: white;
 `;

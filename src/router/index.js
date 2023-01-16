@@ -1,11 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { BaseLayout } from "../components/public";
 import {
-  Home,
-  Page404,
-  ContactSuccess,
-  PageProducts,
-  ServicesExtinguisher,
+    Home,
+    Page404,
+    ContactSuccess, PageSedeChorrillos, PageSedeRimac,PageSedeTarapaca
 } from "../pages";
 
 export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
@@ -37,7 +35,7 @@ export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
         path="/sede-chorrillos"
         element={
           <BaseLayout>
-            <PageProducts/>
+            <PageSedeChorrillos/>
           </BaseLayout>
         }
       />
@@ -46,7 +44,7 @@ export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
         path="/sede-tarapaca"
         element={
           <BaseLayout>
-            <ServicesExtinguisher/>
+            <PageSedeTarapaca/>
           </BaseLayout>
         }
       />
@@ -55,7 +53,7 @@ export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
             path="/sede-rimac"
             element={
                 <BaseLayout>
-                    <ServicesExtinguisher/>
+                    <PageSedeRimac/>
                 </BaseLayout>
             }
         />

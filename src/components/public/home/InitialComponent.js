@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {ExtintoresBackground, Linea} from "../../../images";
+import { Linea} from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import { Button } from "../ui";
 
-export const InitialComponent = ({ onClickVisibleFormContact }) => {
+export const InitialComponent = ({ bgImage }) => {
   return (
-    <Container id="inicio" bgImage={ExtintoresBackground}>
+    <Container id="inicio" bgImage={bgImage}>
       <div className="content-items" line={Linea}>
         <div className="content">
           <div className="heading">
