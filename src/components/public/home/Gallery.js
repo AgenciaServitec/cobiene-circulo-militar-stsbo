@@ -20,8 +20,7 @@ export const Gallery = ({images=[], title}) => {
             <div className="wrapper-gallery">
                 {images.map((image, index)=>(
                     <div key={index} className="wrapper-image-gallery" onClick={()=>getImg(image.src)}>
-                        <img src={image.src} alt={image.title}/>
-                        {}
+                        <img loading="lazy" src={image.src} alt={image.title}/>
                         <div className="content-text">
                             <h3>{image.title}</h3>
                         </div>

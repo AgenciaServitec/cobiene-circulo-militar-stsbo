@@ -2,7 +2,7 @@ import React from "react";
 import { AboutService } from "../../components/public/home/AboutService";
 import styled from "styled-components";
 import { InitialComponent} from "../../components/public";
-import {Services1, Services2} from "../../images";
+import { BackgroundTarapaca, Services2} from "../../images";
 import {Gallery} from "../../components/public/home/Gallery";
 
 export const PageSedeTarapaca = () => {
@@ -14,8 +14,8 @@ export const PageSedeTarapaca = () => {
   return (
       <div>
           <Container>
-              <InitialComponent bgImage={Services1}/>
-              <Gallery images={images} title="Sede Chorrillos"/>
+              <InitialComponent bgImage={BackgroundTarapaca} description=""/>
+              <Gallery images={images} title="Sede Tarapacá"/>
           </Container>
       </div>
   );

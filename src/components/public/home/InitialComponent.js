@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { Linea} from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-export const InitialComponent = ({ bgImage }) => {
+export const InitialComponent = ({ bgImage,description }) => {
   return (
     <Container id="inicio" bgImage={bgImage}>
       <div className="content-items" line={Linea}>
         <div className="content">
           <div className="heading">
             <h2 className="description">
-              PATRIA, SOCIEDAD Y FAMILIA.
+              {description}
             </h2>
           </div>
         </div>

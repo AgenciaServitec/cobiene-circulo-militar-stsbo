@@ -68,3 +68,10 @@ export {default as Rimac3} from './others/3rimac.webp';
 export {default as Rimac4} from './others/4rimac.webp';
 export {default as Rimac5} from './others/5rimac.webp';
 export {default as Rimac6} from './others/6rimac.webp';
+
+
+//------ Backgrounds-------
+export {default as BackgroundChorrillos} from './others/sedechorrillosfondo.webp';
+export {default as BackgroundRimac} from './others/sederimacfondo.webp';
+export {default as BackgroundTarapaca} from './others/sedetarapacafondo.webp';
+

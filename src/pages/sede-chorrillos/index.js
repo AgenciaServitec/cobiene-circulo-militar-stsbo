@@ -1,7 +1,16 @@
 import React from 'react';
 import {Gallery} from "../../components/public/home/Gallery";
 import styled from "styled-components";
-import {Services1,Chorrillos1,Chorrillos2,Chorrillos3,Chorrillos4,Chorrillos5,Chorrillos6,Chorrillos7} from '../../images';
+import {
+    Chorrillos1,
+    Chorrillos2,
+    Chorrillos3,
+    Chorrillos4,
+    Chorrillos5,
+    Chorrillos6,
+    Chorrillos7,
+    BackgroundChorrillos
+} from '../../images';
 import {InitialComponent} from "../../components/public";
 
 export const PageSedeChorrillos = () => {
@@ -19,7 +28,7 @@ export const PageSedeChorrillos = () => {
     return (
         <>
             <Container>
-                <InitialComponent bgImage={Services1}/>
+                <InitialComponent bgImage={BackgroundChorrillos} description=""/>
                 <Gallery images={images} title="Sede Chorrillos"/>
             </Container>
         </>
