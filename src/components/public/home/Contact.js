@@ -5,7 +5,7 @@ import {SvgEmail, SvgLocation, SvgPhone} from "../../../images";
 
  export const Contact = ({ubicacion}) => {
     return (
-        <Container>
+        <Container id="contact">
            <h1>CONTACTANOS</h1>
             <div className="wrapper-contact">
                 <div className="items-contacts">

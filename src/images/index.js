@@ -59,7 +59,7 @@ export {default as Chorrillos3} from './others/3chorrillos.webp';
 export {default as Chorrillos4} from './others/4chorrillos.webp';
 export {default as Chorrillos5} from './others/7choriillos.webp';
 export {default as Chorrillos6} from './others/6chorrillos.webp';
-export {default as Chorrillos7} from './others/8chorrillos.webp';
+export {default as Chorrillos7} from './others/9chorrillos.webp';
 
 //---------SEDE RIMAC -------
 export {default as Rimac1} from './others/1rimac.webp';
@@ -74,4 +74,5 @@ export {default as Rimac6} from './others/6rimac.webp';
 export {default as BackgroundChorrillos} from './others/sedechorrillosfondo.webp';
 export {default as BackgroundRimac} from './others/sederimacfondo.webp';
 export {default as BackgroundTarapaca} from './others/sedetarapacafondo.webp';
+
 
