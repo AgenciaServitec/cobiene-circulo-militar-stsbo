@@ -44,7 +44,7 @@ const Container = styled.section`
   // }
 
   ${mediaQuery.minTablet} {
-    padding: 21.5rem 0;
+    padding: 18rem 0;
   }
 
   .content-items {
@@ -84,7 +84,8 @@ const Container = styled.section`
         }
 
         .description {
-          color: ${({ theme }) => theme.colors.font1};
+          padding-top: 2rem;
+          color: ${({ theme }) => theme.colors.tertiary};
           max-width: 85rem;
           font-weight: 500;
           font-size: 4rem;
