@@ -14,7 +14,7 @@ export const ButtonsFloating = () => (
       <WrapperButton bg="#5cc753">
         <div className="item-text">
           <div>Servicio Whatsapp</div>
-          <div>941801827</div>
+          <div>013171700</div>
         </div>
         <div className="item-icon">
           <FontAwesomeIcon icon={faWhatsapp} className="icon" />
