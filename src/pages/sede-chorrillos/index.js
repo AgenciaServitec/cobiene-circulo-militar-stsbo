@@ -29,7 +29,7 @@ export const PageSedeChorrillos = () => {
         <>
             <Container>
                 <InitialComponent bgImage={BackgroundChorrillos} description=""/>
-                <Gallery images={images} title="Sede Chorrillos"/>
+                <Gallery images={images} title="ZONAS RECREATIVAS"/>
             </Container>
         </>
     );

@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutService } from "../../components/public/home/AboutService";
+
 import styled from "styled-components";
 import { InitialComponent} from "../../components/public";
 import { BackgroundTarapaca, Services2} from "../../images";

@@ -32,7 +32,7 @@ export const PageSedeRimac = () => {
         <div>
             <Container>
                 <InitialComponent bgImage={BackgroundRimac} description=""/>
-                <Gallery images={images} title="Sede Rimac"/>
+                <Gallery images={images} title="ZONA RECREATIVA"/>
             </Container>
         </div>
     );
