@@ -74,7 +74,7 @@ import {SvgEmail, SvgLocation, SvgPhone} from "../../../images";
    text-align: center;
    padding: 2.5rem;
   h1{
-  font-size:2.5rem;
+  font-size:3.5rem;
   color:black;
   }
   .wrapper-contact{
