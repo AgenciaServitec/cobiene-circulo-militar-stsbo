@@ -44,7 +44,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
                 }
               >
                 <a
-                  href="https://goo.gl/maps/EiSoB4t5tQ3rG5YU6"
+                  href="https://goo.gl/maps/JpygwD7qvhcNVU9E6"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -60,23 +60,16 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
                 }
               >
                 <a
-                  href="https://api.whatsapp.com/send/?phone=+51941801827&text=Estoy+interesado+en+su+producto+%2F+servicio&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=+51929054672&text=Estoy+interesado+%2F+servicio&app_absent=0"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
               </li>
-              <li
-                onClick={() =>
-                  onEventGaClickIcon(
-                    "click-icon-email-contactos@servitec-peru.com",
-                    "Click icon email contactos@servitec-peru.com"
-                  )
-                }
-              >
+              <li>
                 <a
-                  href="mailto:contactos@servitec-peru.com"
+                  href="mailto:contacto@cobiene.mil.pe"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -84,15 +77,9 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
                 </a>
               </li>
               <li
-                onClick={() =>
-                  onEventGaClickIcon(
-                    "click-icon-facebook-servitec-chorrillos",
-                    "Click icon facebook Servitec.chorrillos"
-                  )
-                }
               >
                 <a
-                  href="https://www.facebook.com/Servitec.chorrillos/"
+                  href="https://www.facebook.com/C%C3%ADrculo-Militar-STS-307692109354465/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -117,8 +104,8 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
                 )
               }
             >
-              <a href="tel:+51941801827" target="_blank" rel="noreferrer">
-                941 801 827
+              <a href="tel:+51929054672" target="_blank" rel="noreferrer">
+                929054672
               </a>
               <p> Lun-Dom 9am-6pm</p>
             </div>
@@ -138,11 +125,11 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
               }
             >
               <a
-                href="mailto:contactos@servitec-peru.com"
+                href="mailto:contacto@cobiene.mil.pe"
                 target="_blank"
                 rel="noreferrer"
               >
-                contactos@servitec-peru.com
+                contacto@cobiene.mil.pe
               </a>
               <p>Soporte en Linea</p>
             </div>
@@ -154,38 +141,22 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
             </div>
             <div
               className="content"
-              onClick={() =>
-                onEventGaClickLink(
-                  "click-link-ubicacion-EiSoB4t5tQ3rG5YU6",
-                  "Click link ubicacion https://goo.gl/maps/EiSoB4t5tQ3rG5YU6"
-                )
-              }
             >
               <a
-                href="https://goo.gl/maps/EiSoB4t5tQ3rG5YU6"
+                href="https://goo.gl/maps/JpygwD7qvhcNVU9E6"
                 target="_blank"
                 rel="noreferrer"
               >
                 Chorrillos, Perú
               </a>
-              <p>Jr.Justor Pastor Davila 117</p>
+              <p>Av. Escuela Militar 990, Chorrillos 15064</p>
             </div>
           </div>
         </div>
         <div className="bottom-footer">
           <div>
             © Copyright 2022 - {capitalize(contactData.name)} / Diseñado con{" "}
-            <FontAwesomeIcon icon={faHeart} color="red" /> por{" "}
-            <a
-              href={contactData.poweredBy.webUrl}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() =>
-                onEventGaClickLink("click-link-servitec", "Click link servitec")
-              }
-            >
-              {contactData.poweredBy.name}
-            </a>
+            <FontAwesomeIcon icon={faHeart} color="red" /> por{" CiculaMilitarsts"}
           </div>
         </div>
       </>

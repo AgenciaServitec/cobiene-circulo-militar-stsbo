@@ -44,35 +44,10 @@ export const BaseLayout = ({ children }) => {
               </div>
             ) : (
               <div className="menu-list">
-                {/*<div className="logo-img">*/}
-                {/*  <Link to="/">*/}
-                {/*    <img*/}
-                {/*      src={LogoCobiene}*/}
-                {/*      alt="Logo Servitec Facil Factura"*/}
-                {/*    />*/}
-                {/*  </Link>*/}
-                {/*</div>*/}
-                {/*<nav className="list">*/}
-                {/*  <ul>*/}
-                {/*    <a href="#inicio">*/}
-                {/*      <li>INICIO</li>*/}
-                {/*    </a>*/}
-                {/*    <a href="#about-us">*/}
-                {/*      <li>NOSOTROS</li>*/}
-                {/*    </a>*/}
-                {/*    <a href="#services">*/}
-                {/*      <li>SERVICIOS</li>*/}
-                {/*    </a>*/}
-                {/*    <a href="#footer">*/}
-                {/*      <li>CONTÁCTO</li>*/}
-                {/*    </a>*/}
-                {/*  </ul>*/}
-                {/*</nav>*/}
 
                       <Link to="/">
-                          <a><li>INICIO</li></a>
+                          <a href=""><li>INICIO</li></a>
                       </Link>
-
 
                       <a href="#about-us"><li>NOSOTROS</li></a>
 
@@ -204,6 +179,9 @@ const Container = styled.div`
         transition: all 0.3s ease-in-out;
         margin-left: 1.5rem;
         cursor: pointer;
+        img {
+          width:5rem;
+        }
       }
 
       li:hover {
@@ -213,14 +191,14 @@ const Container = styled.div`
       }
 
       .logo-img {
-        width: 40%;
+        width: 20%;
         list-style: none;
         display: flex;
         align-items: center;
         justify-content: flex-start;
 
         img {
-          width: 4rem;
+          width:4rem;
         }
       }
 
@@ -270,7 +248,7 @@ const Container = styled.div`
         justify-content: start;
 
         img {
-          width: 65%;
+          width: 20%;
           max-width: 220px;
         }
       }

@@ -55,6 +55,9 @@ const Container = styled.section`
     background: none repeat scroll 0 0 #ffffff;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    ${mediaQuery.maxMobile} {
+      grid-template-columns: 1fr;
+    }
 
     .content-text {
       text-align: center;

@@ -34,6 +34,9 @@ export const Gallery = ({images=[], title}) => {
 const Container = styled.div`
   padding: 3rem 3rem;
   text-align: center;
+  @media(max-width: 480px){
+    padding: 3rem 1.5rem;
+  }
   .title{
     letter-spacing: 0.3px;
     font-family: "Intro Demo", sans-serif;
@@ -74,6 +77,9 @@ const Container = styled.div`
        left: 5%;
        h3{
          font-size: 2.4rem;
+         @media(max-width: 480px){
+           font-size: 1.5rem;
+         }
        }
      }
      img{

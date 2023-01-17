@@ -1,5 +1,5 @@
 // ------Img Servitec-------
-export { default as LogoCobiene } from "./others/cobiene-1.webp";
+export { default as LogoCobiene } from "./others/circulosts.webp";
 export { default as ExtintoresBackground } from "./others/ultimobraground.webp";
 export { default as OffersServitec } from "./others/offers1.webp";
 export { default as SeoOne } from "./others/info-box7.webp";
