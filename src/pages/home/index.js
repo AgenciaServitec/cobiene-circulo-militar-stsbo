@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { InitialComponent, AboutUs, Sedes } from "../../components/public";
 import { FormContact } from "../../components/public/ui";
 import {Services} from "../../components/public/home/Services";
-import {Contact} from"../../components/public/home/Contact";
 import {ExtintoresBackground} from "../../images";
 export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
   return (
