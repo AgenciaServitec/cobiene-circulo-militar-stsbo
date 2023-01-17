@@ -15,7 +15,7 @@ export const PageSedeTarapaca = () => {
       <div>
           <Container>
               <InitialComponent bgImage={BackgroundTarapaca} description=""/>
-              <Gallery images={images} title="Sede Tarapacá"/>
+              <Gallery images={images} title="ZONA RECREATIVA"/>
           </Container>
       </div>
   );

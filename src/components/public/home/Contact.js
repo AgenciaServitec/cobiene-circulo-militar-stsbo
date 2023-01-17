@@ -28,6 +28,7 @@ import styled from "styled-components";
   }
   .wrapper-contact{
  display:flex;
+ margin-right: 50%;
  }
    
 `;
