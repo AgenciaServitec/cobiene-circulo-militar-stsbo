@@ -17,7 +17,6 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
           bgImage={ExtintoresBackground}
           description="PATRIA, SOCIEDAD Y FAMILIA."
         />
-          <Contact/>
         <AboutUs />
           {/*<CustomImage/>*/}
         <Sedes

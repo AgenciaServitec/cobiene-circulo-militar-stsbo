@@ -11,7 +11,7 @@ export const SvgLocation = (props) => (
   >
     <path
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -23,7 +23,7 @@ export const SvgLocation = (props) => (
       cy={32}
       fill="none"
       r={4}
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -32,7 +32,7 @@ export const SvgLocation = (props) => (
     <path
       d="M26.1 53.2c-7.9-2.2-13.9-8.6-15.6-16.7"
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -45,7 +45,7 @@ export const SvgLocation = (props) => (
     <path
       d="M53.5 36.9c-1.8 8.1-8.2 14.6-16.3 16.5"
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -58,7 +58,7 @@ export const SvgLocation = (props) => (
     <path
       d="M36.9 10.5c8.2 1.9 14.7 8.3 16.6 16.6"
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -71,7 +71,7 @@ export const SvgLocation = (props) => (
     <path
       d="M10.5 27.1c1.9-8.2 8.3-14.6 16.4-16.5"
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}

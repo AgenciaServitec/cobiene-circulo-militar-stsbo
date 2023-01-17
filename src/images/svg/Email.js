@@ -11,7 +11,7 @@ export const SvgEmail = (props) => (
   >
     <path
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -21,7 +21,7 @@ export const SvgEmail = (props) => (
     <path
       d="M32.7 49H13c-2.2 0-4-1.8-4-4V19c0-2.2 1.8-4 4-4h38c2.2 0 4 1.8 4 4v15.5"
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -36,7 +36,7 @@ export const SvgEmail = (props) => (
       cy={43.1}
       fill="none"
       r={10.1}
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}
@@ -45,7 +45,7 @@ export const SvgEmail = (props) => (
     <path
       d="M44 41.4s-1.3 3.4-.9 5.1c.4 1.7 2.6 2.1 3.7 1.1"
       fill="none"
-      stroke="#fff"
+      stroke={props.color || "#fff"}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit={10}

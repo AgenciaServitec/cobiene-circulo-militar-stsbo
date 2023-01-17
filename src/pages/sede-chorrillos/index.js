@@ -11,7 +11,7 @@ import {
     Chorrillos7,
     BackgroundChorrillos
 } from '../../images';
-import {InitialComponent} from "../../components/public";
+import {Contact, InitialComponent} from "../../components/public";
 
 export const PageSedeChorrillos = () => {
 
@@ -30,6 +30,7 @@ export const PageSedeChorrillos = () => {
             <Container>
                 <InitialComponent bgImage={BackgroundChorrillos} description=""/>
                 <Gallery images={images} title="ZONAS RECREATIVAS"/>
+                <Contact ubicacion="chorrillos"/>
             </Container>
         </>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Rimac1, Rimac2, Rimac3, Rimac4, Rimac5, Rimac6, BackgroundRimac} from "../../images";
-import {InitialComponent} from "../../components/public";
+import {Contact, InitialComponent} from "../../components/public";
 import {Gallery} from "../../components/public/home/Gallery";
 import styled from "styled-components";
 
@@ -33,6 +33,7 @@ export const PageSedeRimac = () => {
             <Container>
                 <InitialComponent bgImage={BackgroundRimac} description=""/>
                 <Gallery images={images} title="ZONA RECREATIVA"/>
+                <Contact ubicacion="chorrillos"/>
             </Container>
         </div>
     );

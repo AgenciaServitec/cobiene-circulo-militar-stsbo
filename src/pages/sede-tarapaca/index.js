@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { InitialComponent} from "../../components/public";
+import {Contact, InitialComponent} from "../../components/public";
 import { BackgroundTarapaca, Services2} from "../../images";
 import {Gallery} from "../../components/public/home/Gallery";
 
@@ -16,6 +16,7 @@ export const PageSedeTarapaca = () => {
           <Container>
               <InitialComponent bgImage={BackgroundTarapaca} description=""/>
               <Gallery images={images} title="Sede Tarapacá"/>
+              <Contact ubicacion="chorrillos"/>
           </Container>
       </div>
   );

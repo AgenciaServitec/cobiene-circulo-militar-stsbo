@@ -1,13 +1,63 @@
 import React from 'react';
 import styled from "styled-components";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
+import {SvgEmail, SvgLocation, SvgPhone} from "../../../images";
 
- export const Contact = () => {
+ export const Contact = ({ubicacion}) => {
     return (
         <Container>
-           <h1>prueba numero
-           numero 1</h1>
+           <h1>CONTACTANOS</h1>
             <div className="wrapper-contact">
-                <div><h2>CONTENIDO DE CONTACTO</h2></div>
+                <div className="items-contacts">
+                    <div className="item-contact">
+                        <div className="icon">
+                            <SvgPhone width="80px" color="#000000"/>
+                        </div>
+                        <div className="content">
+                            <a href="tel:+51 0131717" target="_blank" rel="noreferrer">
+                                0131717
+                            </a>
+                            <p> Lun-Dom 9am-6pm</p>
+                        </div>
+                    </div>
+
+                    <div className="item-contact">
+                        <div className="icon">
+                            <SvgEmail width="80px"  color="#000000"/>
+                        </div>
+                        <div
+                            className="content"
+                        >
+                            <a
+                                href="mailto:contactos@servitec-peru.com"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                contacto@cobiene.mil.pe
+                            </a>
+                            <p>Soporte en Linea</p>
+                        </div>
+                    </div>
+
+                    <div className="item-contact">
+                        <div className="icon">
+                            <SvgLocation width="80px" color="#000000" />
+                        </div>
+                        <div
+                            className="content"
+
+                        >
+                            <a
+                                href="https://goo.gl/maps/EiSoB4t5tQ3rG5YU6"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Chorrillos, Perú {ubicacion}
+                            </a>
+                            <p>Circulo Militar de Supervisores, Técnicos y SubOficiales</p>
+                        </div>
+                    </div>
+                </div>
             <iframe title = "map"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3900.182822107938!2d-77.02182883518618!3d-12.16795324138669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b784f6fb93df%3A0x5907a77c2f4a4c66!2sC%C3%ADrculo%20Militar%20de%20Supervisores%20T%C3%A9cnicos%20y%20Suboficiales%20del%20Ej%C3%A9rcito%20del%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1673904843012!5m2!1ses!2spe"
                 width="600" height="450"  allowFullScreen="" loading="lazy"
@@ -21,13 +71,51 @@ import styled from "styled-components";
  const Container = styled.div`
   width: 100%;
   height: auto;
-  background: #black; 
+   text-align: center;
+   padding: 2.5rem;
   h1{
   font-size:2.5rem;
   color:black;
   }
   .wrapper-contact{
- display:flex;
+ display:grid;
+    grid-template-columns: 1fr 1fr;
+    .items-contacts {
+      display: grid;
+      grid-template-areas: 1fr;
+      justify-items: center;
+
+      ${mediaQuery.minTablet} {
+        grid-template-areas: 1fr 1fr 1fr;
+      }
+
+      .item-contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+        ${mediaQuery.minTablet} {
+          grid-template-columns: 1fr auto;
+        }
+        .icon {
+          font-size: 3rem;
+        }
+        .content {
+          text-align: center;
+          line-height: 3rem;
+          p {
+            opacity: 0.4;
+          }
+          a {
+            font-size: 1.5rem;
+            color: black;
+          }
+          a:hover {
+            color: #292929;
+          }
+        }
+      }
+    }
  }
    
 `;
