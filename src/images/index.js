@@ -73,8 +73,7 @@ export {default as BackgroundRimac} from './others/sederimacfondo.webp';
 export {default as BackgroundTarapaca} from './others/sedetarapacafondo.webp';
 
 //----- Backgrounds of slider ------
-export {default as SliderHome} from './others/1sts-bac.webp';
-export { default as SliderHome2} from './others/2sts-bac.webp';
+export { default as SliderHome2} from './others/2sts-bacnew.webp';
 export {default as SliderHome3} from './others/3sts-bac.webp';
-export {default as SliderHome4} from './others/4sts-bac.webp';
-export {default as SliderHom5} from './others/5sts-bac.webp';
+export {default as SliderHome4} from './others/4sts-bacnew.webp';
+export {default as SliderHom5} from './others/5sts-bacnew.webp';

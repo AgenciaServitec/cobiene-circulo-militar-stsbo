@@ -1,6 +1,6 @@
 import React from "react";
 import AntCarousel from "antd/lib/carousel";
-import {SliderHom5, SliderHome, SliderHome2, SliderHome3, SliderHome4} from "../../../images";
+import {SliderHom5, SliderHome2, SliderHome3, SliderHome4} from "../../../images";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,7 +10,7 @@ import {
 import { useDevice } from "../../../hooks";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-const carouselItems = [SliderHome,SliderHome2,SliderHome3,SliderHome4,SliderHom5];
+const carouselItems = [SliderHom5,SliderHome2,SliderHome3,SliderHome4];
 
 export const Carousel = () => {
   const { isMobile } = useDevice();
@@ -101,6 +101,6 @@ const Container = styled.div`
 `;
 
 const Slide = styled.img`
-  width: 111vw !important;
+  width: 105vw !important;
   height: auto !important;
 `;
