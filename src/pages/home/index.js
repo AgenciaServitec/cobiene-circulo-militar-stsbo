@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { InitialComponent, AboutUs, Sedes } from "../../components/public";
-import { FormContact } from "../../components/public/ui";
+import { Carousel, AboutUs, Sedes } from "../../components/public";
 import {Services} from "../../components/public/home/Services";
-import {ExtintoresBackground} from "../../images";
 export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
   return (
     <>
@@ -12,10 +10,11 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
         {/*  onClickVisibleFormContact={onClickVisibleFormContact}*/}
         {/*  onEventGaClickButton={onEventGaClickButton}*/}
         {/*/>*/}
-        <InitialComponent
-          bgImage={ExtintoresBackground}
-          description="PATRIA, SOCIEDAD Y FAMILIA."
-        />
+          <Carousel />
+        {/*<InitialComponent*/}
+        {/*  bgImage={ExtintoresBackground}*/}
+        {/*  description="PATRIA, SOCIEDAD Y FAMILIA."*/}
+        {/*/>*/}
         <AboutUs />
           {/*<CustomImage/>*/}
         <Sedes
@@ -32,10 +31,6 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
 
         {/*</WrapperComponent>*/}
       </Container>
-      <FormContact
-        visibleFormContact={visibleFormContact}
-        onClickVisibleFormContact={onClickVisibleFormContact}
-      />
     </>
   );
 };

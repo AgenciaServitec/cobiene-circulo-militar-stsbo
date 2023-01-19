@@ -19,9 +19,6 @@ export { default as ImgAbout } from "./others/facturacion-electronica-peru-sunat
 export { default as ImgFacturaService5 } from "./others/info-box10.webp";
 
 // ------Img Servitec AboutUs ALL IN ONE-------
-export { default as MarcaSony } from "./others/sony.webp";
-export { default as MarcaHp } from "./others/hp.webp";
-export { default as MarcaDell } from "./others/dell.webp";
 export { default as MarcaMitsubishi } from "./others/mitsubishi.webp";
 export { default as MarcaMac } from "./others/logmac-removebg-preview.webp";
 export { default as MarcaLenovo } from "./others/lenovo-removebg-preview.webp";
@@ -75,4 +72,9 @@ export {default as BackgroundChorrillos} from './others/sedechorrillosfondo.webp
 export {default as BackgroundRimac} from './others/sederimacfondo.webp';
 export {default as BackgroundTarapaca} from './others/sedetarapacafondo.webp';
 
-
+//----- Backgrounds of slider ------
+export {default as SliderHome} from './others/1sts-bac.webp';
+export { default as SliderHome2} from './others/2sts-bac.webp';
+export {default as SliderHome3} from './others/3sts-bac.webp';
+export {default as SliderHome4} from './others/4sts-bac.webp';
+export {default as SliderHom5} from './others/5sts-bac.webp';
