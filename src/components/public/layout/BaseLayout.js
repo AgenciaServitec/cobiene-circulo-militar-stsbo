@@ -16,6 +16,13 @@ export const BaseLayout = ({ children }) => {
   const navigate = useNavigate();
 
   const [visibleDrawer, setVisibleDrawer] = useState(false);
+  const [selectSede, setSelectSede] = useState(false);
+
+  const onSede = () => {
+      setSelectSede(!selectSede)
+      console.log(selectSede)
+  }
+
 
   return (
     <Container>
@@ -57,7 +64,14 @@ export const BaseLayout = ({ children }) => {
                       </Link>
                   </li>
 
-                      <a href="#sedes"><li>DEPARTAMENTOS</li></a>
+                  {/*<li onClick={onSede}><a href="#sedes">SEDES</a>*/}
+                  {/*    /!*{selectSede ? <ul>*!/*/}
+                  {/*    /!*    <li><a href="#sedes">chorrillos</a></li>*!/*/}
+                  {/*    /!*    <li><a href="#sedes">tarapaca</a></li>*!/*/}
+                  {/*    /!*    <li><a href="#sedes">rimac</a></li>*!/*/}
+                  {/*    /!*</ul> : null}*!/*/}
+                  {/*</li>*/}
+                      <a href="#sedes"><li>SEDES</li></a>
 
 
                       <a href="#contact"><li>CONTÁCTO</li></a>
@@ -248,7 +262,8 @@ const Container = styled.div`
         justify-content: start;
 
         img {
-          width: 20%;
+          width: 12%;
+          padding-bottom: 1.5rem;
           max-width: 220px;
         }
       }

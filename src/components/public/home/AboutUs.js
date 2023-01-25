@@ -15,8 +15,8 @@ export const AboutUs = () => {
             La Asociación Círculo Militar de Supervisores Técnicos y Sub Oficiales del Ejército (ACM-STS), brinda bienestar al personal de Supervisores, Técnicos y sub Oficiales del Ejército del Perú en situación de Actividad, Disponibilidad o Retiro y sus FAMILIARES DIRECTOS, en el área de alojamiento, alimentaciones, recreación, deporte y cultura. Los beneficios que brinda a los ASOCIADOS son únicos y exclusivos para el: TITULAR Y SUS FAMILIARES DIRECTOS.
           </p>
         </div>
-        <div style={{ paddingBottom: "0.5em", display: "flex", alingSelf: "center", justifyContent: "center", }}>
-          <VideoBg autoPlay loop muted src={videAboutUs} type="Video/mp4" />
+        <div style={{ paddingBottom: "0.5em", display: "flex", justifyContent: "center" }}>
+          <VideoBg autoPlay controls loop src={videAboutUs} type="Video/mp4" />
         </div>
       </div>
     </Container>

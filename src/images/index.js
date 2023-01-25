@@ -2,9 +2,6 @@
 export { default as LogoCobiene } from "./others/circulosts.webp";
 export { default as ExtintoresBackground } from "./others/newfondosts.webp";
 export { default as OffersServitec } from "./others/offers1.webp";
-export { default as SeoOne } from "./others/info-box7.webp";
-export { default as SeoTwo } from "./others/info-box8.webp";
-export { default as SeoThree } from "./others/info-box9.webp";
 export { default as ServitecSlider1 } from "./others/servitec-slider2.webp";
 export { default as ServitecSlider4 } from "./others/servitec-slider4.webp";
 export { default as ServitecSlider2 } from "./others/servitec-slider1.webp";
@@ -16,20 +13,17 @@ export {default as Linea} from "./others/lineu.webp";
 export { default as ImgLogoFacturaFacil } from "./others/logo-factura.webp";
 export { default as ImgCarousel1 } from "./others/img-carousel-girl.webp";
 export { default as ImgAbout } from "./others/facturacion-electronica-peru-sunat.webp";
-export { default as ImgFacturaService5 } from "./others/info-box10.webp";
+
 
 // ------Img Servitec AboutUs ALL IN ONE-------
 export { default as MarcaMitsubishi } from "./others/mitsubishi.webp";
 export { default as MarcaMac } from "./others/logmac-removebg-preview.webp";
-export { default as MarcaLenovo } from "./others/lenovo-removebg-preview.webp";
-export { default as MarcaLg } from "./others/lg-removebg-preview.webp";
+
 // ------Img Servitec Servicios ALL IN ONE-------
 export { default as Services1 } from "./others/sedechorrillos.webp";
 export { default as Services2 } from "./others/sedetarapacareview.webp";
 export { default as Services3 } from "./others/sederimacnew.webp";
-export { default as Services4 } from "./others/card4.webp";
-export { default as Services5 } from "./others/card5.webp";
-export { default as Services6 } from "./others/card6.webp";
+
 
 export { default as Product1 } from "./others/1primero.webp";
 export { default as Product2 } from "./others/2segundo.webp";
@@ -74,6 +68,6 @@ export {default as BackgroundTarapaca} from './others/sedetarapacafondo.webp';
 
 //----- Backgrounds of slider ------
 export { default as SliderHome2} from './others/2sts-bacnew.webp';
-export {default as SliderHome3} from './others/3sts-bac.webp';
-export {default as SliderHome4} from './others/4sts-bacnew.webp';
-export {default as SliderHom5} from './others/5sts-bacnew.webp';
+export {default as SliderHome3} from './others/2newbackgroundsts.webp';
+export {default as SliderHome4} from './others/newbackgroundsts.webp';
+export {default as SliderHom5} from './others/3newbackgroundsts.webp';
