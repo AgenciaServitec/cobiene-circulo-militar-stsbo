@@ -6,5 +6,6 @@ export * from "./VideoSection";
 export * from "./ItemServices";
 export * from "./AboutUs";
 export * from "./Contact";
+export * from "./Novelty";
 
 

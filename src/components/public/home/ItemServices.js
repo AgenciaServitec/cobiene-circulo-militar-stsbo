@@ -34,7 +34,7 @@ const Container = styled.div`
   cursor: pointer;
   background: #1a1a1a;
   border-radius: 1rem;
-  width: 28rem;
+  width: 25rem;
   //display: flex;
   position: relative;
   display: inline-block;

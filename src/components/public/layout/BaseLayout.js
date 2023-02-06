@@ -16,12 +16,12 @@ export const BaseLayout = ({ children }) => {
   const navigate = useNavigate();
 
   const [visibleDrawer, setVisibleDrawer] = useState(false);
-  const [selectSede, setSelectSede] = useState(false);
+  // const [selectSede, setSelectSede] = useState(false);
 
-  const onSede = () => {
-      setSelectSede(!selectSede)
-      console.log(selectSede)
-  }
+  // const onSede = () => {
+  //     setSelectSede(!selectSede)
+  //     console.log(selectSede)
+  // }
 
 
   return (
@@ -53,7 +53,7 @@ export const BaseLayout = ({ children }) => {
               <div className="menu-list">
 
                       <Link to="/">
-                          <a href=""><li>INICIO</li></a>
+                         <li>INICIO</li>
                       </Link>
 
                       <a href="#about-us"><li>NOSOTROS</li></a>

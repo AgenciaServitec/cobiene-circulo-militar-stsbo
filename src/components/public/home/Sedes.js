@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Services1, Services2, Services3 } from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 // import { Button } from "../ui";
-import { ItemServices } from "./ItemServices";
+import { ItemServices, Novelty } from "./index";
 
 export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
   return (
@@ -33,6 +33,10 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
             onClick="sede-Rimac"
           />
         </div>
+        <div>
+          <h5 className="subtitle-new-notices">+ NOVEDADES</h5>
+        </div>
+        <Novelty/>
         {/*<div className="button">*/}
         {/*  <div>*/}
         {/*    <Button*/}
@@ -71,7 +75,7 @@ const Container = styled.div`
 
     .heading {
       margin-bottom: 60px;
-      padding-top: 79px;
+      padding-top: 40px;
       position: relative;
       text-align: center;
       width: 100%;
@@ -100,7 +104,12 @@ const Container = styled.div`
       gap: 2rem;
       flex-wrap: wrap;
     }
-
+.subtitle-new-notices{
+  padding-top: 7rem;
+  padding-left: 3rem;
+  color: black;
+  font-size: 1.5rem;
+}
     .button {
       padding-top: 3rem;
       width: 100%;

@@ -71,3 +71,10 @@ export { default as SliderHome2} from './others/2sts-bacnew.webp';
 export {default as SliderHome3} from './others/2newbackgroundsts.webp';
 export {default as SliderHome4} from './others/newbackgroundsts.webp';
 export {default as SliderHom5} from './others/3newbackgroundsts.webp';
+
+//-----Novedades DEL CIRCULO MILITAR ------
+
+export { default as CobieneAppNovelty} from './others/noveltycobiene.webp';
+export { default as CobieneWebNovelty} from './others/noveltycobieneweb.webp';
+export { default as TramitesNovely} from './others/noveltycobienetramites.webp';
+export { default as CatalogoNovely} from './others/noveltycatalogo.webp';

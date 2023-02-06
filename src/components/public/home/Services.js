@@ -68,7 +68,7 @@ const Container = styled.div`
       color: #F6B63E;
       font-weight: bolder;
       font-size: 2.5rem;
-      margin-top: 6rem;
+      margin-top: 4rem;
     }
     .items-socials {
       width: 100%;
