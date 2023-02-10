@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import { Footer } from "./Footer";
 import { ButtonsFloating, WrapperComponent } from "../ui";
+import { useFormContact } from "../../../providers";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
 export const BaseLayout = ({ children }) => {
@@ -16,6 +17,9 @@ export const BaseLayout = ({ children }) => {
   const navigate = useNavigate();
 
   const [visibleDrawer, setVisibleDrawer] = useState(false);
+    const { visibleFormContact, setVisibleFormContact } = useFormContact();
+    const handleVisibleFormContact = () =>
+        setVisibleFormContact(!visibleFormContact);
   // const [selectSede, setSelectSede] = useState(false);
 
   // const onSede = () => {
@@ -29,6 +33,8 @@ export const BaseLayout = ({ children }) => {
       <Drawer
         visibleDrawer={visibleDrawer}
         onSetVisibleDrawer={setVisibleDrawer}
+        visibleFormContact={visibleFormContact}
+        handleVisibleFormContact={handleVisibleFormContact}
       />
       <header className="header">
         <WrapperComponent>
@@ -58,20 +64,13 @@ export const BaseLayout = ({ children }) => {
 
                       <a href="#about-us"><li>NOSOTROS</li></a>
 
+                      <a href="#sedes"><li>SEDES</li></a>
                   <li>
                       <Link to="/">
                           <img src={LogoCobiene} alt="Cobiene logo" />
                       </Link>
                   </li>
-
-                  {/*<li onClick={onSede}><a href="#sedes">SEDES</a>*/}
-                  {/*    /!*{selectSede ? <ul>*!/*/}
-                  {/*    /!*    <li><a href="#sedes">chorrillos</a></li>*!/*/}
-                  {/*    /!*    <li><a href="#sedes">tarapaca</a></li>*!/*/}
-                  {/*    /!*    <li><a href="#sedes">rimac</a></li>*!/*/}
-                  {/*    /!*</ul> : null}*!/*/}
-                  {/*</li>*/}
-                      <a href="#sedes"><li>SEDES</li></a>
+                  <a onClick={()=>{handleVisibleFormContact()}}><li>SABER SI SOY SOCIO</li></a>
 
 
                       <a href="#contact"><li>CONTÁCTO</li></a>
@@ -194,7 +193,7 @@ const Container = styled.div`
         margin-left: 1.5rem;
         cursor: pointer;
         img {
-          width:5rem;
+          width:6rem;
         }
       }
 
@@ -212,7 +211,7 @@ const Container = styled.div`
         justify-content: flex-start;
 
         img {
-          width:4rem;
+          width:3.5rem;
         }
       }
 

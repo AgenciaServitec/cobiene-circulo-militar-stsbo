@@ -2,14 +2,18 @@ import React from "react";
 import DrawerAntd from "antd/lib/drawer";
 import styled from "styled-components";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
+import {useFormContact} from '../../../providers';
 import { useNavigate } from "react-router";
 
 export const Drawer = ({
   visibleDrawer,
   onSetVisibleDrawer,
-  onClickVisibleFormContact,
 }) => {
   const navigate = useNavigate();
+  const { visibleFormContact, setVisibleFormContact } = useFormContact();
+
+  const handleVisibleFormContact = () =>
+      setVisibleFormContact(!visibleFormContact);
   return (
     <ComponentDrawerAntd
       title={null}
@@ -29,8 +33,7 @@ export const Drawer = ({
       </MenuItem>
       <MenuItem
         onClick={() => {
-          onSetVisibleDrawer(false);
-          onClickVisibleFormContact();
+          handleVisibleFormContact();
         }}
       >
         <span>Contácto</span>

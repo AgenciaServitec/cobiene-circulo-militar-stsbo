@@ -6,7 +6,7 @@ import {
     ContactSuccess, PageSedeChorrillos, PageSedeRimac,PageSedeTarapaca
 } from "../pages";
 
-export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
+export const Router = () => {
   return (
     <Routes>
       <Route
@@ -14,10 +14,7 @@ export const Router = ({ onClickVisibleFormContact, visibleFormContact }) => {
         path="/"
         element={
           <BaseLayout>
-            <Home
-              onClickVisibleFormContact={onClickVisibleFormContact}
-              visibleFormContact={visibleFormContact}
-            />
+            <Home/>
           </BaseLayout>
         }
       />
