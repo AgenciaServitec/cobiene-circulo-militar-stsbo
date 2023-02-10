@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Carousel, AboutUs, Sedes } from "../../components/public";
+import { Carousel, AboutUs, Sedes, GalleryHome } from "../../components/public";
 import {Services} from "../../components/public/home/Services";
 export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
   return (
@@ -21,6 +21,7 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
           onClickVisibleFormContact={onClickVisibleFormContact}
           visibleFormContact={visibleFormContact}
         />
+          <GalleryHome/>
           <Services/>
         {/*<WrapperComponent>*/}
         {/*  <VideoSection*/}

@@ -7,5 +7,6 @@ export * from "./ItemServices";
 export * from "./AboutUs";
 export * from "./Contact";
 export * from "./Novelty";
+export * from './GalleryHome';
 
 

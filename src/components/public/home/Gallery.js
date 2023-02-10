@@ -34,74 +34,80 @@ export const Gallery = ({images=[], title}) => {
 const Container = styled.div`
   padding: 3rem 3rem;
   text-align: center;
-  @media(max-width: 480px){
+  @media (max-width: 480px) {
     padding: 3rem 1.5rem;
   }
-  .title{
+
+  .title {
     letter-spacing: 0.3px;
     font-family: "Intro Demo", sans-serif;
     width: 100%;
     color: #F6B63E;
     font-size: 4.5rem;
   }
- .wrapper-gallery{
-   position: relative;
-   width: 100%;
-   -webkit-column-count: 3;
-   -moz-column-count: 3;
-   column-count: 3;
-   padding: 0.5rem 1.2rem;
-   //display: flex;
-   //display: grid;
-   //grid-template-columns: 3fr;
-   //grid-template-rows: 2fr;
-   //padding: 0.5rem 1.2rem;
-   //.content-text{
-   //  position: absolute;
-   //}
-   .wrapper-image-gallery{
-     //.content-text{
-     //  position: absolute;
-     //}
-     transition: all 350ms ease;
-     cursor: pointer;
-     margin-bottom: 12px;
-     position: relative;
-     :hover{
-       filter: opacity(.4);
-     }
-     
-     .content-text{
-       position: absolute;
-       top:70%;
-       left: 5%;
-       h3{
-         font-size: 2.4rem;
-         @media(max-width: 480px){
-           font-size: 1.5rem;
-         }
-       }
-     }
-     img{
-       width: 100%;
-     }
-   }
 
-   @media(max-width: 991px){
-       column-count: 2;
-   }
-   @media(max-width: 480px){
-     column-count: 1;
-   }
-   
- }
-  
+  .wrapper-gallery {
+    position: relative;
+    width: 100%;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    padding: 0.5rem 1.2rem;
+    //display: flex;
+    //display: grid;
+    //grid-template-columns: 3fr;
+    //grid-template-rows: 2fr;
+    //padding: 0.5rem 1.2rem;
+    //.content-text{
+    //  position: absolute;
+    //}
+    .wrapper-image-gallery {
+      //.content-text{
+      //  position: absolute;
+      //}
+      transition: all 350ms ease;
+      cursor: pointer;
+      margin-bottom: 12px;
+      position: relative;
+
+      :hover {
+        filter: opacity(.4);
+      }
+
+      .content-text {
+        position: absolute;
+        top: 70%;
+        left: 5%;
+
+        h3 {
+          font-size: 2rem;
+          //color: #000000;
+          @media (max-width: 480px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 991px) {
+      column-count: 2;
+    }
+    @media (max-width: 480px) {
+      column-count: 1;
+    }
+
+  }
+
   .model {
     width: 100%;
     height: 100vh;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,16 +117,17 @@ const Container = styled.div`
     opacity: 0;
     transform: scale(0);
     overflow: hidden;
-    z-index: 999; 
+    z-index: 999;
   }
-  .model.open{
+
+  .model.open {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
   }
-  
-  .model{
-    img{
+
+  .model {
+    img {
       width: auto;
       max-width: 100%;
       height: auto;
@@ -132,5 +139,5 @@ const Container = styled.div`
       margin: 0 auto;
     }
   }
-  
+
 `;

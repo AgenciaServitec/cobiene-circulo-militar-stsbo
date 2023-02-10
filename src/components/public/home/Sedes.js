@@ -36,7 +36,9 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
         <div>
           <h5 className="subtitle-new-notices">+ NOVEDADES</h5>
         </div>
-        <Novelty/>
+    <div className="container-novelty">
+      <Novelty/>
+    </div>
         {/*<div className="button">*/}
         {/*  <div>*/}
         {/*    <Button*/}
@@ -110,6 +112,10 @@ const Container = styled.div`
   color: black;
   font-size: 1.5rem;
 }
+    .container-novelty{
+      display: flex;
+      justify-content: center;
+    }
     .button {
       padding-top: 3rem;
       width: 100%;

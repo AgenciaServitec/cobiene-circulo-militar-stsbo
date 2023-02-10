@@ -73,7 +73,7 @@ const Container = styled.div`
       display: flex !important;
     }
     li.slick-active {
-      width: 48px;
+      width: 48px; 
     }
     li {
       width: 48px;

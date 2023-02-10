@@ -78,3 +78,19 @@ export { default as CobieneAppNovelty} from './others/noveltycobiene.webp';
 export { default as CobieneWebNovelty} from './others/noveltycobieneweb.webp';
 export { default as TramitesNovely} from './others/noveltycobienetramites.webp';
 export { default as CatalogoNovely} from './others/noveltycatalogo.webp';
+//-----Gallery of home ------
+
+export { default as ImageGalleyHome1} from './others/imghomesedes.webp';
+export { default as ImageGalleyHome2} from './others/imghomesedes2.webp';
+export { default as ImageGalleyHome3} from './others/imghomesedes3.webp';
+export { default as ImageGalleyHome4} from './others/imghomesedes4.webp';
+export { default as ImageGalleyHome5} from './others/imghomesedes5.webp';
+export { default as ImageGalleyHome6} from './others/imghomesedes6.webp';
+export { default as ImageGalleyHome7} from './others/imghomesedes7.webp';
+export { default as ImageGalleyHome8} from './others/imghomesedes8.webp';
+export { default as ImageGalleyHome9} from './others/imghomesedes9.webp';
+export { default as ImageGalleyHome10} from './others/imghomesedes10.webp';
+export { default as ImageGalleyHome11} from './others/imghomesedes11.webp';
+export { default as ImageGalleyHome12} from './others/imghomesedes12.webp';
+export { default as ImageGalleyHome13} from './others/imghomesedes13.webp';
+export { default as ImageGalleyHome14} from './others/imghomesedes14.webp';
