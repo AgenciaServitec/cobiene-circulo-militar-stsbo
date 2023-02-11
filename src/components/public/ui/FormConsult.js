@@ -1,45 +1,31 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import React, {useState} from "react";
+import styled, {css} from "styled-components";
 import ModalAntd from "antd/lib/modal/Modal";
-import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import Row from "antd/lib/row";
-import Col from "antd/lib/col";
-import { Controller, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
+import {mediaQuery} from "../../../styles/constants/mediaQuery";
+import {Controller, useForm} from "react-hook-form";
+import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useFormUtils } from "../../../hooks";
-import { Input } from "./Input";
-import { Form } from "./Form";
-import { defaultTo } from "lodash";
-import { phoneCodes } from "../../../data-list";
-import { Select } from "./Select";
-import { InputNumber } from "./InputNumber";
-import { TextArea } from "./TextArea";
-import { notification } from "./notification";
-import { currentConfig } from "../../../firebase";
-import { useNavigate } from "react-router";
-import { Button } from "./Button";
-import { useDevice } from "../../../hooks";
+import {useFormUtils} from "../../../hooks";
+import {Form} from "./Form";
+import {defaultTo} from "lodash";
+import {InputNumber} from "./InputNumber";
+import {firestore, querySnapshotToArray} from '../../../firebase'
+import {notification} from "./notification";
 import {useFormContact} from '../../../providers';
 import {ButtonPopUp} from './ButtonPopUp';
 
 export const FormConsult = () => {
+    const [users,setUsers]=useState([]);
     const { visibleFormContact, setVisibleFormContact } = useFormContact();
 
     const handleVisibleFormContact = () =>
         setVisibleFormContact(!visibleFormContact);
 
-    const { isMobile } = useDevice();
 
     const [loadingContact, setLoadingContact] = useState(false);
 
     const schema = yup.object({
-        firstName: yup.string().required(),
-        lastName: yup.string().required(),
-        email: yup.string().email().required(),
-        countryCode: yup.string().required(),
-        phoneNumber: yup.number().required(),
-        message: yup.string(),
+        dni: yup.number().required(),
     });
 
     const {
@@ -53,14 +39,13 @@ export const FormConsult = () => {
 
     const { required, error } = useFormUtils({ errors, schema });
 
-    const onSubmitFetchContacts = async (formData) => {
+    const onSubmitUser = async (formData) => {
+
         try {
             setLoadingContact(true);
-            const contact = mapContactData(formData);
 
-            const response = await fetchSendEmail(contact);
-
-            if (!response.ok) throw new Error(response.statusText);
+            await firestore.collection("users").where("document.number","==", formData.dni.toString())
+                .onSnapshot((snapshot)=> setUsers(querySnapshotToArray(snapshot)))
 
             notification({ type: "success", title: "Enviado exitosamente" });
 
@@ -75,39 +60,11 @@ export const FormConsult = () => {
         }
     };
 
-    const fetchSendEmail = async (contact) =>
-        await fetch(`${currentConfig.sendingEmailsApi}/generic/contact`, {
-            method: "POST",
-            headers: {
-                "Access-Control-Allow-Origin": null,
-                "content-Type": "application/json",
-                Accept: "application/json",
-            },
-            body: JSON.stringify(contact),
-        });
-
-    const mapContactData = (formData) => ({
-        contact: {
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            phone: {
-                number: formData.phoneNumber,
-                countryCode: formData.countryCode,
-            },
-            message: formData.message,
-            hostname: window.location.hostname || "cobiene-352004.web.app",
-        },
-    });
+    console.log("users->",users);
 
     const resetContactForm = () =>
         reset({
-            firstName: "",
-            lastName: "",
-            email: "",
-            countryCode: "+51",
-            phoneNumber: "",
-            message: "",
+            dni: "",
         });
 
     return (
@@ -118,14 +75,14 @@ export const FormConsult = () => {
             onCancel={() => handleVisibleFormContact()}
             footer={null}
         >
-            <Form onSubmit={handleSubmit(onSubmitFetchContacts)}>
+            <Form onSubmit={handleSubmit(onSubmitUser)}>
                <h2>Escriba su DNI para la consulta:</h2>
                 <Controller
-                    name="firstName"
+                    name="dni"
                     control={control}
                     defaultValue=""
                     render={({ field: { onChange, value, name } }) => (
-               <Input
+               <InputNumber
                    label="Ingrese DNI"
                    name={name}
                    value={value}
