@@ -44,14 +44,24 @@ export const FormConsult = () => {
         try {
             setLoadingContact(true);
 
-            await firestore.collection("users").where("document.number","==", formData.dni.toString())
+            // const valueCollection = await firestore.collection("users").where("document.number","==", formData.dni.toString())
+
+            // const []
+            const valueFormDataDni = formData.dni.toString();
+            await firestore.collection("users").where("document.number","==", valueFormDataDni)
                 .onSnapshot((snapshot)=> setUsers(querySnapshotToArray(snapshot)))
-
-            notification({ type: "success", title: "Enviado exitosamente" });
-
+            // notification({ type: "success", title: "Eres Socio" })
+            const [number]= users;
+            // console.log(number.document.number)
+            if(valueFormDataDni === number.document.number) {
+               notification({type: "success", title: "Eres Socio"});
+            }else{
+                notification({ type: "error", title: "No eres Socio" });
+            }
             resetContactForm();
-
+            setUsers([]);
             handleVisibleFormContact();
+
         } catch (e) {
             console.log("ErrorEmailSend:", e);
             notification({ type: "error" });
@@ -102,6 +112,8 @@ export const FormConsult = () => {
                     >
                         Consultar
                     </ButtonPopUp>
+                {/*{(users === []) ? null : <h2>Eres Socio</h2>}*/}
+
             </Form>
         </ModalComponent>
     );
