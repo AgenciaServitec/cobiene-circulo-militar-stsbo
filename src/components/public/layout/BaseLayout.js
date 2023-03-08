@@ -12,9 +12,10 @@ import { ButtonsFloating, WrapperComponent } from "../ui";
 import { useFormContact } from "../../../providers";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-export const BaseLayout = ({ children }) => {
+export const BaseLayout = ({ children,sectionVideo,onVideosSedes,setVideosSedes}) => {
   const { isMobile } = useDevice();
   const navigate = useNavigate();
+
 
   const [visibleDrawer, setVisibleDrawer] = useState(false);
     const { visibleFormContact, setVisibleFormContact } = useFormContact();
@@ -66,15 +67,16 @@ export const BaseLayout = ({ children }) => {
 
                       <a href="#sedes"><li>SEDES</li></a>
                   <li>
-                      <Link to="/">
+                      <Link to="/" onClick={()=>{setVideosSedes(false)}}>
                           <img src={LogoCobiene} alt="Cobiene logo" />
                       </Link>
                   </li>
+                  {
+                      sectionVideo ? ( <a onClick={()=>{onVideosSedes()}}><li>VIDEOS DE LA SEDE</li></a>) : null
+                  }
                   <a onClick={()=>{handleVisibleFormContact()}}><li>SABER SI SOY SOCIO</li></a>
 
-
                       <a href="#contact"><li>CONTÁCTO</li></a>
-
               </div>
             )}
           </>

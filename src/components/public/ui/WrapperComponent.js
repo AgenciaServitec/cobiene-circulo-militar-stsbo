@@ -7,7 +7,7 @@ export const WrapperComponent = ({ children }) => (
 
 const Container = styled.div`
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   height: auto;
   margin: auto;
 `;

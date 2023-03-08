@@ -94,3 +94,22 @@ export { default as ImageGalleyHome11} from './others/imghomesedes11.webp';
 export { default as ImageGalleyHome12} from './others/imghomesedes12.webp';
 export { default as ImageGalleyHome13} from './others/imghomesedes13.webp';
 export { default as ImageGalleyHome14} from './others/imghomesedes14.webp';
+
+//-----Gallery of VIDEOS IN SEDES ------
+
+export {default as VideoChorrillos1} from "./multimedia/videos-sedes/VID-20230308-WA0002.mp4";
+export {default as VideoChorrillos2} from "./multimedia/videos-sedes/VID-20230308-WA0013.mp4";
+export {default as VideoChorrillos3} from "./multimedia/videos-sedes/VID-20230308-WA0024.mp4";
+export {default as VideoChorrillos4} from "./multimedia/videos-sedes/VID-20230308-WA0027.mp4";
+export {default as VideoChorrillos5} from "./multimedia/videos-sedes/VID-20230308-WA0037.mp4";
+export {default as VideoChorrillos6} from "./multimedia/videos-sedes/VID-20230308-WA0038.mp4";
+export {default as VideoChorrillos7} from "./multimedia/videos-sedes/VID-20230308-WA0039.mp4";
+export {default as VideoChorrillos8} from "./multimedia/videos-sedes/VID-20230308-WA0040.mp4";
+export {default as VideoChorrillos9} from "./multimedia/videos-sedes/VID-20230308-WA0041.mp4";
+export {default as VideoChorrillos10} from "./multimedia/videos-sedes/VID-20230308-WA0043.mp4";
+export {default as VideoChorrillos11} from "./multimedia/videos-sedes/VID-20230308-WA0044.mp4";
+export {default as VideoChorrillos12} from "./multimedia/videos-sedes/VID-20230308-WA0045.mp4";
+export {default as VideoChorrillos13} from "./multimedia/videos-sedes/VID-20230308-WA0049.mp4";
+export {default as VideoChorrillos14} from "./multimedia/videos-sedes/WhatsApp Video 2023-02-21 at 2.01.49 PM.mp4";
+export {default as VideoChorrillos15} from "./multimedia/videos-sedes/WhatsApp Video 2023-02-27 at 10.22.48 AM.mp4";
+export {default as VideoChorrillos16} from "./multimedia/videos-sedes/WhatsApp Video 2023-03-08 at 5.07.40 AM (1).mp4";

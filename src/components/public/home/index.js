@@ -8,5 +8,7 @@ export * from "./AboutUs";
 export * from "./Contact";
 export * from "./Novelty";
 export * from './GalleryHome';
+export * from "./VideosSedes";
+export * from "./Gallery";
 
 

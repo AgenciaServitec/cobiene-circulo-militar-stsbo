@@ -1,3 +1,4 @@
+import React,{useState} from 'react';
 import { Route, Routes } from "react-router-dom";
 import { BaseLayout } from "../components/public";
 import {
@@ -6,14 +7,20 @@ import {
     ContactSuccess, PageSedeChorrillos, PageSedeRimac,PageSedeTarapaca
 } from "../pages";
 
+
 export const Router = () => {
+    const [videosSedes, setVideosSedes] = useState(false);
+
+    const onVideosSedes = () => {
+        setVideosSedes(!videosSedes)
+    }
   return (
     <Routes>
       <Route
         exact
         path="/"
         element={
-          <BaseLayout>
+          <BaseLayout sectionVideo={false} >
             <Home/>
           </BaseLayout>
         }
@@ -31,8 +38,8 @@ export const Router = () => {
         exact
         path="/sede-chorrillos"
         element={
-          <BaseLayout>
-            <PageSedeChorrillos/>
+          <BaseLayout sectionVideo={true} onVideosSedes={onVideosSedes} setVideosSedes={setVideosSedes}>
+            <PageSedeChorrillos videosSedes={videosSedes}/>
           </BaseLayout>
         }
       />
@@ -40,7 +47,7 @@ export const Router = () => {
         exact
         path="/sede-tarapaca"
         element={
-          <BaseLayout>
+          <BaseLayout sectionVideo={false}>
             <PageSedeTarapaca/>
           </BaseLayout>
         }
@@ -49,7 +56,7 @@ export const Router = () => {
             exact
             path="/sede-rimac"
             element={
-                <BaseLayout>
+                <BaseLayout sectionVideo={false}>
                     <PageSedeRimac/>
                 </BaseLayout>
             }
