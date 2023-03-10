@@ -42,6 +42,9 @@ const Container = styled.div`
     width: 100%;
     color: #F6B63E;
     font-size: 4.5rem;
+    @media (max-width: 480px) {
+      font-size: 2.6rem;
+    }
   }
   .content-gallery-video{
     display: flex;

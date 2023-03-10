@@ -8,12 +8,19 @@ import { useNavigate } from "react-router";
 export const Drawer = ({
   visibleDrawer,
   onSetVisibleDrawer,
+                         onVideosSedes,
+                         sectionVideo,
 }) => {
   const navigate = useNavigate();
   const { visibleFormContact, setVisibleFormContact } = useFormContact();
 
   const handleVisibleFormContact = () =>
       setVisibleFormContact(!visibleFormContact);
+
+  const onVideosAndCloseDrawer = () =>{
+    onVideosSedes();
+    onSetVisibleDrawer(false);
+  }
   return (
     <ComponentDrawerAntd
       title={null}
@@ -31,6 +38,11 @@ export const Drawer = ({
       <MenuItem onClick={() => onSetVisibleDrawer(false)}>
         <a href="#services">Servicios</a>
       </MenuItem>
+      {
+        sectionVideo ? (<MenuItem onClick={onVideosAndCloseDrawer} >
+          <a>Videos de la Sede</a>
+        </MenuItem>) : null
+      }
       <MenuItem
         onClick={() => {
           handleVisibleFormContact();

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import {videAboutUs} from "../../../images";
+import {videAboutUs,VideoChorrillos16} from "../../../images";
 // import { useDevice } from "../../../hooks";
 
 export const AboutUs = () => {
@@ -12,11 +12,11 @@ export const AboutUs = () => {
         <div className="content-text">
             <h2 className="title">SOBRE NOSOTROS</h2>
           <p className="content">
-            La Asociación Círculo Militar de Supervisores Técnicos y Sub Oficiales del Ejército (ACM-STS), brinda bienestar al personal de Supervisores, Técnicos y sub Oficiales del Ejército del Perú en situación de Actividad, Disponibilidad o Retiro y sus FAMILIARES DIRECTOS, en el área de alojamiento, alimentaciones, recreación, deporte y cultura. Los beneficios que brinda a los ASOCIADOS son únicos y exclusivos para el: TITULAR Y SUS FAMILIARES DIRECTOS.
+            La Asociación Círculo Militar de Supervisores Técnicos y SubOficiales del Ejército (ACM-STS), brinda bienestar al personal de Supervisores, Técnicos y sub Oficiales del Ejército del Perú en situación de Actividad, Disponibilidad o Retiro y sus FAMILIARES DIRECTOS, en el área de alojamiento, alimentaciones, recreación, deporte y cultura. Los beneficios que brinda a los ASOCIADOS son únicos y exclusivos para el: TITULAR Y SUS FAMILIARES DIRECTOS.
           </p>
         </div>
         <div style={{alignSelf: "center", display: "flex", justifyContent: "center" }}>
-          <VideoBg autoPlay controls loop src={videAboutUs} type="Video/mp4" />
+          <VideoBg autoPlay controls loop src={VideoChorrillos16} type="Video/mp4" />
         </div>
       </div>
     </Container>

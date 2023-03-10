@@ -4,3 +4,4 @@ export * from "./contact-success";
 export * from "./sede-tarapaca";
 export * from "./sede-chorrillos";
 export * from "./sede-rimac";
+export * from "./galleria";

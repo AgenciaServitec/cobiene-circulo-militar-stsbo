@@ -28,6 +28,10 @@ export const BaseLayout = ({ children,sectionVideo,onVideosSedes,setVideosSedes}
   //     console.log(selectSede)
   // }
 
+    /*const addRuteandUpDateState = () =>{
+        navigate("/sede-chorrillos");
+        setVideosSedes(true);
+    }*/
 
   return (
     <Container>
@@ -36,13 +40,15 @@ export const BaseLayout = ({ children,sectionVideo,onVideosSedes,setVideosSedes}
         onSetVisibleDrawer={setVisibleDrawer}
         visibleFormContact={visibleFormContact}
         handleVisibleFormContact={handleVisibleFormContact}
+        onVideosSedes={onVideosSedes}
+        sectionVideo={sectionVideo}
       />
       <header className="header">
         <WrapperComponent>
           <>
             {isMobile ? (
               <div className="menu-mobile">
-                <div className="item-logo">
+                <div className="item-logo" onClick={()=>{setVideosSedes(false)}}>
                   <img
                     src={LogoCobiene}
                     alt="Logo Servitec Facil Factura"
@@ -71,11 +77,8 @@ export const BaseLayout = ({ children,sectionVideo,onVideosSedes,setVideosSedes}
                           <img src={LogoCobiene} alt="Cobiene logo" />
                       </Link>
                   </li>
-                  {
-                      sectionVideo ? ( <a onClick={()=>{onVideosSedes()}}><li>VIDEOS DE LA SEDE</li></a>) : null
-                  }
-                  <a onClick={()=>{handleVisibleFormContact()}}><li>SABER SI SOY SOCIO</li></a>
-
+                     <a onClick={() => navigate("/galleria")}><li>GALERÍA</li></a>
+                  <a onClick={()=>{handleVisibleFormContact()}}><li>SOCIO</li></a>
                       <a href="#contact"><li>CONTÁCTO</li></a>
               </div>
             )}

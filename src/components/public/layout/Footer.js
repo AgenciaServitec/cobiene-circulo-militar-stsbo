@@ -79,7 +79,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
               <li
               >
                 <a
-                  href="https://www.facebook.com/C%C3%ADrculo-Militar-STS-307692109354465/"
+                  href="https://www.facebook.com/ACMSTS"
                   target="_blank"
                   rel="noreferrer"
                 >

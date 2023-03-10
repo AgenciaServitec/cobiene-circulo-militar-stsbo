@@ -4,7 +4,7 @@ import { BaseLayout } from "../components/public";
 import {
     Home,
     Page404,
-    ContactSuccess, PageSedeChorrillos, PageSedeRimac,PageSedeTarapaca
+    ContactSuccess, PageSedeChorrillos, PageSedeRimac,PageSedeTarapaca,GalleryPage
 } from "../pages";
 
 
@@ -20,7 +20,7 @@ export const Router = () => {
         exact
         path="/"
         element={
-          <BaseLayout sectionVideo={false} >
+          <BaseLayout sectionVideo={true} >
             <Home/>
           </BaseLayout>
         }
@@ -58,6 +58,15 @@ export const Router = () => {
             element={
                 <BaseLayout sectionVideo={false}>
                     <PageSedeRimac/>
+                </BaseLayout>
+            }
+        />
+        <Route
+            exact
+            path="/galleria"
+            element={
+                <BaseLayout sectionVideo={false}>
+                    <GalleryPage/>
                 </BaseLayout>
             }
         />

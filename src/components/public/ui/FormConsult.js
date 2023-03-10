@@ -63,7 +63,7 @@ export const FormConsult = () => {
             handleVisibleFormContact();
 
         } catch (e) {
-            console.log("ErrorEmailSend:", e);
+            console.log("No eres Socio:", e);
             notification({ type: "error" });
         } finally {
             setLoadingContact(false);

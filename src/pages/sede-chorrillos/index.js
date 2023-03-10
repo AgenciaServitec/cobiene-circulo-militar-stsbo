@@ -40,6 +40,7 @@ export const PageSedeChorrillos = ({videosSedes}) => {
         {src:Chorrillos5, title: "Zona Sociales"},
         {src:Chorrillos6, title:"Deportivas"},
         {src:Chorrillos7, title:"Deportivas"},
+        {src:Chorrillos3, title:"Áreas Deportivas"},
     ];
 
     const videos = [
