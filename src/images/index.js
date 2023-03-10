@@ -95,6 +95,13 @@ export { default as ImageGalleyHome12} from './others/imghomesedes12.webp';
 export { default as ImageGalleyHome13} from './others/imghomesedes13.webp';
 export { default as ImageGalleyHome14} from './others/imghomesedes14.webp';
 
+//-----Gallery of Tarapaca ------
+
+export { default as ImageGalleryTarapaca} from './others/localtarapaca.webp';
+export { default as ImageGalleryTarapaca1} from './others/localtarapaca1.webp';
+export { default as ImageGalleryTarapaca2} from './others/localtarapaca2.webp';
+
+
 //-----Gallery of VIDEOS IN SEDES ------
 
 export {default as VideoChorrillos1} from "./multimedia/videos-sedes/VID-20230308-WA0002.mp4";
