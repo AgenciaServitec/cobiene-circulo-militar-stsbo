@@ -28,7 +28,7 @@ export const Carousel = () => {
               <Slide
                   src={banner}
                   width={isMobile ? "768" : "992"}
-                  height="670"
+                  height="970"
                   alt="Banner cobiene"
               />
           ))}

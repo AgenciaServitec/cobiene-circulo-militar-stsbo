@@ -1,7 +1,8 @@
 import React,{ useState} from 'react';
 import styled from "styled-components";
 
-export const Gallery = ({images=[], title}) => {
+export const Gallery = ({images=[], title,background}) => {
+
 
     const [model, setModel]=useState(false)
     const [imgSrc, setImgSrc] = useState("")
@@ -12,7 +13,7 @@ export const Gallery = ({images=[], title}) => {
     }
 
     return (
-        <Container>
+        <Container color={background}>
             <div className={model ? "model open" : "model" } onClick={()=>setModel(false)}>
                 <img src={imgSrc} alt="imgmodelopen"/>
             </div>
@@ -32,6 +33,7 @@ export const Gallery = ({images=[], title}) => {
 };
 
 const Container = styled.div`
+  background: ${({ color }) => color};
   padding: 3rem 3rem;
   text-align: center;
   @media (max-width: 480px) {

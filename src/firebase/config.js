@@ -17,8 +17,16 @@ const currentConfig = configs[currentEnvironment];
 
 firebase.initializeApp(currentConfig.firebaseApp);
 
+
 const auth = firebase.auth();
 const firestore = firebase.firestore();
+const collectionRef = firebase.firestore().collection('users');
+/*const query = firestore.query();
+const collection = firestore.addCollection();*/
+
+
+
+
 const storage = firebase.storage();
 
 const buckets = {
@@ -48,4 +56,6 @@ export {
   firestore,
   imageResizes,
   buckets,
+  collectionRef,
+  
 };

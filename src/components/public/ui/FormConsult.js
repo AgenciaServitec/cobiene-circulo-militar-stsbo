@@ -9,10 +9,11 @@ import {useFormUtils} from "../../../hooks";
 import {Form} from "./Form";
 import {defaultTo} from "lodash";
 import {InputNumber} from "./InputNumber";
-import {firestore, querySnapshotToArray} from '../../../firebase'
+import {firestore, querySnapshotToArray,collectionRef} from '../../../firebase'
 import {notification} from "./notification";
 import {useFormContact} from '../../../providers';
 import {ButtonPopUp} from './ButtonPopUp';
+
 
 export const FormConsult = () => {
     const [users,setUsers]=useState([]);
@@ -46,18 +47,24 @@ export const FormConsult = () => {
 
             // const valueCollection = await firestore.collection("users").where("document.number","==", formData.dni.toString())
 
-            // const []
             const valueFormDataDni = formData.dni.toString();
-            await firestore.collection("users").where("document.number","==", valueFormDataDni)
-                .onSnapshot((snapshot)=> setUsers(querySnapshotToArray(snapshot)))
-            // notification({ type: "success", title: "Eres Socio" })
-            const [number]= users;
+            /*await firestore.collection("users").where("document.number","==", valueFormDataDni).onSnapshot((snapshot)=> setUsers(querySnapshotToArray(snapshot)))
+             const [number]= users;*/
+                const querySnapshot = await collectionRef.where("document.number", '==', valueFormDataDni).get();
+            const resulConsult = !querySnapshot.empty;
+                console.log(resulConsult)
+            if (resulConsult) {
+                notification({type: "success", title: "Eres Socio"});
+            }else {
+                notification({ type: "error", title: "No eres Socio" });
+            }
+
             // console.log(number.document.number)
-            if(valueFormDataDni === number.document.number) {
+            /*if(valueFormDataDni === number.document.number) {
                notification({type: "success", title: "Eres Socio"});
             }else{
                 notification({ type: "error", title: "No eres Socio" });
-            }
+            }*/
             resetContactForm();
             setUsers([]);
             handleVisibleFormContact();

@@ -78,6 +78,10 @@ import {SvgEmail, SvgLocation, SvgPhone} from "../../../images";
   h1{
   font-size:3.5rem;
   color:black;
+    @media(max-width: 480px){
+      font-size:2.5rem;
+    }
+    
   }
   .wrapper-contact{
   display:grid;
@@ -125,13 +129,24 @@ import {SvgEmail, SvgLocation, SvgPhone} from "../../../images";
       }
     }
     .wrapper-iframe{
+      height: auto;
+     
+
+    
       iframe{
         width: 600px;
         height: 450px;
+
+        @media(max-width: 480px){
+          width: auto;
+          height: 20rem;
+          display: flex;
+        }
+        
       }
-      
       @media(max-width: 480px){
-        width: 55%;
+        width: 3rem;
+        height: 19rem;
       }
     }
  }

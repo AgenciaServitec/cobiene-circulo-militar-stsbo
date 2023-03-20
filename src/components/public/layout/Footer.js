@@ -31,7 +31,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
             <h4 className="content-contact">
               Contáctanos: 01 6449277
             </h4>
-            <span className="content-somos">Circulo de Sub Oficiales</span>
+            <span className="content-somos">Circulo de SubOficiales</span>
           </div>
           <div className="items-socials">
             <ul>

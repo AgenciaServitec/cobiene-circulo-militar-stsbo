@@ -1,22 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import {videAboutUs,VideoChorrillos16} from "../../../images";
 // import { useDevice } from "../../../hooks";
 
-export const AboutUs = () => {
+export const AboutUs = ({title, styles, src}) => {
   // const { isMobile } = useDevice();
   return (
-    <Container id="about-us">
+    <Container styles={styles} id="about-us">
       <div className="wrapper-text">
         <div className="content-text">
-            <h2 className="title">SOBRE NOSOTROS</h2>
+            <h2 className="title">{title}</h2>
           <p className="content">
-            La Asociación Círculo Militar de Supervisores Técnicos y SubOficiales del Ejército (ACM-STS), brinda bienestar al personal de Supervisores, Técnicos y sub Oficiales del Ejército del Perú en situación de Actividad, Disponibilidad o Retiro y sus FAMILIARES DIRECTOS, en el área de alojamiento, alimentaciones, recreación, deporte y cultura. Los beneficios que brinda a los ASOCIADOS son únicos y exclusivos para el: TITULAR Y SUS FAMILIARES DIRECTOS.
+            La Asociación Círculo Militar de Supervisores Técnicos y SubOficiales del Ejército (ACM-STS), brinda bienestar al personal de Supervisores, Técnicos y subOficiales del Ejército del Perú en situación de Actividad, Disponibilidad o Retiro y sus FAMILIARES DIRECTOS, en el área de alojamiento, alimentaciones, recreación, deporte y cultura. Los beneficios que brinda a los ASOCIADOS son únicos y exclusivos para el: TITULAR Y SUS FAMILIARES DIRECTOS.
           </p>
         </div>
         <div style={{alignSelf: "center", display: "flex", justifyContent: "center" }}>
-          <VideoBg autoPlay controls loop src={VideoChorrillos16} type="Video/mp4" />
+          <VideoBg autoPlay controls loop src={src} type="Video/mp4" />
         </div>
       </div>
     </Container>
@@ -26,7 +25,7 @@ export const AboutUs = () => {
 const Container = styled.section`
   width: 100%;
   height: auto;
-  padding: 4rem 0 0 0;
+  padding: ${({styles})=>styles.padding};
   background: none repeat scroll 0 0 #ffffff;
   text-align: center;
   .title {
@@ -35,6 +34,9 @@ const Container = styled.section`
     width: 100%;
     color: #F6B63E;
     font-size: 2.5rem;
+    @media(max-width: 480px){
+      font-size: 2rem;
+    }
   }
 
   .wrapper-logos-mobile {
@@ -54,9 +56,10 @@ const Container = styled.section`
   .wrapper-text {
     background: none repeat scroll 0 0 #ffffff;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: ${({styles})=> styles.grid};
     ${mediaQuery.maxMobile} {
       grid-template-columns: 1fr;
+      padding-bottom: 2rem;
     }
 
     .content-text {

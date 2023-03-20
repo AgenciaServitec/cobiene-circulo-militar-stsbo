@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {CatalogoNovely, CobieneAppNovelty, CobieneWebNovelty, ImageGalleyHome1, TramitesNovely} from "../../../images";
+import {CatalogoNovely, CobieneAppNovelty, CobieneWebNovelty,PdfNovely, ImageGalleyHome1, TramitesNovely,FacebookSede} from "../../../images";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,6 +35,19 @@ const CobieneNovelty = [
         title: "Cobiene premios",image: ImageGalleyHome1 ,
         fecha:"5 de febrero del 2023",
         content: "Un merecido reconocimiento, al personal militar que laboró en el Circulo Militar de S.T.S del Ejército del Perú."
+    },
+    {
+        title: "Memoria Anual Consejo de Vigilancia",image: PdfNovely ,
+        fecha:"16 de marzo del 2023",
+        link: "https://drive.google.com/file/d/1itB1RhqRH1XedfpwGjxBKxeinPKHNa3z/view?usp=sharing",
+        content: "El Ejército del Perú y la Asociación Círculo \n" +
+            "Memoria Anual Consejo de Vigilancia."
+    },
+    {
+        title: "Facebook",image: FacebookSede ,
+        fecha:"16 de marzo del 2023",
+        link: "https://www.facebook.com/ACMSTS",
+        content: "Facebook de la sede para estar al tanto de los ultimos cambios y actulizaciones."
     }
 ]
 

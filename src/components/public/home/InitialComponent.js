@@ -4,6 +4,7 @@ import { Linea} from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
 export const InitialComponent = ({ bgImage,description }) => {
+
   return (
     <Container id="inicio" bgImage={bgImage}>
       <div className="content-items" line={Linea}>
@@ -27,6 +28,12 @@ const Container = styled.section`
   height: auto;
   background: url(${({ bgImage }) => bgImage}) no-repeat scroll 0 0 / 100% 100%
     rgba(0, 0, 0, 0);
+  ${mediaQuery.minTablet} {
+    padding: 18rem 0;
+  }
+  @media(max-width: 480px){
+    padding: 2rem 0;
+  }
   //background-position: center center;
   //background-size: cover;
   // ::before{
@@ -42,10 +49,6 @@ const Container = styled.section`
   //   position: absolute;
   //   z-index: 9;
   // }
-
-  ${mediaQuery.minTablet} {
-    padding: 18rem 0;
-  }
 
   .content-items {
     display: grid;

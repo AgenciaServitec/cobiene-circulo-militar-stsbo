@@ -38,6 +38,10 @@ export const Drawer = ({
       <MenuItem onClick={() => onSetVisibleDrawer(false)}>
         <a href="#services">Servicios</a>
       </MenuItem>
+      <MenuItem onClick={() => onSetVisibleDrawer(false)}>
+        <a onClick={()=>{handleVisibleFormContact()}}>SOCIO</a>
+      </MenuItem>
+
       {
         sectionVideo ? (<MenuItem onClick={onVideosAndCloseDrawer} >
           <a>Videos de la Sede</a>

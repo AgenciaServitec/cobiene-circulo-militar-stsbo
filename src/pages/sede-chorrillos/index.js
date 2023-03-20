@@ -1,5 +1,5 @@
 import React from 'react';
-import {Gallery, VideosSedes} from "../../components/public/home";
+import {Gallery, VideosSedes, AboutUs} from "../../components/public/home";
 import styled from "styled-components";
 import {
     Chorrillos1,
@@ -9,6 +9,13 @@ import {
     Chorrillos5,
     Chorrillos6,
     Chorrillos7,
+    Chorrillos8,
+    Chorrillos9,
+    Chorrillos10,
+    Chorrillos11,
+    Chorrillos12,
+    Chorrillos13,
+    Chorrillos14,
     BackgroundChorrillos,
     VideoChorrillos1,
     VideoChorrillos2,
@@ -33,14 +40,22 @@ export const PageSedeChorrillos = ({videosSedes}) => {
 
 
     const images = [
-        { src:Chorrillos1, title:"Restaurantes"},
+        { src:Chorrillos1, title:"Areas Deportivas"},
         {src:Chorrillos2, title: "Piscina"},
-        {src:Chorrillos3, title:"Áreas Deportivas"},
-        {src:Chorrillos4,title: "Áreas Infantiles"},
-        {src:Chorrillos5, title: "Zona Sociales"},
-        {src:Chorrillos6, title:"Deportivas"},
-        {src:Chorrillos7, title:"Deportivas"},
-        {src:Chorrillos3, title:"Áreas Deportivas"},
+        {src:Chorrillos3, title:"Áreas de la Sede"},
+        {src:Chorrillos4,title: "Áreas de la Sede"},
+        {src:Chorrillos5, title: "Areas de Reunion"},
+        {src:Chorrillos6, title:"Nuestra Sede"},
+        {src:Chorrillos7, title:"Areas de Eventos"},
+        {src:Chorrillos3, title:"Áreas de la Sede"},
+        {src:Chorrillos8, title:"Áreas Deportivas"},
+        {src:Chorrillos9, title:"Áreas de Eventos"},
+        {src:Chorrillos10, title:"Áreas Sociales"},
+        {src:Chorrillos11, title:"Áreas Sociales"},
+        {src:Chorrillos12, title:"Áreas de la Sede"},
+        {src:Chorrillos13, title:"Áreas Deportivas"},
+        {src:Chorrillos14, title:"Áreas Recreacionales"},
+
     ];
 
     const videos = [
@@ -67,9 +82,9 @@ export const PageSedeChorrillos = ({videosSedes}) => {
         <>
             <Container>
                 <InitialComponent bgImage={BackgroundChorrillos} description=""/>
-
+                <AboutUs src={VideoChorrillos16} title="Nosotros-Sede Chorrillos" styles={{padding: "2rem 0 2rem 0", grid:"60% 40%"}} />
                 {
-                    videosSedes ? (<VideosSedes videos={videos} title="NUESTROS RECUERDOS" />) : ( <Gallery images={images} title="ZONAS RECREATIVAS"/>)
+                    videosSedes ? (<VideosSedes videos={videos}  title="NUESTROS RECUERDOS" />) : ( <Gallery background="#efefef" images={images} title="ZONAS RECREATIVAS"/>)
                 }
                 <Contact ubicacion="chorrillos"/>
             </Container>
