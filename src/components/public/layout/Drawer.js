@@ -3,13 +3,13 @@ import DrawerAntd from "antd/lib/drawer";
 import styled from "styled-components";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import {useFormContact} from '../../../providers';
-import { useNavigate } from "react-router";
+import { useNavigate, Navigate } from "react-router";
 
 export const Drawer = ({
   visibleDrawer,
   onSetVisibleDrawer,
-                         onVideosSedes,
-                         sectionVideo,
+  onVideosSedes,
+  sectionVideo,
 }) => {
   const navigate = useNavigate();
   const { visibleFormContact, setVisibleFormContact } = useFormContact();
@@ -21,6 +21,7 @@ export const Drawer = ({
     onVideosSedes();
     onSetVisibleDrawer(false);
   }
+
   return (
     <ComponentDrawerAntd
       title={null}
@@ -31,28 +32,35 @@ export const Drawer = ({
       <MenuItem onClick={() => onSetVisibleDrawer(false)}>
         <span onClick={() => navigate("/")}>Inicio</span>
       </MenuItem>
-      <MenuItem onClick={() => onSetVisibleDrawer(false)}>
+      <MenuItem onClick={() => {
+        onSetVisibleDrawer(false);
+        navigate("/");
+      }}>
         <a href="#about-us">Nosotros</a>
-        {/*<a href="#about-us">Nosotros</a>*/}
       </MenuItem>
-      <MenuItem onClick={() => onSetVisibleDrawer(false)}>
-        <a href="#services">Servicios</a>
+      <MenuItem onClick={() => {
+        onSetVisibleDrawer(false);
+        navigate("/");
+      }}>
+        <a href="#sedes">Sedes</a>
+      </MenuItem>
+      <MenuItem onClick={() => {
+        onSetVisibleDrawer(false);
+        navigate("/galleria");
+      }}>
+        <span href="#services">Galeria</span>
       </MenuItem>
       <MenuItem onClick={() => onSetVisibleDrawer(false)}>
         <a onClick={()=>{handleVisibleFormContact()}}>SOCIO</a>
       </MenuItem>
 
-      {
-        sectionVideo ? (<MenuItem onClick={onVideosAndCloseDrawer} >
-          <a>Videos de la Sede</a>
-        </MenuItem>) : null
-      }
       <MenuItem
         onClick={() => {
-          handleVisibleFormContact();
+          onSetVisibleDrawer(false);
+          navigate("/galleria");
         }}
       >
-        <span>Contácto</span>
+        <a href="#contact">Contácto</a>
       </MenuItem>
     </ComponentDrawerAntd>
   );

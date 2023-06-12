@@ -1,95 +1,128 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import {LogoCobiene} from "../../../images";
-import { useDevice } from "../../../hooks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Drawer } from "./Drawer";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
-import { Footer } from "./Footer";
-import { ButtonsFloating, WrapperComponent } from "../ui";
-import { useFormContact } from "../../../providers";
-import { mediaQuery } from "../../../styles/constants/mediaQuery";
+import {useDevice} from "../../../hooks";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {Drawer} from "./Drawer";
+import {Link} from "react-router-dom";
+import {useNavigate, useLocation} from "react-router";
+import {Footer} from "./Footer";
+import {ButtonsFloating, WrapperComponent} from "../ui";
+import {useFormContact} from "../../../providers";
+import {mediaQuery} from "../../../styles/constants/mediaQuery";
 
-export const BaseLayout = ({ children,sectionVideo,onVideosSedes,setVideosSedes}) => {
-  const { isMobile } = useDevice();
-  const navigate = useNavigate();
+export const BaseLayout = ({children, sectionVideo, onVideosSedes, setVideosSedes}) => {
+    const {isMobile} = useDevice();
+    const navigate = useNavigate();
+    const {pathname} = useLocation();
 
 
-  const [visibleDrawer, setVisibleDrawer] = useState(false);
-    const { visibleFormContact, setVisibleFormContact } = useFormContact();
+    const [visibleDrawer, setVisibleDrawer] = useState(false);
+    const {visibleFormContact, setVisibleFormContact} = useFormContact();
     const handleVisibleFormContact = () =>
         setVisibleFormContact(!visibleFormContact);
-  // const [selectSede, setSelectSede] = useState(false);
+    // const [selectSede, setSelectSede] = useState(false);
 
-  // const onSede = () => {
-  //     setSelectSede(!selectSede)
-  //     console.log(selectSede)
-  // }
+    // const onSede = () => {
+    //     setSelectSede(!selectSede)
+    //     console.log(selectSede)
+    // }
 
     /*const addRuteandUpDateState = () =>{
         navigate("/sede-chorrillos");
         setVideosSedes(true);
     }*/
 
-  return (
-    <Container>
-      <Drawer
-        visibleDrawer={visibleDrawer}
-        onSetVisibleDrawer={setVisibleDrawer}
-        visibleFormContact={visibleFormContact}
-        handleVisibleFormContact={handleVisibleFormContact}
-        onVideosSedes={onVideosSedes}
-        sectionVideo={sectionVideo}
-      />
-      <header className="header">
-        <WrapperComponent>
-          <>
-            {isMobile ? (
-              <div className="menu-mobile">
-                <div className="item-logo" onClick={()=>{setVideosSedes(false)}}>
-                  <img
-                    src={LogoCobiene}
-                    alt="Logo Servitec Facil Factura"
-                    onClick={() => navigate("/")}
-                  />
-                </div>
-                <div
-                  className="icon-bar"
-                  onClick={() => setVisibleDrawer(true)}
-                >
-                  <FontAwesomeIcon icon={faBars} size="2x" />
-                </div>
-              </div>
-            ) : (
-              <div className="menu-list">
+    return (
+        <Container>
+            <Drawer
+                visibleDrawer={visibleDrawer}
+                onSetVisibleDrawer={setVisibleDrawer}
+                visibleFormContact={visibleFormContact}
+                handleVisibleFormContact={handleVisibleFormContact}
+                onVideosSedes={onVideosSedes}
+                sectionVideo={sectionVideo}
+            />
+            <header className="header">
+                <WrapperComponent>
+                    <>
+                        {isMobile ? (
+                            <div className="menu-mobile">
+                                <div className="item-logo" onClick={() => {
+                                    setVideosSedes(false)
+                                }}>
+                                    <img
+                                        src={LogoCobiene}
+                                        alt="Logo Servitec Facil Factura"
+                                        onClick={() => navigate("/")}
+                                    />
+                                </div>
+                                <div
+                                    className="icon-bar"
+                                    onClick={() => setVisibleDrawer(true)}
+                                >
+                                    <FontAwesomeIcon icon={faBars} size="2x"/>
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="menu-list">
 
-                      <Link to="/">
-                         <li>INICIO</li>
-                      </Link>
+                                <Link to="/">
+                                    <li>INICIO</li>
+                                </Link>
 
-                      <a href="#about-us"><li>NOSOTROS</li></a>
+                                {
+                                    pathname === "/" ? (
+                                        <a href="#about-us">
+                                            <li>NOSOTROS</li>
+                                        </a>
+                                    ) : (
+                                        <Link to="/">
+                                            <li>NOSOTROS</li>
+                                        </Link>
+                                    )
+                                }
 
-                      <a href="#sedes"><li>SEDES</li></a>
-                  <li>
-                      <Link to="/" onClick={()=>{setVideosSedes(false)}}>
-                          <img src={LogoCobiene} alt="Cobiene logo" />
-                      </Link>
-                  </li>
-                     <a onClick={() => navigate("/galleria")}><li>GALERÍA</li></a>
-                  <a onClick={()=>{handleVisibleFormContact()}}><li>SOCIO</li></a>
-                      <a href="#contact"><li>CONTÁCTO</li></a>
-              </div>
-            )}
-          </>
-        </WrapperComponent>
-      </header>
-      <main className="body">{children}</main>
-      <Footer />
-      <ButtonsFloating />
-    </Container>
-  );
+                                {
+                                    pathname === "/" ? (
+                                        <a href="#sedes">
+                                            <li>SEDES</li>
+                                        </a>
+                                    ) : (
+                                        <Link to="/">
+                                            <li>NOSOTROS</li>
+                                        </Link>
+                                    )
+                                }
+
+                                <li>
+                                    <Link to="/">
+                                        <img src={LogoCobiene} alt="Cobiene logo"/>
+                                    </Link>
+                                </li>
+
+                                <Link to="/galleria">
+                                    <li>GALERÍA</li>
+                                </Link>
+                                <a onClick={() => {
+                                    handleVisibleFormContact()
+                                }}>
+                                    <li>SOCIO</li>
+                                </a>
+                                <a href="#contact">
+                                    <li>CONTÁCTO</li>
+                                </a>
+                            </div>
+                        )}
+                    </>
+                </WrapperComponent>
+            </header>
+            <main className="body">{children}</main>
+            <Footer/>
+            <ButtonsFloating/>
+        </Container>
+    );
 };
 
 const Container = styled.div`
