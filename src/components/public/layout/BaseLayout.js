@@ -91,7 +91,7 @@ export const BaseLayout = ({children, sectionVideo, onVideosSedes, setVideosSede
                                         </a>
                                     ) : (
                                         <Link to="/">
-                                            <li>NOSOTROS</li>
+                                            <li>SEDES</li>
                                         </Link>
                                     )
                                 }
