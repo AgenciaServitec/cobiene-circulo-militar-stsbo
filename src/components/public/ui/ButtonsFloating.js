@@ -7,7 +7,7 @@ import { mediaQuery } from "../../../styles/constants/mediaQuery";
 export const ButtonsFloating = () => (
   <Container>
     <a
-      href={`https://api.whatsapp.com/send?phone=941801827`}
+      href={`https://api.whatsapp.com/send?phone=929054672`}
       target="_blank"
       rel="noreferrer"
     >
@@ -27,7 +27,7 @@ export const ButtonsFloating = () => (
 const Container = styled.div`
   position: fixed;
   left: 0;
-  bottom: 0.8%;
+  bottom: 10%;
   z-index: 998;
 `;
 
