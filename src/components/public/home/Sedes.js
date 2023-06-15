@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Services1, Services2, Services3 } from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-// import { Button } from "../ui";
 import { ItemServices, Novelty } from "./index";
 
 export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
@@ -10,7 +9,9 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
     <Container id="sedes">
       <div className="content-items">
         <div className="heading">
-          <h2 className="title">Círculo Militar De Supervisores, Técnicos y Sub Oficiales</h2>
+          <h2 className="title">
+            Círculo Militar De Supervisores, Técnicos y Sub Oficiales
+          </h2>
           <h5 className="subtitle">+ NUESTRAS SEDES</h5>
         </div>
         <div className="content-img">
@@ -36,21 +37,9 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
         <div>
           <h5 className="subtitle-new-notices">+ NOVEDADES</h5>
         </div>
-    <div className="container-novelty">
-      <Novelty/>
-    </div>
-        {/*<div className="button">*/}
-        {/*  <div>*/}
-        {/*    <Button*/}
-        {/*      text="¡Empezar Ahora!"*/}
-        {/*      type="primary"*/}
-        {/*      onClick={() => {*/}
-        {/*        onClickVisibleFormContact(true);*/}
-        {/*      }}*/}
-        {/*      // onClick de google anality*/}
-        {/*    />*/}
-        {/*  </div>*/}
-        {/*</div>*/}
+        <div className="container-novelty">
+          <Novelty />
+        </div>
       </div>
     </Container>
   );
@@ -59,7 +48,7 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
 const Container = styled.div`
   width: 100%;
   height: auto;
-  background: ${({theme}) => theme.colors.basic};
+  background: ${({ theme }) => theme.colors.basic};
   padding: 1rem;
 
   ${mediaQuery.minTablet} {
@@ -83,7 +72,7 @@ const Container = styled.div`
       width: 100%;
 
       .title {
-        color: #F6B63E;
+        color: #f6b63e;
         left: 0;
         font-size: 3rem;
         text-align: center;
@@ -106,16 +95,19 @@ const Container = styled.div`
       gap: 2rem;
       flex-wrap: wrap;
     }
-.subtitle-new-notices{
-  padding-top: 7rem;
-  padding-left: 3rem;
-  color: black;
-  font-size: 1.5rem;
-}
-    .container-novelty{
+
+    .subtitle-new-notices {
+      padding-top: 7rem;
+      padding-left: 3rem;
+      color: black;
+      font-size: 1.5rem;
+    }
+
+    .container-novelty {
       display: flex;
       justify-content: center;
     }
+
     .button {
       padding-top: 3rem;
       width: 100%;
