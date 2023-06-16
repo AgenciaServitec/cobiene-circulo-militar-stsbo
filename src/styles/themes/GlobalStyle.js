@@ -7,6 +7,10 @@ const global = css`
     box-sizing: border-box;
   }
 
+  #root {
+    background: #808080;
+  }
+
   html {
     scroll-behavior: smooth;
   }
