@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { LogoCobiene } from "../../../images";
 import { useDevice } from "../../../hooks";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { Drawer } from "./Drawer";
-import { useNavigate } from "react-router";
 import { Footer } from "./Footer";
-import { ButtonsFloating, WrapperComponent } from "../ui";
+import { ButtonsFloating } from "../ui";
 import { useFormContact } from "../../../providers";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import { HeaderDesktop } from "./HeaderDesktop";
+import { HeaderMobile } from "./HeaderMobile";
 
 export const BaseLayout = ({
   children,
@@ -19,7 +16,6 @@ export const BaseLayout = ({
   setVideosSedes,
 }) => {
   const { isMobile } = useDevice();
-  const navigate = useNavigate();
 
   const [visibleDrawer, setVisibleDrawer] = useState(false);
   const { visibleFormContact, setVisibleFormContact } = useFormContact();
@@ -37,36 +33,18 @@ export const BaseLayout = ({
         sectionVideo={sectionVideo}
       />
       <header className="header">
-        <WrapperComponent>
-          <>
-            {isMobile ? (
-              <div className="menu-mobile">
-                <div
-                  className="item-logo"
-                  onClick={() => {
-                    setVideosSedes(false);
-                  }}
-                >
-                  <img
-                    src={LogoCobiene}
-                    alt="Logo Servitec Facil Factura"
-                    onClick={() => navigate("/")}
-                  />
-                </div>
-                <div
-                  className="icon-bar"
-                  onClick={() => setVisibleDrawer(true)}
-                >
-                  <FontAwesomeIcon icon={faBars} size="2x" />
-                </div>
-              </div>
-            ) : (
-              <HeaderDesktop
-                handleVisibleFormContact={handleVisibleFormContact}
-              />
-            )}
-          </>
-        </WrapperComponent>
+        <>
+          {isMobile ? (
+            <HeaderMobile
+              setVisibleDrawer={setVisibleDrawer}
+              setVideosSedes={setVideosSedes}
+            />
+          ) : (
+            <HeaderDesktop
+              handleVisibleFormContact={handleVisibleFormContact}
+            />
+          )}
+        </>
       </header>
       <main className="body">{children}</main>
       <Footer />
@@ -135,47 +113,6 @@ const Container = styled.div`
   li,
   span {
     color: ${({ theme }) => theme.colors.font3};
-  }
-
-  .header {
-    background: ${({ theme }) => theme.colors.basic};
-    position: absolute;
-    width: 100%;
-    height: auto;
-    background: transparent;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding: 1rem;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 500;
-
-    .menu-mobile {
-      width: 100%;
-      color: ${({ theme }) => theme.colors.black};
-      display: grid;
-      grid-template-columns: 85% 1fr;
-
-      .item-logo {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-
-        img {
-          width: 12%;
-          padding-bottom: 1.5rem;
-          max-width: 220px;
-        }
-      }
-
-      .icon-bar {
-        width: auto;
-        height: 100%;
-        padding: 0.7rem 0.1rem 0.7rem 1.7rem;
-      }
-    }
   }
 
   .footer {

@@ -2,129 +2,93 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import { LogoCobiene } from "../../../images";
+import { NewLogoCobiene } from "../../../images";
 
 export const HeaderDesktop = ({ handleVisibleFormContact }) => {
   const { pathname } = useLocation();
 
   return (
     <Container>
-      <Link to="/">
-        <li>INICIO</li>
-      </Link>
+      <div className="nav-left">
+        <img src={NewLogoCobiene} alt="Logo Circulo militar" loading="lazy" />
+      </div>
 
-      {pathname === "/" ? (
-        <a href="#about-us">
-          <li>NOSOTROS</li>
-        </a>
-      ) : (
-        <Link to="/">
-          <li>NOSOTROS</li>
-        </Link>
-      )}
+      <div className="nav-right">
+        <ul>
+          <li>
+            <Link to="/">INICIO</Link>
+          </li>
 
-      {pathname === "/" ? (
-        <a href="#sedes">
-          <li>SEDES</li>
-        </a>
-      ) : (
-        <Link to="/">
-          <li>SEDES</li>
-        </Link>
-      )}
+          <li>
+            {pathname === "/" ? (
+              <a href="#sedes">SEDES</a>
+            ) : (
+              <Link to="/">SEDES</Link>
+            )}
+          </li>
+          <li>
+            {pathname === "/" ? (
+              <a href="#galleria">GALERIA</a>
+            ) : (
+              <Link to="/">GALERIA</Link>
+            )}
+          </li>
 
-      <li>
-        <Link to="/">
-          <img src={LogoCobiene} alt="Cobiene logo" />
-        </Link>
-      </li>
-
-      <Link to="/galleria">
-        <li>GALERÍA</li>
-      </Link>
-      <a
-        onClick={() => {
-          handleVisibleFormContact();
-        }}
-      >
-        <li>SOCIO</li>
-      </a>
-      <a href="#contact">
-        <li>CONTÁCTO</li>
-      </a>
+          <li>
+            <a
+              onClick={() => {
+                handleVisibleFormContact();
+              }}
+            >
+              SOCIO
+            </a>
+          </li>
+          <li>
+            <a href="#contact">CONTÁCTO</a>
+          </li>
+        </ul>
+      </div>
     </Container>
   );
 };
 
 const Container = styled.div`
-  width: calc(100%, 10px);
-  list-style: none;
+  background: #fff;
+  width: 100%;
+  padding: 1em 0.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  li {
-    color: rgb(253, 253, 253);
-    font-weight: bold;
-    font-size: 1.1rem;
-    font-family: inherit !important;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
-    margin-left: 1.5rem;
-    cursor: pointer;
+  .nav-left {
     img {
-      width: 6rem;
+      max-width: 20em;
+      height: auto;
     }
   }
 
-  li:hover {
-    color: rgb(121, 131, 140);
-    border-bottom: 2px solid rgb(246, 70, 93);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .logo-img {
-    width: 20%;
+  ul {
     list-style: none;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
 
-    img {
-      width: 3.5rem;
+    li {
+      color: #000;
+      font-weight: bold;
+      font-size: 1em;
+      border-bottom: 2px solid transparent;
+      transition: 0.1s;
+      margin-left: 1.5rem;
+      cursor: pointer;
+      a {
+        color: inherit;
+      }
     }
-  }
-
-  .list {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    ul {
-      list-style: none;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0;
-      margin: 0;
-
-      li {
-        color: rgb(11, 12, 16);
-        font-weight: bold;
-        font-size: 1.1rem;
-        font-family: inherit !important;
-        border-bottom: 2px solid transparent;
-        transition: all 0.3s ease-in-out;
-        margin-left: 1.5rem;
-        cursor: pointer;
-      }
-
-      li:hover {
-        color: rgb(121, 131, 140);
-        border-bottom: 2px solid rgb(246, 70, 93);
-        transition: all 0.3s ease-in-out;
-      }
+    li:hover {
+      color: #86895d;
+      border-bottom: 2px solid rgb(246, 70, 93);
+      transition: 0.1s;
     }
   }
 `;
