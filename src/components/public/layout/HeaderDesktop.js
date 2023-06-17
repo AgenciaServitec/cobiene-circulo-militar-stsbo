@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import { NewLogoCobiene } from "../../../images";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
 export const HeaderDesktop = ({ handleVisibleFormContact }) => {
   const { pathname } = useLocation();
@@ -62,8 +63,12 @@ const Container = styled.div`
 
   .nav-left {
     img {
-      max-width: 20em;
+      width: 100%;
+      max-width: 15em;
       height: auto;
+      ${mediaQuery.minTablet} {
+        max-width: 18em;
+      }
     }
   }
 

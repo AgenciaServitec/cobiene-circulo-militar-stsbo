@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useDevice } from "../../../hooks";
-import { Drawer } from "./Drawer";
-import { Footer } from "./Footer";
+import { BoxAddress, Drawer, Footer, HeaderDesktop, HeaderMobile } from "./";
 import { ButtonsFloating } from "../ui";
 import { useFormContact } from "../../../providers";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import { HeaderDesktop } from "./HeaderDesktop";
-import { HeaderMobile } from "./HeaderMobile";
 
 export const BaseLayout = ({
   children,
@@ -32,6 +29,7 @@ export const BaseLayout = ({
         onVideosSedes={onVideosSedes}
         sectionVideo={sectionVideo}
       />
+      <BoxAddress />
       <header className="header">
         <>
           {isMobile ? (
