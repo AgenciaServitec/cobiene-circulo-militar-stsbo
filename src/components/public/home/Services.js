@@ -1,48 +1,51 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faHotel,
-    faUtensils,
-    faDumbbell,
-    faBaseball,
-    faWaterLadder,
+  faHotel,
+  faUtensils,
+  faDumbbell,
+  faBaseball,
+  faWaterLadder,
 } from "@fortawesome/free-solid-svg-icons";
-import {mediaQuery} from "../../../styles/constants/mediaQuery";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
 export const Services = () => {
+  const contact = {
+    socialsRed: [
+      { icon: faHotel, name: "Hoteles" },
+      { icon: faUtensils, name: "Restaurantes" },
+      { icon: faBaseball, name: "Deportes" },
+      { icon: faDumbbell, name: "Gimnasio" },
+      { icon: faWaterLadder, name: "Recreación" },
+    ],
+  };
 
-    const contact = {
-        socialsRed:[
-            {icon:faHotel, name:"Hoteles"},
-            {icon: faUtensils, name:"Restaurantes"},
-            {icon: faBaseball, name: "Deportes"},
-            {icon:faDumbbell, name:"Gimnasio"},
-            {icon:faWaterLadder, name:"Recreación"},
-        ],
-    }
+  const { socialsRed } = contact;
 
-    const {socialsRed} = contact;
-
-    return (
-        <Container id="contact">
-            <hr />
-            <div className="content-left">
-                <h2>NUESTROS SERVICIOS</h2>
-                <div className="items-socials">
-                    <ul>
-                        {socialsRed.map((socialRed, index) => (
-                            <li key={index}>
-                                   <div> <a rel="noreferrer"><FontAwesomeIcon icon={socialRed.icon}/></a></div>
-                                <div>
-                                    <p>{socialRed.name}</p>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+  return (
+    <Container id="contact">
+      <hr />
+      <div className="content-left">
+        <h2>NUESTROS SERVICIOS</h2>
+        <div className="items-socials">
+          <ul>
+            {socialsRed.map((socialRed, index) => (
+              <li key={index}>
+                <div>
+                  <a rel="noreferrer">
+                    <FontAwesomeIcon icon={socialRed.icon} />
+                  </a>
                 </div>
-            </div>
-        </Container>
-    );
+                <div>
+                  <p>{socialRed.name}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -65,7 +68,7 @@ const Container = styled.div`
     text-align: center;
     font-size: 1rem;
     h2 {
-      color: #F6B63E;
+      color: #f6b63e;
       font-weight: bolder;
       font-size: 2.5rem;
       margin-top: 4rem;
@@ -83,7 +86,7 @@ const Container = styled.div`
         li {
           text-align: center;
           margin: 0 1rem 1.7rem 2rem;
-          div{
+          div {
             a {
               color: white;
               font-size: 5.4rem;
@@ -96,7 +99,7 @@ const Container = styled.div`
               background: ${({ theme }) => theme.colors.light};
             }
           }
-          div{
+          div {
             p {
               margin-top: 1rem;
               margin-bottom: 1em;
