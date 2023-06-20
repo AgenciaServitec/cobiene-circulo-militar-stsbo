@@ -35,11 +35,6 @@ export const CardSede = ({ banner, title, titleLarge, url, externalUrl }) => {
                   <FontAwesomeIcon icon={faLink} />
                 </a>
               )}
-              {url && (
-                <span onClick={() => onNavigateTo()}>
-                  <h5>Ver más</h5> <FontAwesomeIcon icon={faPlay} />
-                </span>
-              )}
             </div>
           </div>
         </div>
