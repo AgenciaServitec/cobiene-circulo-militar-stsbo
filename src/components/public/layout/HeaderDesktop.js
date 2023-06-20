@@ -11,7 +11,14 @@ export const HeaderDesktop = ({ handleVisibleFormContact }) => {
   return (
     <Container>
       <div className="nav-left">
-        <img src={NewLogoCobiene} alt="Logo Circulo militar" loading="lazy" />
+        <Link to="/">
+          <img
+            src={NewLogoCobiene}
+            alt="Logo Circulo militar"
+            loading="lazy"
+            title="Inicio"
+          />
+        </Link>
       </div>
 
       <div className="nav-right">
