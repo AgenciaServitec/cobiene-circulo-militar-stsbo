@@ -35,13 +35,8 @@ export const HeaderDesktop = ({ handleVisibleFormContact }) => {
             )}
           </li>
           <li>
-            {pathname === "/" ? (
-              <a href="#galleria">GALERIA</a>
-            ) : (
-              <Link to="/">GALERIA</Link>
-            )}
+            <Link to="/">GALERIA</Link>
           </li>
-
           <li>
             <a
               onClick={() => {
