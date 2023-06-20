@@ -1,6 +1,11 @@
 import React from "react";
 import AntCarousel from "antd/lib/carousel";
-import {SliderHom5, SliderHome2, SliderHome3, SliderHome4} from "../../../images";
+import {
+  SliderHom5,
+  SliderHome2,
+  SliderHome3,
+  SliderHome4,
+} from "../../../images";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,30 +15,30 @@ import {
 import { useDevice } from "../../../hooks";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-const carouselItems = [SliderHom5,SliderHome2,SliderHome3,SliderHome4];
+const carouselItems = [SliderHom5, SliderHome2, SliderHome3, SliderHome4];
 
 export const Carousel = () => {
   const { isMobile } = useDevice();
 
   return (
-      <Container>
-        <AntCarousel
-            autoplay
-            autoplaySpeed={2 * 1000}
-            arrows={!isMobile}
-            prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
-            nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
-        >
-          {carouselItems.map((banner) => (
-              <Slide
-                  src={banner}
-                  width={isMobile ? "768" : "992"}
-                  height="970"
-                  alt="Banner cobiene"
-              />
-          ))}
-        </AntCarousel>
-      </Container>
+    <Container>
+      <AntCarousel
+        autoplay
+        autoplaySpeed={2 * 1000}
+        arrows={!isMobile}
+        prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
+        nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
+      >
+        {carouselItems.map((banner) => (
+          <Slide
+            src={banner}
+            width={isMobile ? "768" : "992"}
+            height="970"
+            alt="Banner cobiene"
+          />
+        ))}
+      </AntCarousel>
+    </Container>
   );
 };
 
@@ -73,7 +78,7 @@ const Container = styled.div`
       display: flex !important;
     }
     li.slick-active {
-      width: 48px; 
+      width: 48px;
     }
     li {
       width: 48px;
