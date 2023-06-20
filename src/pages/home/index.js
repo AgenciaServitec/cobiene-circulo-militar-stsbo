@@ -9,12 +9,10 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
       <Container>
         <Carousel />
 
+        <Sedes />
+
         <AboutUs title="SOBRE NOSOTROS" src={VideoChorrillos16} />
 
-        <Sedes
-          onClickVisibleFormContact={onClickVisibleFormContact}
-          visibleFormContact={visibleFormContact}
-        />
         <GalleryHome />
         <Services />
       </Container>
