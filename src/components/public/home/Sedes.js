@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Services1, Services2, Services3 } from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import { ItemServices, Novelty } from "./index";
+import { CardSede, Novelty } from "./index";
 
-export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
+export const Sedes = () => {
   return (
     <Container id="sedes">
       <div className="content-items">
@@ -15,23 +15,23 @@ export const Sedes = ({ onClickVisibleFormContact, visibleFormContact }) => {
           <h5 className="subtitle">+ NUESTRAS SEDES</h5>
         </div>
         <div className="content-img">
-          <ItemServices
-            img={Services1}
-            title="CHORRILLOS"
-            content=""
-            onClick="sede-chorrillos"
+          <CardSede
+            title="Chorrillos"
+            banner={Services1}
+            titleLarge="Sede de Chorrillos"
+            url="sede-chorrillos"
           />
-          <ItemServices
-            img={Services2}
-            title="TARAPACA"
-            content=""
-            onClick="sede-tarapaca"
+          <CardSede
+            title="Tarapaca"
+            banner={Services2}
+            titleLarge="Sede de Tarapaca"
+            url="sede-tarapaca"
           />
-          <ItemServices
-            img={Services3}
-            title="RIMAC"
-            content=""
-            onClick="sede-Rimac"
+          <CardSede
+            title="Rimac"
+            banner={Services3}
+            titleLarge="Sede de Rimac"
+            url="sede-Rimac"
           />
         </div>
         <div>
@@ -52,7 +52,7 @@ const Container = styled.div`
   padding: 1rem;
 
   ${mediaQuery.minTablet} {
-    padding: 1rem 5rem;
+    padding: 1rem 3rem;
   }
 
   z-index: 9;
