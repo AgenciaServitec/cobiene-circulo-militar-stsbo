@@ -1,35 +1,40 @@
-import React,{ useState} from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
 
-export const Gallery = ({images=[], title,background}) => {
+export const Gallery = ({ images = [], title, background }) => {
+  const [model, setModel] = useState(false);
+  const [imgSrc, setImgSrc] = useState("");
 
+  const getImg = (src) => {
+    setImgSrc(src);
+    setModel(true);
+  };
 
-    const [model, setModel]=useState(false)
-    const [imgSrc, setImgSrc] = useState("")
-
-    const getImg = (src) =>{
-        setImgSrc(src);
-        setModel(true);
-    }
-
-    return (
-        <Container color={background}>
-            <div className={model ? "model open" : "model" } onClick={()=>setModel(false)}>
-                <img src={imgSrc} alt="imgmodelopen"/>
+  return (
+    <Container color={background}>
+      <div
+        className={model ? "model open" : "model"}
+        onClick={() => setModel(false)}
+      >
+        <img src={imgSrc} alt="imgmodelopen" />
+      </div>
+      <h1 className="title">{title}</h1>
+      <div className="wrapper-gallery">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="wrapper-image-gallery"
+            onClick={() => getImg(image.src)}
+          >
+            <img loading="lazy" src={image.src} alt={image.title} />
+            <div className="content-text">
+              <h3>{image.title}</h3>
             </div>
-            <h1 className="title">{title}</h1>
-            <div className="wrapper-gallery">
-                {images.map((image, index)=>(
-                    <div key={index} className="wrapper-image-gallery" onClick={()=>getImg(image.src)}>
-                        <img loading="lazy" src={image.src} alt={image.title}/>
-                        <div className="content-text">
-                            <h3>{image.title}</h3>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </Container>
-    );
+          </div>
+        ))}
+      </div>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -44,7 +49,7 @@ const Container = styled.div`
     letter-spacing: 0.3px;
     font-family: "Intro Demo", sans-serif;
     width: 100%;
-    color: #F6B63E;
+    color: #f6b63e;
     font-size: 4.5rem;
     @media (max-width: 480px) {
       font-size: 2.5rem;
@@ -58,34 +63,24 @@ const Container = styled.div`
     -moz-column-count: 3;
     column-count: 3;
     padding: 0.5rem 1.2rem;
-    //display: flex;
-    //display: grid;
-    //grid-template-columns: 3fr;
-    //grid-template-rows: 2fr;
-    //padding: 0.5rem 1.2rem;
-    //.content-text{
-    //  position: absolute;
-    //}
+
     .wrapper-image-gallery {
-      //.content-text{
-      //  position: absolute;
-      //}
       transition: all 350ms ease;
       cursor: pointer;
       margin-bottom: 12px;
       position: relative;
 
       :hover {
-        filter: opacity(.4);
+        filter: opacity(0.4);
       }
 
       .content-text {
         position: absolute;
-        top: 70%;
+        top: 60%;
         left: 5%;
 
         h3 {
-          font-size: 2rem;
+          font-size: 1.5em;
           //color: #000000;
           @media (max-width: 480px) {
             font-size: 1.3rem;
@@ -104,7 +99,6 @@ const Container = styled.div`
     @media (max-width: 480px) {
       column-count: 1;
     }
-
   }
 
   .model {
@@ -117,7 +111,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out;
+    transition: opacity 0.4s ease, visibility 0.4s ease,
+      transform 0.5s ease-in-out;
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
@@ -144,5 +139,4 @@ const Container = styled.div`
       margin: 0 auto;
     }
   }
-
 `;
