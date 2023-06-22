@@ -1,8 +1,14 @@
 import React from "react";
-import { Gallery, VideosSedes, AboutUs } from "../../components/public/home";
+import { AboutUs, Gallery, VideosSedes } from "../../components/public/home";
 import styled from "styled-components";
 import {
+  BackgroundChorrillos2,
   Chorrillos1,
+  Chorrillos10,
+  Chorrillos11,
+  Chorrillos12,
+  Chorrillos13,
+  Chorrillos14,
   Chorrillos2,
   Chorrillos3,
   Chorrillos4,
@@ -11,13 +17,14 @@ import {
   Chorrillos7,
   Chorrillos8,
   Chorrillos9,
-  Chorrillos10,
-  Chorrillos11,
-  Chorrillos12,
-  Chorrillos13,
-  Chorrillos14,
-  BackgroundChorrillos,
   VideoChorrillos1,
+  VideoChorrillos10,
+  VideoChorrillos11,
+  VideoChorrillos12,
+  VideoChorrillos13,
+  VideoChorrillos14,
+  VideoChorrillos15,
+  VideoChorrillos16,
   VideoChorrillos2,
   VideoChorrillos3,
   VideoChorrillos4,
@@ -26,14 +33,6 @@ import {
   VideoChorrillos7,
   VideoChorrillos8,
   VideoChorrillos9,
-  VideoChorrillos10,
-  VideoChorrillos11,
-  VideoChorrillos12,
-  VideoChorrillos13,
-  VideoChorrillos14,
-  VideoChorrillos15,
-  VideoChorrillos16,
-  BackgroundChorrillos2,
 } from "../../images";
 import { Contact, InitialComponent } from "../../components/public";
 

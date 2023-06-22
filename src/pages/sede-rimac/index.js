@@ -1,14 +1,7 @@
 import React from "react";
 import {
+  BackgroundRimac2,
   Rimac1,
-  Rimac2,
-  Rimac3,
-  Rimac4,
-  Rimac5,
-  Rimac6,
-  Rimac7,
-  Rimac8,
-  Rimac9,
   Rimac10,
   Rimac11,
   Rimac12,
@@ -19,13 +12,20 @@ import {
   Rimac17,
   Rimac18,
   Rimac19,
+  Rimac2,
   Rimac20,
   Rimac21,
   Rimac22,
-  BackgroundRimac,
-  VideoChorrillos18, BackgroundRimac2,
+  Rimac3,
+  Rimac4,
+  Rimac5,
+  Rimac6,
+  Rimac7,
+  Rimac8,
+  Rimac9,
+  VideoChorrillos18,
 } from "../../images";
-import { Contact, InitialComponent, AboutUs } from "../../components/public";
+import { AboutUs, Contact, InitialComponent } from "../../components/public";
 import { Gallery } from "../../components/public/home/Gallery";
 import styled from "styled-components";
 
