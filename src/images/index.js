@@ -60,7 +60,9 @@ export { default as Rimac22 } from "./others/6fed2056-5d80-4b01-9176-b74108de3c8
 
 //------ Backgrounds-------
 export { default as BackgroundChorrillos } from "./others/sedechorrillosfondo.webp";
+export { default as BackgroundChorrillos2 } from "./others/chorrillos-fondo2.webp";
 export { default as BackgroundRimac } from "./others/sederimacfondo.webp";
+export { default as BackgroundRimac2 } from "./others/rimac-fondo 2.webp";
 export { default as BackgroundTarapaca } from "./others/sedetarapacafondo.webp";
 
 //----- Backgrounds of slider ------
