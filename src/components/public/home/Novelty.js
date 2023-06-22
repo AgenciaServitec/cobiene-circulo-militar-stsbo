@@ -41,6 +41,7 @@ export const Novelty = () => {
       },
     ],
   };
+
   return (
     <Container>
       <Slider {...settings}>
@@ -57,7 +58,7 @@ export const Novelty = () => {
                 loading="lazy"
               />
               <div className="wrapper-info">
-                <h3>{itemNovelty.fecha}</h3>
+                <h3>{itemNovelty.date}</h3>
                 <h2>{itemNovelty.content}</h2>
               </div>
             </a>
