@@ -39,7 +39,10 @@ const Container = styled.section`
   .content-text {
     text-align: left;
     width: 100%;
-    padding: 1.5em;
+    padding: 0.5em;
+    ${mediaQuery.minTablet} {
+      padding: 1.5em;
+    }
 
     .title {
       letter-spacing: 0.3px;
