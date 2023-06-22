@@ -33,6 +33,7 @@ import {
   VideoChorrillos14,
   VideoChorrillos15,
   VideoChorrillos16,
+  BackgroundChorrillos2,
 } from "../../images";
 import { Contact, InitialComponent } from "../../components/public";
 
@@ -77,7 +78,7 @@ export const PageSedeChorrillos = ({ videosSedes }) => {
   return (
     <>
       <Container>
-        <InitialComponent bgImage={BackgroundChorrillos} description="" />
+        <InitialComponent bgImage={BackgroundChorrillos2} description="" />
         <AboutUs
           src={VideoChorrillos16}
           title="Nosotros-Sede Chorrillos"

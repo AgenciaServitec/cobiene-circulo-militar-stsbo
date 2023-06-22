@@ -23,7 +23,7 @@ const Container = styled.section`
   background: url(${({ bgImage }) => bgImage}) no-repeat scroll 0 0 / 100% 100%
     rgba(0, 0, 0, 0);
   ${mediaQuery.minDesktop} {
-    padding: 9em 0;
+    padding: 10em 0;
   }
 
   .content-items {

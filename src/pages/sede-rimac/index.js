@@ -23,7 +23,7 @@ import {
   Rimac21,
   Rimac22,
   BackgroundRimac,
-  VideoChorrillos18,
+  VideoChorrillos18, BackgroundRimac2,
 } from "../../images";
 import { Contact, InitialComponent, AboutUs } from "../../components/public";
 import { Gallery } from "../../components/public/home/Gallery";
@@ -66,7 +66,7 @@ export const PageSedeRimac = () => {
   return (
     <div>
       <Container>
-        <InitialComponent bgImage={BackgroundRimac} description="" />
+        <InitialComponent bgImage={BackgroundRimac2} description="" />
         <AboutUs
           src={VideoChorrillos18}
           title="Nosotros-Sede Rimac"
