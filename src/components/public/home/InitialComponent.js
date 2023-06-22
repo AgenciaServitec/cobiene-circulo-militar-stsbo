@@ -1,23 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { Linea} from "../../../images";
+import { Linea } from "../../../images";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
-export const InitialComponent = ({ bgImage,description }) => {
-
+export const InitialComponent = ({ bgImage, description }) => {
   return (
-    <Container id="inicio" bgImage={bgImage}>
+    <Container bgImage={bgImage}>
       <div className="content-items" line={Linea}>
         <div className="content">
           <div className="heading">
-            <h2 className="description">
-              {description}
-            </h2>
+            <h2 className="description">{description}</h2>
           </div>
         </div>
-        {/*<div>*/}
-        {/*  <img src={Linea} alt="efectodelinea"/>*/}
-        {/*</div>*/}
       </div>
     </Container>
   );
@@ -28,33 +22,14 @@ const Container = styled.section`
   height: auto;
   background: url(${({ bgImage }) => bgImage}) no-repeat scroll 0 0 / 100% 100%
     rgba(0, 0, 0, 0);
-  ${mediaQuery.minTablet} {
-    padding: 18rem 0;
+  ${mediaQuery.minDesktop} {
+    padding: 9em 0;
   }
-  @media(max-width: 480px){
-    padding: 2rem 0;
-  }
-  //background-position: center center;
-  //background-size: cover;
-  // ::before{
-  //   background: url(${({line})=> line}) no repeat scroll 0 0 / 100% 100%;
-  //   content: '';
-  //   display: block;
-  //   background-position: center bottom;
-  //   background-repeat: repeat-x;
-  //   height: 60px;
-  //   width: 100%;
-  //   bottom: 0;
-  //   left: 0;
-  //   position: absolute;
-  //   z-index: 9;
-  // }
 
   .content-items {
     display: grid;
     grid-template-columns: 1fr;
     padding: 1rem;
-    //justify-items: center;
 
     ${mediaQuery.minTablet} {
       grid-template-columns: 1fr;
@@ -62,11 +37,9 @@ const Container = styled.section`
     }
 
     .content {
-      // align-self: center;
       padding-left: 0;
       ${mediaQuery.minTablet} {
         grid-template-columns: 1fr;
-        //padding-left: 2rem;
       }
 
       .heading {
