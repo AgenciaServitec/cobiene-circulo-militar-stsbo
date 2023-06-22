@@ -13,7 +13,7 @@ import {
 } from "../images";
 
 export const galleryData = [
-  { src: ImageGalleyHome1, title: "Reconocimiento al Personal Militar" },
+  //{ src: ImageGalleyHome1, title: "Reconocimiento al Personal Militar" },
   // {src:ImageGalleyHome2, title: "Sobre nosotros"},
   { src: ImageGalleyHome3, title: "Areas de Ceremonias" },
   { src: ImageGalleyHome4, title: "Piscinas de las Sedes" },
