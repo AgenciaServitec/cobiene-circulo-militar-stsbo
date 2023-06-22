@@ -28,6 +28,10 @@ export const HeaderDesktop = ({ handleVisibleFormContact }) => {
           </li>
 
           <li>
+            <a href="#about-us">NOSOTROS</a>
+          </li>
+
+          <li>
             {pathname === "/" ? (
               <a href="#sedes">SEDES</a>
             ) : (
