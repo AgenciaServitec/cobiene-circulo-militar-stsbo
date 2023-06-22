@@ -49,13 +49,12 @@ const Container = styled.div`
   width: 100%;
   height: auto;
   background: ${({ theme }) => theme.colors.basic};
-  padding: 1rem;
+  padding: 1em;
+  z-index: 9;
 
   ${mediaQuery.minTablet} {
     padding: 1rem 3rem;
   }
-
-  z-index: 9;
 
   .content-items {
     padding: 1em 0;
@@ -67,25 +66,22 @@ const Container = styled.div`
     .heading {
       margin-bottom: 60px;
       padding-top: 40px;
-      position: relative;
-      text-align: center;
-      width: 100%;
 
       .title {
         color: #f6b63e;
-        left: 0;
-        font-size: 3rem;
+        font-size: 1.5em;
         text-align: center;
-        width: 100%;
+        ${mediaQuery.minDesktop} {
+          font-size: 2.5em;
+        }
       }
 
       .subtitle {
         color: #030303;
         font-family: "Intro Demo", sans-serif;
-        font-size: 26px;
+        font-size: 1.5em;
         letter-spacing: 0.3px;
         text-align: center;
-        width: 100%;
       }
     }
 
