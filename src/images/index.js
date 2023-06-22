@@ -79,6 +79,8 @@ export { default as TramitesNovely } from "./others/noveltycobienetramites.webp"
 export { default as CatalogoNovely } from "./others/noveltycatalogo.webp";
 export { default as PdfNovely } from "./others/captura-pdf.webp";
 export { default as FacebookSede } from "./others/captura-facebook-sede.webp";
+export { default as ImgDayMother } from "./others/dia-madre.webp";
+export { default as ImgDayFather } from "./others/dia-padre.webp";
 //-----Gallery of home ------
 
 export { default as ImageGalleyHome1 } from "./others/imghomesedes.webp";

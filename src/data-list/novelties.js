@@ -1,19 +1,34 @@
-import moment from "moment";
 import {
   CatalogoNovely,
   CobieneAppNovelty,
   CobieneWebNovelty,
   FacebookSede,
   ImageGalleyHome1,
+  ImgDayFather,
+  ImgDayMother,
   PdfNovely,
   TramitesNovely,
 } from "../images";
 
 export const novelties = [
   {
+    title: "Dia del Padre",
+    date: "18 de Junio del 2023",
+    content: "Dia del Padre",
+    link: "https://drive.google.com/file/d/1FfiqMm5WH1tDdaj6Kj8DEnbK7Fs9Br6Z/view?usp=sharing",
+    image: ImgDayFather,
+  },
+  {
+    title: "Dia de la Madre",
+    date: "14 de Mayo del 2023",
+    content: "Dia de la Madre",
+    link: "https://drive.google.com/file/d/1hdUANAfEK3LTyrcPPwQ7cvKN7SM4dWWz/view?usp=sharing",
+    image: ImgDayMother,
+  },
+  {
     title: "CobieneApp",
     image: CobieneAppNovelty,
-    date: moment("2022-12-20").format("DD / MMMM / YYYY"),
+    date: "12 de Diciembre del 2022",
     link: "https://play.google.com/store/apps/details?id=com.servitec.cobiene",
     content: "Se lanzo la aplicacion del cobiene.",
   },
