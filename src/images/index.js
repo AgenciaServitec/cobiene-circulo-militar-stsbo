@@ -5,7 +5,7 @@ export { default as Linea } from "./others/lineu.webp";
 export { default as NewLogoCobiene } from "./default-images/newlogosts.webp";
 
 // ------Img Servitec Servicios ALL IN ONE-------
-export { default as Services1 } from "./others/sedechorrillos.webp";
+export { default as Services1 } from "./others/fondoChorrillos.webp";
 export { default as Services2 } from "./others/sedetarapacareview.webp";
 export { default as Services3 } from "./others/sederimacnew.webp";
 
