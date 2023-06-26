@@ -13,7 +13,7 @@ export const BoxAddress = () => {
       </div>
 
       <div className="item-icon">
-        <a href="#">
+        <a href="https://www.facebook.com/C%C3%ADrculo-Militar-STS-307692109354465" target="_blank">
           <FontAwesomeIcon icon={faFacebook} />
         </a>
         <a href="#">
@@ -42,6 +42,7 @@ const Container = styled.div`
 
   .item-icon {
     svg {
+      cursor:pointer;
       color: #fff;
       font-size: 1.5em;
       margin-left: 0.5em;
