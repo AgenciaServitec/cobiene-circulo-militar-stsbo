@@ -12,7 +12,7 @@ import {
 
 export const novelties = [
   {
-    title: "Dia del Padre",
+    title: "Supervisores Técnicos y SubOficiales del Ejercito disfrutaron evento por el día del padre.",
     date: "18 de Junio del 2023",
     content: "Dia del Padre",
     link: "https://drive.google.com/file/d/1FfiqMm5WH1tDdaj6Kj8DEnbK7Fs9Br6Z/view?usp=sharing",
