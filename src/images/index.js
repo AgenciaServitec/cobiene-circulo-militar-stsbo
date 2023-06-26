@@ -97,6 +97,7 @@ export { default as ImageGalleyHome11 } from "./others/imghomesedes11.webp";
 export { default as ImageGalleyHome12 } from "./others/imghomesedes12.webp";
 export { default as ImageGalleyHome13 } from "./others/imghomesedes13.webp";
 export { default as ImageGalleyHome14 } from "./others/imghomesedes14.webp";
+export { default as ImageGalleyHome15 } from "./others/imghomesedes15.webp";
 
 //-----Gallery of Tarapaca ------
 
