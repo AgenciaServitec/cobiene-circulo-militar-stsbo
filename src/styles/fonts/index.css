@@ -5,7 +5,13 @@
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Belanosima-Regular";
+  src: url(Audiowide-Regular.ttf) format("ttf"),
+  url(Audiowide-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: "MontserratRegular";
   src: url(Montserrat-Regular.ttf) format("ttf"),

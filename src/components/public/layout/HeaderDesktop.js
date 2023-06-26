@@ -86,9 +86,9 @@ const Container = styled.div`
 
     li {
       color: #000;
-      font-weight: bold;
+      font-weight: 800;
       font-size: 1em;
-      font-family: "Intro Demo", sans-serif;
+      font-family:  sans-serif;
       border-bottom: 2px solid transparent;
       transition: 0.1s;
       margin-left: 1.5rem;
