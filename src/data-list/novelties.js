@@ -12,16 +12,16 @@ import {
 
 export const novelties = [
   {
-    title: "Supervisores Técnicos y SubOficiales del Ejercito disfrutaron evento por el día del padre.",
+    title: "Dia del padre",
     date: "18 de Junio del 2023",
-    content: "Dia del Padre",
+    content: "Supervisores Técnicos y SubOficiales del Ejercito disfrutaron evento por el día del padre.",
     link: "https://drive.google.com/file/d/1FfiqMm5WH1tDdaj6Kj8DEnbK7Fs9Br6Z/view?usp=sharing",
     image: ImgDayFather,
   },
   {
     title: "Dia de la Madre",
     date: "14 de Mayo del 2023",
-    content: "Dia de la Madre",
+    content: "Se realizó evento por el día de la Madre",
     link: "https://drive.google.com/file/d/1hdUANAfEK3LTyrcPPwQ7cvKN7SM4dWWz/view?usp=sharing",
     image: ImgDayMother,
   },
