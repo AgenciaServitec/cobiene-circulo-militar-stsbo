@@ -135,3 +135,5 @@ export { default as VideoChorrillos15 } from "./multimedia/videos-sedes/WhatsApp
 export { default as VideoChorrillos16 } from "./multimedia/videos-sedes/WhatsApp Video 2023-03-08 at 5.07.40 AM (1).mp4";
 export { default as VideoChorrillos17 } from "./multimedia/videos-sedes/tarapacaWhatsApp Video 2023-03-08 at 5.07.39 AM.mp4";
 export { default as VideoChorrillos18 } from "./multimedia/videos-sedes/WhatsApp Video 2023-03-08 at 5.07.40 AM.mp4";
+
+export * from "./flip-book";
