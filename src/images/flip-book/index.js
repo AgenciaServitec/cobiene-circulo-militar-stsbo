@@ -10,10 +10,9 @@ export { default as ImgFatherDay8 } from "./father-day/diaDelPadre8.webp";
 export { default as ImgFatherDay9 } from "./father-day/diaDelPadre9.webp";
 
 //img mother day
-export { default as ImgMother1 } from "./mother-day/diadelamadre1.webp";
-export { default as ImgMother2 } from "./mother-day/diadelamadre2.webp";
-export { default as ImgMother3 } from "./mother-day/diadelamadre3.webp";
-export { default as ImgMother4 } from "./mother-day/diadelamadre4.webp";
-
+export { default as ImgMotherDay1 } from "./mother-day/diadelamadre1.webp";
+export { default as ImgMotherDay2 } from "./mother-day/diadelamadre2.webp";
+export { default as ImgMotherDay3 } from "./mother-day/diadelamadre3.webp";
+export { default as ImgMotherDay4 } from "./mother-day/diadelamadre4.webp";
 
 export { default as ImgBlankImage } from "./blank-page.webp";
