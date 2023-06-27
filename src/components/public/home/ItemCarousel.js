@@ -17,7 +17,13 @@ export const ItemCarousel = ({ bgColor, image, description, title }) => {
           </div>
         </div>
         <div className="second-content">
-          <img src={image} alt="Slider Servitec" width="100%" height="100%" />
+          <img
+            src={image}
+            alt="Slider Servitec"
+            width="100%"
+            height="100%"
+            loading="lazy"
+          />
         </div>
       </div>
     </Container>

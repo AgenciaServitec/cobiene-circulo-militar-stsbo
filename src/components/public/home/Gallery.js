@@ -16,7 +16,7 @@ export const Gallery = ({ images = [], title, background }) => {
         className={model ? "model open" : "model"}
         onClick={() => setModel(false)}
       >
-        <img src={imgSrc} alt="imgmodelopen" />
+        <img src={imgSrc} alt="imgmodelopen" loading="lazy" />
       </div>
       <h1 className="title">{title}</h1>
       <div className="wrapper-gallery">
@@ -37,7 +37,7 @@ export const Gallery = ({ images = [], title, background }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.article`
   background: ${({ color }) => color};
   padding: 3rem 3rem;
   text-align: center;

@@ -15,7 +15,7 @@ export const CardSede = ({ banner, title, titleLarge, url, externalUrl }) => {
   return (
     <Container>
       <div className="item-picture" onClick={() => onNavigateTo()}>
-        <img src={banner} alt="ImageBanner" />
+        <img src={banner} alt={title} loading="lazy" />
         {title && <h2 className="item-department-name">{title}</h2>}
       </div>
 
@@ -43,7 +43,7 @@ export const CardSede = ({ banner, title, titleLarge, url, externalUrl }) => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.article`
   position: relative;
   background: radial-gradient(100% 100% at 50.52% 0%, #86895d 0%, #000000 100%);
   box-shadow: 0 10px 20px rgb(0 0 0 / 5%);
