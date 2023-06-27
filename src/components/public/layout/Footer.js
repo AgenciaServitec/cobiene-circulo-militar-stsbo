@@ -142,9 +142,9 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
     </div>
     <div className="bottom-footer">
       <div>
-        © Copyright 2022 - {capitalize(contactData.name)} / Diseñado con
+        © Copyright 2022 - {capitalize(contactData.name)} / Diseñado con{" "}
         <FontAwesomeIcon icon={faHeart} color="red" /> por
-        {" CiculaMilitarsts"}
+        {" CirculoMilitarsts"}
       </div>
     </div>
   </Container>
