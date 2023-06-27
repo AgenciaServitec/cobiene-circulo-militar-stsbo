@@ -1,6 +1,9 @@
 import React from "react";
 import HTMLFlipBook from "react-pageflip";
 import styled from "styled-components";
+import { ImgBlankImage } from "../../../images";
+
+const imagesArray = [ImgBlankImage, ImgBlankImage];
 
 export const FlipBookComponent = ({ imagesPages = [] }) => (
   <Container>
@@ -11,13 +14,9 @@ export const FlipBookComponent = ({ imagesPages = [] }) => (
       className="flip-book-container"
     >
       <div className="demoPage" />
-      {imagesPages.map((imagePage, index) => (
+      {imagesArray.map((imagePage, index) => (
         <div className="demoPage" key={index}>
-          <img
-            src={imagePage.flipBookPageImage.url}
-            alt="Page cobiene flip book"
-            loading="lazy"
-          />
+          <img src={imagePage} alt="Page cobiene flip book" loading="lazy" />
         </div>
       ))}
     </HTMLFlipBook>
