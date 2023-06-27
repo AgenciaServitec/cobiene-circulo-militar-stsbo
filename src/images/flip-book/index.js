@@ -16,3 +16,4 @@ export { default as ImgMother3 } from "./mother-day/diadelamadre3.webp";
 export { default as ImgMother4 } from "./mother-day/diadelamadre4.webp";
 
 
+export { default as ImgBlankImage } from "./blank-page.webp";
