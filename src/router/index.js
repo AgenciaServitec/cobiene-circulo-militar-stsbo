@@ -1,27 +1,31 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BaseLayout } from "../components/public";
 import {
-    Home,
-    Page404,
-    ContactSuccess, PageSedeChorrillos, PageSedeRimac,PageSedeTarapaca,GalleryPage
+  Home,
+  Page404,
+  ContactSuccess,
+  PageSedeChorrillos,
+  PageSedeRimac,
+  PageSedeTarapaca,
+  GalleryPage,
 } from "../pages";
-
+import { FlipBook } from "../pages/flip-book";
 
 export const Router = () => {
-    const [videosSedes, setVideosSedes] = useState(false);
+  const [videosSedes, setVideosSedes] = useState(false);
 
-    const onVideosSedes = () => {
-        setVideosSedes(!videosSedes)
-    }
+  const onVideosSedes = () => {
+    setVideosSedes(!videosSedes);
+  };
   return (
     <Routes>
       <Route
         exact
         path="/"
         element={
-          <BaseLayout sectionVideo={true} >
-            <Home/>
+          <BaseLayout sectionVideo={true}>
+            <Home />
           </BaseLayout>
         }
       />
@@ -38,8 +42,12 @@ export const Router = () => {
         exact
         path="/sede-chorrillos"
         element={
-          <BaseLayout sectionVideo={true} onVideosSedes={onVideosSedes} setVideosSedes={setVideosSedes}>
-            <PageSedeChorrillos videosSedes={videosSedes}/>
+          <BaseLayout
+            sectionVideo={true}
+            onVideosSedes={onVideosSedes}
+            setVideosSedes={setVideosSedes}
+          >
+            <PageSedeChorrillos videosSedes={videosSedes} />
           </BaseLayout>
         }
       />
@@ -48,28 +56,38 @@ export const Router = () => {
         path="/sede-tarapaca"
         element={
           <BaseLayout sectionVideo={false}>
-            <PageSedeTarapaca/>
+            <PageSedeTarapaca />
           </BaseLayout>
         }
       />
-        <Route
-            exact
-            path="/sede-rimac"
-            element={
-                <BaseLayout sectionVideo={false}>
-                    <PageSedeRimac/>
-                </BaseLayout>
-            }
-        />
-        <Route
-            exact
-            path="/galleria"
-            element={
-                <BaseLayout sectionVideo={false}>
-                    <GalleryPage/>
-                </BaseLayout>
-            }
-        />
+      <Route
+        exact
+        path="/sede-rimac"
+        element={
+          <BaseLayout sectionVideo={false}>
+            <PageSedeRimac />
+          </BaseLayout>
+        }
+      />
+      <Route
+        exact
+        path="/galleria"
+        element={
+          <BaseLayout sectionVideo={false}>
+            <GalleryPage />
+          </BaseLayout>
+        }
+      />
+      <Route
+        exact
+        path="/flip-book"
+        element={
+          <BaseLayout>
+            <FlipBook />
+          </BaseLayout>
+        }
+      />
+
       <Route path="*" element={<Page404 />} />
     </Routes>
   );
