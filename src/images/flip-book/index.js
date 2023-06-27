@@ -1,7 +1,7 @@
 //img father day
 export { default as ImgFatherDay1 } from "./father-day/diaDelPadre1.webp";
-export { default as ImgFatherDay2 } from "./father-day/diaDelPadre2.webp.webp";
-export { default as ImgFatherDay3 } from "./father-day/diaDelPadre3.webp.webp";
+export { default as ImgFatherDay2 } from "./father-day/diaDelPadre2.webp";
+export { default as ImgFatherDay3 } from "./father-day/diaDelPadre3.webp";
 export { default as ImgFatherDay4 } from "./father-day/diaDelPadre4.webp";
 export { default as ImgFatherDay5 } from "./father-day/diaDelPadre5.webp";
 export { default as ImgFatherDay6 } from "./father-day/diaDelPadre6.webp";
