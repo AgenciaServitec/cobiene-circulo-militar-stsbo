@@ -4,8 +4,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { novelties } from "../../../data-list";
+import { useNavigate } from "react-router-dom";
 
 export const Novelty = () => {
+  const navigate = useNavigate();
+
+  const onNavigateTo = ({ url = "", externalUrl = "" }) => {
+    if (url) return navigate(url);
+
+    return window.open(externalUrl, "_blank");
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -46,9 +55,18 @@ export const Novelty = () => {
     <Container>
       <Slider {...settings}>
         {novelties.map((itemNovelty, index) => (
-          <div className="wrapper-novelties" key={index}>
+          <div
+            className="wrapper-novelties"
+            key={index}
+            onClick={() =>
+              onNavigateTo({
+                url: itemNovelty?.linkRouter,
+                externalUrl: itemNovelty?.link,
+              })
+            }
+          >
             <a
-              href={itemNovelty.link && itemNovelty.link}
+              href={itemNovelty?.link ? itemNovelty.link : "#"}
               target={itemNovelty.link && "_blank"}
               rel={itemNovelty.link && "noreferrer"}
             >
