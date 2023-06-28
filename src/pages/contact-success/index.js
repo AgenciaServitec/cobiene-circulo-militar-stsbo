@@ -3,10 +3,8 @@ import styled from "styled-components";
 import { ImgCongratulation } from "../../images";
 import { mediaQuery } from "../../styles/constants/mediaQuery";
 import { Button } from "../../components/public";
-import { useNavigate } from "react-router";
 
 export const ContactSuccess = () => {
-  const navigate = useNavigate();
 
   return (
     <Container>
