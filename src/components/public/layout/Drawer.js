@@ -2,8 +2,8 @@ import React from "react";
 import DrawerAntd from "antd/lib/drawer";
 import styled from "styled-components";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import {useFormContact} from '../../../providers';
-import { useNavigate, Navigate } from "react-router";
+import { useFormContact } from "../../../providers";
+import { useNavigate } from "react-router";
 
 export const Drawer = ({
   visibleDrawer,
@@ -15,12 +15,12 @@ export const Drawer = ({
   const { visibleFormContact, setVisibleFormContact } = useFormContact();
 
   const handleVisibleFormContact = () =>
-      setVisibleFormContact(!visibleFormContact);
+    setVisibleFormContact(!visibleFormContact);
 
-  const onVideosAndCloseDrawer = () =>{
-    onVideosSedes();
-    onSetVisibleDrawer(false);
-  }
+  // const onVideosAndCloseDrawer = () =>{
+  //   onVideosSedes();
+  //   onSetVisibleDrawer(false);
+  // }
 
   return (
     <ComponentDrawerAntd
@@ -32,26 +32,38 @@ export const Drawer = ({
       <MenuItem onClick={() => onSetVisibleDrawer(false)}>
         <span onClick={() => navigate("/")}>Inicio</span>
       </MenuItem>
-      <MenuItem onClick={() => {
-        onSetVisibleDrawer(false);
-        navigate("/");
-      }}>
+      <MenuItem
+        onClick={() => {
+          onSetVisibleDrawer(false);
+          navigate("/");
+        }}
+      >
         <a href="#about-us">Nosotros</a>
       </MenuItem>
-      <MenuItem onClick={() => {
-        onSetVisibleDrawer(false);
-        navigate("/");
-      }}>
+      <MenuItem
+        onClick={() => {
+          onSetVisibleDrawer(false);
+          navigate("/");
+        }}
+      >
         <a href="#sedes">Sedes</a>
       </MenuItem>
-      <MenuItem onClick={() => {
-        onSetVisibleDrawer(false);
-        navigate("/galleria");
-      }}>
+      <MenuItem
+        onClick={() => {
+          onSetVisibleDrawer(false);
+          navigate("/galleria");
+        }}
+      >
         <span href="#services">Galeria</span>
       </MenuItem>
       <MenuItem onClick={() => onSetVisibleDrawer(false)}>
-        <a onClick={()=>{handleVisibleFormContact()}}>SOCIO</a>
+        <a
+          onClick={() => {
+            handleVisibleFormContact();
+          }}
+        >
+          SOCIO
+        </a>
       </MenuItem>
 
       <MenuItem
