@@ -1,45 +1,46 @@
 import React from "react";
 import HTMLFlipBook from "react-pageflip";
 import styled from "styled-components";
-import { ImgBlankImage } from "../../../images";
+import {
+  ImgBlankImage,
+  ImgEndBookCover,
+  ImgFirstBookCover,
+} from "../../../images";
+import { useParams } from "react-router";
+import { flipBookList } from "../../../data-list";
 
-const imagesArray = [
-  ImgBlankImage,
-  ImgBlankImage,
-  ImgBlankImage,
-  ImgBlankImage,
-];
+export const FlipBookComponent = () => {
+  const { type } = useParams();
 
-export const FlipBookComponent = ({ imagesPages = [] }) => (
-  <Container>
-    <HTMLFlipBook
-      width={550}
-      height={680}
-      autoSize
-      className="flip-book-container"
-    >
-      <DemoPage>
-        <h2>Portada</h2>
-      </DemoPage>
-      <DemoPage>
-        <img src={ImgBlankImage} alt="blankPage" />
-      </DemoPage>
-      {imagesArray.map((imagePage, index) => (
-        <div className="demoPage" key={index}>
-          <img src={imagePage} alt="Page cobiene flip book" loading="lazy" />
+  const filterType = flipBookList.filter((list) => list?.type === type);
+  const listImages = filterType[0]?.images || [];
+
+  return (
+    <Container>
+      <HTMLFlipBook
+        width={550}
+        height={680}
+        autoSize
+        className="flip-book-container"
+      >
+        <div className="demoPage"></div>
+        <div className="demoPage">
+          <img src={ImgFirstBookCover} alt="blankPage" loading="lazy" />
         </div>
-      ))}
-      <DemoPage>
-        <img src={ImgBlankImage} alt="endPage" />
-      </DemoPage>
-      <DemoPage>
-        <h2>Contra portada</h2>
-      </DemoPage>
-    </HTMLFlipBook>
-  </Container>
-);
 
-const DemoPage = ({ children }) => <div className="demoPage">{children}</div>;
+        {listImages?.map((img, index) => (
+          <div className="demoPage" key={index}>
+            <img src={img || ImgBlankImage} alt="blankPage" loading="lazy" />
+          </div>
+        ))}
+
+        <div className="demoPage">
+          <img src={ImgEndBookCover} alt="blankPage" loading="lazy" />
+        </div>
+      </HTMLFlipBook>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   width: auto;
@@ -47,7 +48,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 0 0 0;
+  padding: 2em 0;
   background: ${({ theme }) => theme.colors.tertiary};
   .demoPage {
     perspective: 2000px;
