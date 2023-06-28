@@ -80,7 +80,7 @@ export const Router = () => {
       />
       <Route
         exact
-        path="/flip-book"
+        path="/flip-book/:type"
         element={
           <BaseLayout>
             <FlipBook />
