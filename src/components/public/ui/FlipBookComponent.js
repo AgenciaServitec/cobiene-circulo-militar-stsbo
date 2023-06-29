@@ -12,8 +12,9 @@ import { flipBookList } from "../../../data-list";
 export const FlipBookComponent = () => {
   const { type } = useParams();
 
-  const filterType = flipBookList.filter((list) => list?.type === type);
-  const listImages = filterType[0]?.images || [];
+  const sheetTypes = flipBookList.find((list) => list.type === type);
+
+  if (!sheetTypes) return;
 
   return (
     <Container>
@@ -28,9 +29,9 @@ export const FlipBookComponent = () => {
           <img src={ImgFirstBookCover} alt="blankPage" loading="lazy" />
         </div>
 
-        {listImages?.map((img, index) => (
+        {sheetTypes.images?.map((sheet, index) => (
           <div className="demoPage" key={index}>
-            <img src={img || ImgBlankImage} alt="blankPage" loading="lazy" />
+            <img src={sheet || ImgBlankImage} alt="blankPage" loading="lazy" />
           </div>
         ))}
 

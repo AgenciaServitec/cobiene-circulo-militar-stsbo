@@ -5,3 +5,4 @@ export * from "./sede-tarapaca";
 export * from "./sede-chorrillos";
 export * from "./sede-rimac";
 export * from "./galleria";
+export * from "./flip-book";
