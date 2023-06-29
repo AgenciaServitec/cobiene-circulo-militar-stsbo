@@ -29,24 +29,24 @@
   },
   "development": {
     "firebaseApp": {
-      "apiKey": "AIzaSyDzyVihFIZWh7CT9k7fHKja7fzG-efTShk",
-      "authDomain": "cobiene-circulo-militar-sts.firebaseapp.com",
-      "projectId": "cobiene-circulo-militar-sts",
-      "storageBucket": "cobiene-circulo-militar-sts.appspot.com",
-      "messagingSenderId": "618421419286",
-      "appId": "1:618421419286:web:e35391a217a5c3f3726437"
+      "apiKey:": "AIzaSyDpxE5HUOEy_yBZI-zsWCvj7ymvtsdEHoc",
+      "authDomain": "militar-circle-sts.firebaseapp.com",
+      "projectId": "militar-circle-sts",
+      "storageBucket": "militar-circle-sts.appspot.com",
+      "messagingSenderId": "166064496759",
+      "appId": "1:166064496759:web:881af40b6536ae13656672"
     },
     "sendingEmailsApiUrl": "-",
     "buckets": {}
   },
   "production": {
     "firebaseApp": {
-      "apiKey": "AIzaSyDzyVihFIZWh7CT9k7fHKja7fzG-efTShk",
-      "authDomain": "cobiene-circulo-militar-sts.firebaseapp.com",
-      "projectId": "cobiene-circulo-militar-sts",
-      "storageBucket": "cobiene-circulo-militar-sts.appspot.com",
-      "messagingSenderId": "618421419286",
-      "appId": "1:618421419286:web:e35391a217a5c3f3726437"
+      "apiKey": "AIzaSyDpxE5HUOEy_yBZI-zsWCvj7ymvtsdEHoc",
+      "authDomain": "militar-circle-sts.firebaseapp.com",
+      "projectId": "militar-circle-sts",
+      "storageBucket": "militar-circle-sts.appspot.com",
+      "messagingSenderId": "166064496759",
+      "appId": "1:166064496759:web:881af40b6536ae13656672"
     },
     "sendingEmailsApiUrl": "https://us-central1-sendingemails-348505.cloudfunctions.net/api",
     "buckets": {}
