@@ -27,26 +27,15 @@
       }
     }
   },
-  "development": {
-    "firebaseApp": {
-      "apiKey:": "AIzaSyDpxE5HUOEy_yBZI-zsWCvj7ymvtsdEHoc",
-      "authDomain": "militar-circle-sts.firebaseapp.com",
-      "projectId": "militar-circle-sts",
-      "storageBucket": "militar-circle-sts.appspot.com",
-      "messagingSenderId": "166064496759",
-      "appId": "1:166064496759:web:881af40b6536ae13656672"
-    },
-    "sendingEmailsApiUrl": "-",
-    "buckets": {}
-  },
   "production": {
     "firebaseApp": {
-      "apiKey": "AIzaSyDpxE5HUOEy_yBZI-zsWCvj7ymvtsdEHoc",
-      "authDomain": "militar-circle-sts.firebaseapp.com",
-      "projectId": "militar-circle-sts",
-      "storageBucket": "militar-circle-sts.appspot.com",
-      "messagingSenderId": "166064496759",
-      "appId": "1:166064496759:web:881af40b6536ae13656672"
+      "apiKey": "AIzaSyCKheYJbEMcMcviaipF_oAS031ucd2DsNg",
+      "authDomain": "military-circle-sts.firebaseapp.com",
+      "projectId": "military-circle-sts",
+      "storageBucket": "military-circle-sts.appspot.com",
+      "messagingSenderId": "495661862969",
+      "appId": "1:495661862969:web:c42820c380a9feacaf7de8",
+      "measurementId": "G-0CJ97NKVM5"
     },
     "sendingEmailsApiUrl": "https://us-central1-sendingemails-348505.cloudfunctions.net/api",
     "buckets": {}

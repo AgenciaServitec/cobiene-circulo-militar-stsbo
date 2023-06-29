@@ -1,129 +1,119 @@
-import React, {useState} from "react";
-import styled, {css} from "styled-components";
+import React, { useState } from "react";
+import styled, { css } from "styled-components";
 import ModalAntd from "antd/lib/modal/Modal";
-import {mediaQuery} from "../../../styles/constants/mediaQuery";
-import {Controller, useForm} from "react-hook-form";
-import {yupResolver} from "@hookform/resolvers/yup";
+import { mediaQuery } from "../../../styles/constants/mediaQuery";
+import { Controller, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import {useFormUtils} from "../../../hooks";
-import {Form} from "./Form";
-import {defaultTo} from "lodash";
-import {InputNumber} from "./InputNumber";
-import {firestore, querySnapshotToArray,collectionRef} from '../../../firebase'
-import {notification} from "./notification";
-import {useFormContact} from '../../../providers';
-import {ButtonPopUp} from './ButtonPopUp';
-
+import { useFormUtils } from "../../../hooks";
+import { Form } from "./Form";
+import { defaultTo } from "lodash";
+import { InputNumber } from "./InputNumber";
+import { notification } from "./notification";
+import { useFormContact } from "../../../providers";
+import { ButtonPopUp } from "./ButtonPopUp";
+import { firestore } from "../../../firebase";
 
 export const FormConsult = () => {
-    const [users,setUsers]=useState([]);
-    const { visibleFormContact, setVisibleFormContact } = useFormContact();
+  const [users, setUsers] = useState([]);
+  const { visibleFormContact, setVisibleFormContact } = useFormContact();
 
-    const handleVisibleFormContact = () =>
-        setVisibleFormContact(!visibleFormContact);
+  const handleVisibleFormContact = () =>
+    setVisibleFormContact(!visibleFormContact);
 
+  const [loadingContact, setLoadingContact] = useState(false);
 
-    const [loadingContact, setLoadingContact] = useState(false);
+  const schema = yup.object({
+    dni: yup.number().required(),
+  });
 
-    const schema = yup.object({
-        dni: yup.number().required(),
+  const {
+    formState: { errors },
+    handleSubmit,
+    control,
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+
+  const { required, error } = useFormUtils({ errors, schema });
+
+  const onSubmitUser = async (formData) => {
+    try {
+      setLoadingContact(true);
+
+      const valueFormDataDni = formData.dni.toString();
+
+      const querySnapshot = await firestore
+        .collection("users")
+        .where("document.number", "==", valueFormDataDni)
+        .get();
+
+      const resulConsult = !querySnapshot.empty;
+
+      console.log(resulConsult);
+      if (resulConsult) {
+        notification({ type: "success", title: "Eres Socio" });
+      } else {
+        notification({ type: "error", title: "No eres Socio" });
+      }
+
+      resetContactForm();
+      setUsers([]);
+      handleVisibleFormContact();
+    } catch (e) {
+      console.log("No eres Socio:", e);
+      notification({ type: "error" });
+    } finally {
+      setLoadingContact(false);
+    }
+  };
+
+  console.log("users->", users);
+
+  const resetContactForm = () =>
+    reset({
+      dni: "",
     });
 
-    const {
-        formState: { errors },
-        handleSubmit,
-        control,
-        reset,
-    } = useForm({
-        resolver: yupResolver(schema),
-    });
-
-    const { required, error } = useFormUtils({ errors, schema });
-
-    const onSubmitUser = async (formData) => {
-
-        try {
-            setLoadingContact(true);
-
-            // const valueCollection = await firestore.collection("users").where("document.number","==", formData.dni.toString())
-
-            const valueFormDataDni = formData.dni.toString();
-            /*await firestore.collection("users").where("document.number","==", valueFormDataDni).onSnapshot((snapshot)=> setUsers(querySnapshotToArray(snapshot)))
-             const [number]= users;*/
-                const querySnapshot = await collectionRef.where("document.number", '==', valueFormDataDni).get();
-            const resulConsult = !querySnapshot.empty;
-                console.log(resulConsult)
-            if (resulConsult) {
-                notification({type: "success", title: "Eres Socio"});
-            }else {
-                notification({ type: "error", title: "No eres Socio" });
-            }
-
-            // console.log(number.document.number)
-            /*if(valueFormDataDni === number.document.number) {
-               notification({type: "success", title: "Eres Socio"});
-            }else{
-                notification({ type: "error", title: "No eres Socio" });
-            }*/
-            resetContactForm();
-            setUsers([]);
-            handleVisibleFormContact();
-
-        } catch (e) {
-            console.log("No eres Socio:", e);
-            notification({ type: "error" });
-        } finally {
-            setLoadingContact(false);
-        }
-    };
-
-    console.log("users->",users);
-
-    const resetContactForm = () =>
-        reset({
-            dni: "",
-        });
-
-    return (
-        <ModalComponent
-            title={<h3 style={{ margin: "0" }}>Saber si soy Socio</h3>}
-            visible={visibleFormContact}
-            onOk={() => handleVisibleFormContact()}
-            onCancel={() => handleVisibleFormContact()}
-            footer={null}
+  return (
+    <ModalComponent
+      title={<h3 style={{ margin: "0" }}>Saber si soy Socio</h3>}
+      visible={visibleFormContact}
+      onOk={() => handleVisibleFormContact()}
+      onCancel={() => handleVisibleFormContact()}
+      footer={null}
+    >
+      <Form onSubmit={handleSubmit(onSubmitUser)}>
+        <h2>Escriba su DNI para la consulta:</h2>
+        <Controller
+          name="dni"
+          control={control}
+          defaultValue=""
+          render={({ field: { onChange, value, name } }) => (
+            <InputNumber
+              label="Ingrese DNI"
+              name={name}
+              value={value}
+              onChange={onChange}
+              error={error(name)}
+              required={required(name)}
+            />
+          )}
+        />
+        <ButtonPopUp
+          type="primary"
+          margin="0"
+          block
+          htmlType="submit"
+          loading={loadingContact}
+          disabled={loadingContact}
         >
-            <Form onSubmit={handleSubmit(onSubmitUser)}>
-               <h2>Escriba su DNI para la consulta:</h2>
-                <Controller
-                    name="dni"
-                    control={control}
-                    defaultValue=""
-                    render={({ field: { onChange, value, name } }) => (
-               <InputNumber
-                   label="Ingrese DNI"
-                   name={name}
-                   value={value}
-                   onChange={onChange}
-                   error={error(name)}
-                   required={required(name)}
-               />
-                    )}
-                />
-                    <ButtonPopUp
-                        type="primary"
-                        margin="0"
-                        block
-                        htmlType="submit"
-                        loading={loadingContact}
-                        disabled={loadingContact}
-                    >
-                        Consultar
-                    </ButtonPopUp>
-                {/*{(users === []) ? null : <h2>Eres Socio</h2>}*/}
-
-            </Form>
-        </ModalComponent>
-    );
+          Consultar
+        </ButtonPopUp>
+      </Form>
+    </ModalComponent>
+  );
 };
 
 const ModalBackground = css`
@@ -160,10 +150,9 @@ const ModalComponent = styled(ModalAntd)`
     .ant-modal-header {
       ${ModalBackground};
       border-bottom: 1px solid #262628;
-      //font-family: "Encode Sans",Arial,sans-serif;
 
       .ant-modal-title {
-        color: ${({theme}) => theme.colors.font1};
+        color: ${({ theme }) => theme.colors.font1};
 
         h2 {
           margin: 0;
@@ -172,15 +161,14 @@ const ModalComponent = styled(ModalAntd)`
     }
 
     .ant-modal-close {
-      color: ${({theme}) => theme.colors.light};
+      color: ${({ theme }) => theme.colors.light};
     }
 
     .ant-modal-body {
       ${ModalBackground};
-      h2{
-        font-family: "Encode Sans",Arial,sans-serif;
+      h2 {
+        font-family: "Encode Sans", Arial, sans-serif;
       }
-      
     }
   }
 `;

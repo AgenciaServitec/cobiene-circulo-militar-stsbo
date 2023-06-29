@@ -10,7 +10,6 @@ import {
   PageSedeTarapaca,
   GalleryPage,
 } from "../pages";
-import { FlipBook } from "../pages/flip-book";
 
 export const Router = () => {
   const [videosSedes, setVideosSedes] = useState(false);
@@ -78,15 +77,15 @@ export const Router = () => {
           </BaseLayout>
         }
       />
-      <Route
-        exact
-        path="/flip-book/:type"
-        element={
-          <BaseLayout>
-            <FlipBook />
-          </BaseLayout>
-        }
-      />
+      {/*<Route*/}
+      {/*  exact*/}
+      {/*  path="/flip-book/:type"*/}
+      {/*  element={*/}
+      {/*    <BaseLayout>*/}
+      {/*      <FlipBook />*/}
+      {/*    </BaseLayout>*/}
+      {/*  }*/}
+      {/*/>*/}
 
       <Route path="*" element={<Page404 />} />
     </Routes>

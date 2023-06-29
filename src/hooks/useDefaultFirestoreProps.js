@@ -1,5 +1,5 @@
 import { assign } from "lodash";
-import { now } from "../firebase";
+import { now } from "../firebase/utils";
 import { useAuthentication } from "../providers";
 
 // interface DocumentCreate {

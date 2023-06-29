@@ -5,12 +5,10 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import { auth, firestore } from "../firebase/index";
-import { firebase } from "../firebase/config";
+import { auth, firebase, firestore } from "../firebase";
 import { isError } from "lodash";
 import { useDocument } from "react-firebase-hooks/firestore";
 import { timeoutPromise } from "../utils";
-import { spinLoaderFixed } from "../utils/loader";
 import { notification } from "../components/public";
 
 const AuthenticationContext = createContext({
