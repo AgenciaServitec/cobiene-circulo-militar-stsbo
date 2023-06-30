@@ -1,5 +1,5 @@
 import {
-  ImgFatherDay1,
+  ImgFatherDay1, ImgFatherDay10,
   ImgFatherDay2,
   ImgFatherDay3,
   ImgFatherDay4,
@@ -12,6 +12,7 @@ import {
   ImgMotherDay2,
   ImgMotherDay3,
   ImgMotherDay4,
+
 } from "../images";
 
 export const flipBookList = [
@@ -31,6 +32,7 @@ export const flipBookList = [
       ImgFatherDay7,
       ImgFatherDay8,
       ImgFatherDay9,
+        ImgFatherDay10,
     ],
   },
 ];
