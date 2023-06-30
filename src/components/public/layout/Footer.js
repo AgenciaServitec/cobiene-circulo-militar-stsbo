@@ -9,7 +9,7 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
-import { contactData } from "../../../firebase";
+import { contactData } from "../../../config";
 import { capitalize } from "lodash";
 
 export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
@@ -144,7 +144,7 @@ export const Footer = ({ onEventGaClickIcon, onEventGaClickLink }) => (
       <div>
         © Copyright 2022 - {capitalize(contactData.name)} / Diseñado con{" "}
         <FontAwesomeIcon icon={faHeart} color="red" /> por
-        {" CirculoMilitarsts"}
+        {" AgenciaServitec"}
       </div>
     </div>
   </Container>
