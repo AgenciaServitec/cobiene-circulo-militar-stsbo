@@ -65,11 +65,7 @@ export const Novelty = () => {
               })
             }
           >
-            <a
-              href={itemNovelty?.link ? itemNovelty.link : "#"}
-              target={itemNovelty.link && "_blank"}
-              rel={itemNovelty.link && "noreferrer"}
-            >
+            <section>
               <img
                 src={itemNovelty.image}
                 alt={itemNovelty.title}
@@ -79,7 +75,7 @@ export const Novelty = () => {
                 <h3>{itemNovelty.date}</h3>
                 <h2>{itemNovelty.content}</h2>
               </div>
-            </a>
+            </section>
           </div>
         ))}
       </Slider>
@@ -87,7 +83,7 @@ export const Novelty = () => {
   );
 };
 
-const Container = styled.div`
+const Container = styled.article`
   width: 100%;
 
   .slick-slide > div {
