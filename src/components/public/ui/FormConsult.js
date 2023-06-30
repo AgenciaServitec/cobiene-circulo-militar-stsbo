@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import ModalAntd from "antd/lib/modal/Modal";
+import { firestore } from "../../../firebase";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -12,10 +13,8 @@ import { InputNumber } from "./InputNumber";
 import { notification } from "./notification";
 import { useFormContact } from "../../../providers";
 import { ButtonPopUp } from "./ButtonPopUp";
-import { firestore } from "../../../firebase";
 
 export const FormConsult = () => {
-  const [users, setUsers] = useState([]);
   const { visibleFormContact, setVisibleFormContact } = useFormContact();
 
   const handleVisibleFormContact = () =>
@@ -24,7 +23,7 @@ export const FormConsult = () => {
   const [loadingContact, setLoadingContact] = useState(false);
 
   const schema = yup.object({
-    dni: yup.number().required(),
+    cip: yup.number().required(),
   });
 
   const {
@@ -42,38 +41,30 @@ export const FormConsult = () => {
     try {
       setLoadingContact(true);
 
-      const valueFormDataDni = formData.dni.toString();
+      const cip = formData.cip;
+      const usersRef = firestore.collection("users");
 
-      const querySnapshot = await firestore
-        .collection("users")
-        .where("document.number", "==", valueFormDataDni)
-        .get();
+      const query = usersRef.where("documents.cid", "==", cip);
+      const result = await query.get();
 
-      const resulConsult = !querySnapshot.empty;
-
-      console.log(resulConsult);
-      if (resulConsult) {
-        notification({ type: "success", title: "Eres Socio" });
-      } else {
-        notification({ type: "error", title: "No eres Socio" });
-      }
+      !result.empty
+        ? notification({ type: "success", title: "Eres Socio" })
+        : notification({ type: "error", title: "No eres Socio" });
 
       resetContactForm();
-      setUsers([]);
+
       handleVisibleFormContact();
     } catch (e) {
-      console.log("No eres Socio:", e);
-      notification({ type: "error" });
+      console.log("Error:", e);
+      notification({ type: "error->" });
     } finally {
       setLoadingContact(false);
     }
   };
 
-  console.log("users->", users);
-
   const resetContactForm = () =>
     reset({
-      dni: "",
+      cip: "",
     });
 
   return (
@@ -85,14 +76,14 @@ export const FormConsult = () => {
       footer={null}
     >
       <Form onSubmit={handleSubmit(onSubmitUser)}>
-        <h2>Escriba su DNI para la consulta:</h2>
+        <h2>Escriba su CIP para la consulta:</h2>
         <Controller
-          name="dni"
+          name="cip"
           control={control}
           defaultValue=""
           render={({ field: { onChange, value, name } }) => (
             <InputNumber
-              label="Ingrese DNI"
+              label="Ingrese CIP"
               name={name}
               value={value}
               onChange={onChange}
