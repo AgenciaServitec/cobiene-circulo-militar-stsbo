@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BaseLayout } from "../components/public";
 import {
+  ContactSuccess,
+  FlipBook,
+  GalleryPage,
   Home,
   Page404,
-  ContactSuccess,
   PageSedeChorrillos,
   PageSedeRimac,
   PageSedeTarapaca,
-  GalleryPage,
-  FlipBook,
 } from "../pages";
 
 export const Router = () => {
@@ -87,7 +87,15 @@ export const Router = () => {
           </BaseLayout>
         }
       />
-
+      {/*<Route*/}
+      {/*  exact*/}
+      {/*  path="/scripts"*/}
+      {/*  element={*/}
+      {/*    <BaseLayout sectionVideo={false}>*/}
+      {/*      <Scripts />*/}
+      {/*    </BaseLayout>*/}
+      {/*  }*/}
+      {/*/>*/}
       <Route path="*" element={<Page404 />} />
     </Routes>
   );
