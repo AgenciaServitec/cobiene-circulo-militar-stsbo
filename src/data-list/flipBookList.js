@@ -13,6 +13,16 @@ import {
   ImgMotherDay2,
   ImgMotherDay3,
   ImgMotherDay4,
+  ImgSocios1,
+  ImgSocios2,
+  ImgSocios3,
+  ImgSocios4,
+  ImgSocios5,
+  ImgSocios6,
+  ImgSocios7,
+  ImgSocios8,
+  ImgSocios9,
+  ImgSocios10,
 } from "../images";
 
 export const flipBookList = [
@@ -33,6 +43,22 @@ export const flipBookList = [
       ImgFatherDay8,
       ImgFatherDay9,
       ImgFatherDay10,
+    ],
+  },
+  {
+    type: "eventDeportivo",
+    images: [
+        ImgSocios1,
+      ImgSocios2,
+      ImgSocios3,
+      ImgSocios4,
+      ImgSocios5,
+      ImgSocios6,
+      ImgSocios7,
+      ImgSocios8,
+      ImgSocios9,
+      ImgSocios10,
+
     ],
   },
 ];

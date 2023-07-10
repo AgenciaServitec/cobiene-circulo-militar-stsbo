@@ -33,3 +33,4 @@ export { default as ImgSocios7 } from "./new-socios/EventDeportivo7.webp";
 export { default as ImgSocios8 } from "./new-socios/EventDeportivo8.webp";
 export { default as ImgSocios9 } from "./new-socios/EventDeportivo9.webp";
 export { default as ImgSocios10 } from "./new-socios/EventDeportivo10.webp";
+export { default as ImgCard } from "./new-socios/imgCard.webp";
