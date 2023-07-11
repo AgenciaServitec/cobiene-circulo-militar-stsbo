@@ -13,7 +13,10 @@ export const BoxAddress = () => {
       </div>
 
       <div className="item-icon">
-        <a href="https://www.facebook.com/C%C3%ADrculo-Militar-STS-307692109354465" target="_blank">
+        <a
+          href="https://www.facebook.com/C%C3%ADrculo-Militar-STS-307692109354465"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={faFacebook} />
         </a>
         <a href="#">
@@ -27,7 +30,7 @@ export const BoxAddress = () => {
 const Container = styled.div`
   background: #86895d;
   width: 100%;
-  padding: 0.5em 1em;
+  padding: 0.2em 1em;
   display: flex;
   justify-content: space-between;
 
