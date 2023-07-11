@@ -6,6 +6,7 @@ import {
   FlipBook,
   GalleryPage,
   Home,
+  Login,
   Page404,
   PageSedeChorrillos,
   PageSedeRimac,
@@ -96,6 +97,9 @@ export const Router = () => {
       {/*    </BaseLayout>*/}
       {/*  }*/}
       {/*/>*/}
+
+      {/*<Route exact path="/login" element={<Login />} />*/}
+
       <Route path="*" element={<Page404 />} />
     </Routes>
   );
