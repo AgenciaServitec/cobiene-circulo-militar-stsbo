@@ -2,14 +2,22 @@ import {
   CatalogoNovely,
   CobieneAppNovelty,
   CobieneWebNovelty,
-  FacebookSede,
+  FacebookSede, ImgCard,
   ImgDayFather,
-  ImgDayMother,
+  ImgDayMother, ImgSocios1,
   PdfNovely,
   TramitesNovely,
 } from "../images";
 
 export const novelties = [
+  {
+    title: "Evento Socios",
+    date: "24 de Junio del 2023",
+    content:
+        "Difusión para la inscripción de socios del circulo militar.",
+    linkRouter: "/flip-book/eventDeportivo",
+    image: ImgCard,
+  },
   {
     title: "Dia del padre",
     date: "18 de Junio del 2023",
