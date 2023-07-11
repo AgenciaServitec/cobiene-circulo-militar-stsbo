@@ -42,7 +42,7 @@ const Container = styled.div`
 
   .item-icon {
     svg {
-      cursor:pointer;
+      cursor: pointer;
       color: #fff;
       font-size: 1.5em;
       margin-left: 0.5em;
