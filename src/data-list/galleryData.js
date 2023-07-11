@@ -1,22 +1,20 @@
 import {
-  ImageGalleyHome1,
   ImageGalleyHome10,
   ImageGalleyHome11,
   ImageGalleyHome12,
   ImageGalleyHome13,
   ImageGalleyHome14,
+  ImageGalleyHome16,
   ImageGalleyHome3,
   ImageGalleyHome4,
   ImageGalleyHome5,
   ImageGalleyHome6,
   ImageGalleyHome9,
-  ImageGalleyHome15,
-  ImageGalleyHome2,
 } from "../images";
 
 export const galleryData = [
   //{ src: ImageGalleyHome1, title: "Reconocimiento al Personal Militar" },
-   {src:ImageGalleyHome15, title: "Sobre nosotros"},
+  { src: ImageGalleyHome16, title: "Sobre nosotros" },
   { src: ImageGalleyHome3, title: "Areas de Ceremonias" },
   { src: ImageGalleyHome4, title: "Piscinas de las Sedes" },
   { src: ImageGalleyHome5, title: "Piscinas de las Sedes" },
