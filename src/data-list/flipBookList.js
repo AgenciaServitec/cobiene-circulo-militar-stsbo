@@ -22,7 +22,8 @@ import {
   ImgSocios7,
   ImgSocios8,
   ImgSocios9,
-  ImgSocios10,
+  ImgSocios10, ImgImposicion1, ImgImposicion2,ImgImposicion3,ImgImposicion4,
+  ImgImposicion5,ImgImposicion6,ImgImposicion7,ImgImposicion8,
 } from "../images";
 
 export const flipBookList = [
@@ -58,6 +59,20 @@ export const flipBookList = [
       ImgSocios8,
       ImgSocios9,
       ImgSocios10,
+
+    ],
+  },
+  {
+    type: "imposicionMedalla",
+    images: [
+      ImgImposicion1,
+      ImgImposicion2,
+      ImgImposicion3,
+      ImgImposicion4,
+      ImgImposicion5,
+      ImgImposicion6,
+      ImgImposicion7,
+      ImgImposicion8,
 
     ],
   },

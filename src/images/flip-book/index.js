@@ -34,3 +34,14 @@ export { default as ImgSocios8 } from "./new-socios/EventDeportivo8.webp";
 export { default as ImgSocios9 } from "./new-socios/EventDeportivo9.webp";
 export { default as ImgSocios10 } from "./new-socios/EventDeportivo10.webp";
 export { default as ImgCard } from "./new-socios/imgCard.webp";
+
+//img Imposicion Medalla
+export { default as ImgImposicion1 } from "./event-imposicion-medalla/2.webp";
+export { default as ImgImposicion2 } from "./event-imposicion-medalla/3.webp";
+export { default as ImgImposicion3 } from "./event-imposicion-medalla/4.webp";
+export { default as ImgImposicion4 } from "./event-imposicion-medalla/5.webp";
+export { default as ImgImposicion5 } from "./event-imposicion-medalla/6.webp";
+export { default as ImgImposicion6 } from "./event-imposicion-medalla/7.webp";
+export { default as ImgImposicion7 } from "./event-imposicion-medalla/8.webp";
+export { default as ImgImposicion8 } from "./event-imposicion-medalla/9.webp";
+export { default as ImgImposicionCard } from "./event-imposicion-medalla/imposicionCard1.webp";
