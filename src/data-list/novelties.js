@@ -4,12 +4,20 @@ import {
   CobieneWebNovelty,
   FacebookSede, ImgCard,
   ImgDayFather,
-  ImgDayMother, ImgSocios1,
+  ImgDayMother, ImgImposicionCard, ImgSocios1,
   PdfNovely,
   TramitesNovely,
 } from "../images";
 
 export const novelties = [
+  {
+    title: "Evento Imposicion",
+    date: "Julio del 2023",
+    content:
+        "Imposición de medalla del presidente del consejo directivo TCOJS Caminada Medina Segundo Emilio",
+    linkRouter: "/flip-book/imposicionMedalla",
+    image: ImgImposicionCard,
+  },
   {
     title: "Evento Socios",
     date: "24 de Junio del 2023",
