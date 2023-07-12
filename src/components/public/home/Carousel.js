@@ -12,35 +12,25 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { useDevice } from "../../../hooks";
 import { mediaQuery } from "../../../styles/constants/mediaQuery";
 
 const carouselItems = [SliderHom5, SliderHome2, SliderHome3, SliderHome4];
 
-export const Carousel = () => {
-  const { isMobile } = useDevice();
-
-  return (
-    <Container>
-      <AntCarousel
-        autoplay
-        autoplaySpeed={2 * 1000}
-        arrows={!isMobile}
-        prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
-        nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
-      >
-        {carouselItems.map((banner) => (
-          <Slide
-            src={banner}
-            width={isMobile ? "768" : "992"}
-            height="970"
-            alt="Banner cobiene"
-          />
-        ))}
-      </AntCarousel>
-    </Container>
-  );
-};
+export const Carousel = () => (
+  <Container>
+    <AntCarousel
+      autoplay
+      autoplaySpeed={2 * 1000}
+      arrows={true}
+      prevArrow={<FontAwesomeIcon icon={faChevronLeft} />}
+      nextArrow={<FontAwesomeIcon icon={faChevronRight} />}
+    >
+      {carouselItems.map((banner) => (
+        <Slide src={banner} width="100" height="100" alt="Banner cobiene" />
+      ))}
+    </AntCarousel>
+  </Container>
+);
 
 const Container = styled.div`
   width: 100%;
@@ -106,6 +96,10 @@ const Container = styled.div`
 `;
 
 const Slide = styled.img`
-  width: 105vw !important;
+  width: 100vw !important;
   height: auto !important;
+
+  ${mediaQuery.minDesktop} {
+    height: 80vh !important;
+  }
 `;

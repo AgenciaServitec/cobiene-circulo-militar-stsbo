@@ -6,3 +6,4 @@ export * from "./sede-chorrillos";
 export * from "./sede-rimac";
 export * from "./galleria";
 export * from "./flip-book";
+export * from "./login";
