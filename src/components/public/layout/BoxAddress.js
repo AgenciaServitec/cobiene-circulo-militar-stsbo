@@ -7,9 +7,7 @@ export const BoxAddress = () => {
   return (
     <Container>
       <div className="item-address">
-        <span>
-          <a href="#">Av. Escuela Militar 990, chorrillos 15064</a>
-        </span>
+        <span>Av. Escuela Militar 990, chorrillos 15064</span>
       </div>
 
       <div className="item-icon">
@@ -19,7 +17,7 @@ export const BoxAddress = () => {
         >
           <FontAwesomeIcon icon={faFacebook} />
         </a>
-        <a href="#">
+        <a href="https://api.whatsapp.com/send?phone=929054672" target="_blank">
           <FontAwesomeIcon icon={faWhatsapp} />
         </a>
       </div>
@@ -36,10 +34,8 @@ const Container = styled.div`
 
   .item-address {
     span {
-      a {
-        color: #fff;
-        font-size: 0.6em;
-      }
+      color: #fff;
+      font-size: 0.6em;
     }
   }
 
