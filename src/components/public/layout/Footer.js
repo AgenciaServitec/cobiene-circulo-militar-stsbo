@@ -164,6 +164,9 @@ const Container = styled.footer`
       img {
         width: 4rem;
         height: auto;
+        ${mediaQuery.minDesktop} {
+          width: 7em;
+        }
       }
     }
     .item-text {
@@ -171,29 +174,39 @@ const Container = styled.footer`
       padding-top: 1rem;
       position: relative;
       width: 100%;
+      h3 {
+        font-size: 1.5em;
+
+        ${mediaQuery.minDesktop} {
+          font-size: 3em;
+        }
+      }
+
       ${mediaQuery.maxMobile} {
         padding: 0.5em;
       }
       span {
-        font-size: 147px;
+        font-size: 140px;
         left: 0;
         line-height: 102px;
         text-align: center;
         width: 100%;
       }
       .content-contact {
-        margin-top: -1.5rem;
+        margin-top: 1.5rem;
         font-family: "Intro Demo", sans-serif;
-        font-size: 26px;
+        font-size: 1em;
         letter-spacing: 0.3px;
         text-align: center;
         width: 100%;
+        ${mediaQuery.minDesktop} {
+          font-size: 3em;
+        }
       }
       .content-somos {
         margin-top: -0.5rem;
         font-family: "Intro Demo", sans-serif;
-        font-size: 26px;
-        letter-spacing: 0.3px;
+        font-size: 1.2em;
         text-align: center;
         width: 100%;
       }
@@ -222,7 +235,6 @@ const Container = styled.footer`
             color: ${({ theme }) => theme.colors.white};
             padding: 0 1rem;
             font-size: 2.5rem;
-            padding: 0 1rem;
           }
           &:last-child {
             span {
