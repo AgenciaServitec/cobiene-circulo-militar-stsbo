@@ -44,7 +44,7 @@ export const FormConsult = () => {
       const cip = formData.cip;
       const usersRef = firestore.collection("users");
 
-      const query = usersRef.where("documents.cid", "==", cip);
+      const query = usersRef.where("documents.cip", "==", cip);
       const result = await query.get();
 
       !result.empty
