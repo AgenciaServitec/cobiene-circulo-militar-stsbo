@@ -22,7 +22,7 @@ export const Novelty = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
     responsive: [
       {
         breakpoint: 1024,
@@ -58,7 +58,7 @@ export const Novelty = () => {
           <div
             className="wrapper-novelties"
             key={index}
-            onClick={() =>
+            onDoubleClick={() =>
               onNavigateTo({
                 url: itemNovelty?.linkRouter,
                 externalUrl: itemNovelty?.link,
