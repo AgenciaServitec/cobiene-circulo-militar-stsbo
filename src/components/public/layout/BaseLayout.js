@@ -57,7 +57,7 @@ const Container = styled.div`
   min-height: 100vh;
   height: auto;
   position: relative;
-  ${mediaQuery.minTablet} {
+  ${mediaQuery.minDesktop} {
     width: calc(100% - 100px);
   }
 
