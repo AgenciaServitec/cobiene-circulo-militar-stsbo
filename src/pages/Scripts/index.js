@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Button, notification } from "../../components/public";
-import { chunk, uniqWith, merge } from "lodash";
+import { chunk, uniqWith } from "lodash";
 import {
+  Abaron4,
+  RpMayo3,
   RpMontepio1,
   RpRelacionRetiro2,
-  RpMayo3,
-  Abaron4,
 } from "../../data-list";
 import { firestore } from "../../firebase";
 import { useDefaultFirestoreProps } from "../../hooks";
@@ -18,9 +18,11 @@ export const Scripts = () => {
     try {
       setLoading(true);
 
-      const usersData = newStructureUsersData(
-        merge(RpMontepio1, RpRelacionRetiro2, RpMayo3, Abaron4)
-      ).filter((user) => user.documents.cid);
+      const data__ = [RpMontepio1, RpRelacionRetiro2, RpMayo3, Abaron4];
+
+      const usersData = newStructureUsersData(Abaron4).filter(
+        (user) => user.documents.cip
+      );
 
       const refUserCollection = firestore.collection("users");
 
@@ -62,7 +64,7 @@ const newStructureUsersData = (users) =>
     fullName: user["APELLIDOS Y NOMBRES"],
     documents: {
       dni: user?.["DNI"] || null,
-      cid: user?.["CIP/NSA"] || user?.["CIP"] || user?.["NRO.ADMIN"] || null,
+      cip: user?.["CIP/NSA"] || user?.["CIP"] || user?.["NRO.ADMIN"] || null,
     },
     isActive: true,
     phone: {
