@@ -2,9 +2,12 @@ import {
   CatalogoNovely,
   CobieneAppNovelty,
   CobieneWebNovelty,
-  FacebookSede, ImgCard,
+  FacebookSede,
+  ImgCard,
   ImgDayFather,
-  ImgDayMother, ImgImposicionCard, ImgSocios1,
+  ImgDayMother,
+  ImgImposicionCard,
+  ImgSocios1,
   PdfNovely,
   TramitesNovely,
 } from "../images";
@@ -14,15 +17,14 @@ export const novelties = [
     title: "Evento Imposicion",
     date: "Julio del 2023",
     content:
-        "Imposición de medalla del presidente del consejo directivo TCOJS Caminada Medina Segundo Emilio",
+      "Imposición de medalla del presidente del consejo directivo TCOJS Caminada Medina Segundo Emilio",
     linkRouter: "/flip-book/imposicionMedalla",
     image: ImgImposicionCard,
   },
   {
     title: "Evento Socios",
     date: "24 de Junio del 2023",
-    content:
-        "Difusión para la inscripción de socios del circulo militar.",
+    content: "Difusión para la inscripción de socios del circulo militar.",
     linkRouter: "/flip-book/eventDeportivo",
     image: ImgCard,
   },
@@ -62,14 +64,14 @@ export const novelties = [
     link: "https://tramites.cobiene.mil.pe/",
     content: "Ya esta disponible la nueva pagina de tramites del cobiene.",
   },
-  {
+  /*{
     title: "Cobiene Catalogo",
     image: CatalogoNovely,
     date: "2 de diciembre del 2022",
     link: "https://cobiene-mil-pe.web.app/flip-book",
     content:
       "Esta disponible el nuevo catalogo del cobiene con los ultimo convenios.",
-  },
+  },*/
   // {
   //   title: "Cobiene premios",
   //   image: ImageGalleyHome1,
@@ -77,7 +79,7 @@ export const novelties = [
   //   content:
   //     "Un merecido reconocimiento, al personal militar que laboró en el Circulo Militar de S.T.S del Ejército del Perú.",
   // },
-  {
+  /* {
     title: "Memoria Anual Consejo de Vigilancia",
     image: PdfNovely,
     date: "16 de marzo del 2023",
@@ -85,13 +87,13 @@ export const novelties = [
     content:
       "El Ejército del Perú y la Asociación Círculo \n" +
       "Memoria Anual Consejo de Vigilancia.",
-  },
-  {
+  },*/
+  /*{
     title: "Facebook",
     image: FacebookSede,
     date: "16 de marzo del 2023",
     link: "https://www.facebook.com/ACMSTS",
     content:
       "Facebook de la sede para estar al tanto de los ultimos cambios y actulizaciones.",
-  },
+  },*/
 ];

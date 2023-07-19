@@ -14,7 +14,7 @@ import {
 
 export const galleryData = [
   //{ src: ImageGalleyHome1, title: "Reconocimiento al Personal Militar" },
-  { src: ImageGalleyHome16, title: "Sobre nosotros" },
+  // { src: ImageGalleyHome16, title: "Sobre nosotros" },
   { src: ImageGalleyHome3, title: "Areas de Ceremonias" },
   { src: ImageGalleyHome4, title: "Piscinas de las Sedes" },
   { src: ImageGalleyHome5, title: "Piscinas de las Sedes" },
@@ -29,4 +29,6 @@ export const galleryData = [
   { src: ImageGalleyHome12, title: "Areas de Eventos" },
   { src: ImageGalleyHome13, title: "oficinas sede chorrillos" },
   { src: ImageGalleyHome14, title: "oficinas sede chorrillos" },
+  { src: ImageGalleyHome12, title: "Areas de Eventos" },
+  { src: ImageGalleyHome3, title: "Areas de Ceremonias" },
 ];
