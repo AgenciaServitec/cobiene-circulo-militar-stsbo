@@ -1,14 +1,10 @@
 import {
-  CatalogoNovely,
   CobieneAppNovelty,
   CobieneWebNovelty,
-  FacebookSede,
   ImgCard,
   ImgDayFather,
   ImgDayMother,
   ImgImposicionCard,
-  ImgSocios1,
-  PdfNovely,
   TramitesNovely,
 } from "../images";
 
