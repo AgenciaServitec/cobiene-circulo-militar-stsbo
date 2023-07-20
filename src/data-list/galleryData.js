@@ -4,7 +4,6 @@ import {
   ImageGalleyHome12,
   ImageGalleyHome13,
   ImageGalleyHome14,
-  ImageGalleyHome16,
   ImageGalleyHome3,
   ImageGalleyHome4,
   ImageGalleyHome5,
