@@ -5,10 +5,18 @@ import {
   ImgDayFather,
   ImgDayMother,
   ImgImposicionCard,
+  portadaFiestas,
   TramitesNovely,
 } from "../images";
 
 export const novelties = [
+  {
+    title: "Almuerzo",
+    date: "23 de Julio del 2023",
+    content: "Almuerzo de Camaderia por Fiestas Patrias",
+    linkRouter: "/flip-book/NationalHolidays",
+    image: portadaFiestas,
+  },
   {
     title: "Evento Imposicion",
     date: "Julio del 2023",

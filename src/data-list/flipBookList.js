@@ -22,8 +22,29 @@ import {
   ImgSocios7,
   ImgSocios8,
   ImgSocios9,
-  ImgSocios10, ImgImposicion1, ImgImposicion2,ImgImposicion3,ImgImposicion4,
-  ImgImposicion5,ImgImposicion6,ImgImposicion7,ImgImposicion8,
+  ImgSocios10,
+  ImgImposicion1,
+  ImgImposicion2,
+  ImgImposicion3,
+  ImgImposicion4,
+  ImgImposicion5,
+  ImgImposicion6,
+  ImgImposicion7,
+  ImgImposicion8,
+  almuerzo1,
+  almuerzo2,
+  almuerzo3,
+  almuerzo4,
+  almuerzo5,
+  almuerzo6,
+  almuerzo7,
+  almuerzo8,
+  almuerzo9,
+  almuerzo10,
+  almuerzo11,
+  almuerzo12,
+  almuerzo13,
+  almuerzo14,
 } from "../images";
 
 export const flipBookList = [
@@ -46,10 +67,11 @@ export const flipBookList = [
       ImgFatherDay10,
     ],
   },
+
   {
     type: "eventDeportivo",
     images: [
-        ImgSocios1,
+      ImgSocios1,
       ImgSocios2,
       ImgSocios3,
       ImgSocios4,
@@ -59,7 +81,6 @@ export const flipBookList = [
       ImgSocios8,
       ImgSocios9,
       ImgSocios10,
-
     ],
   },
   {
@@ -73,7 +94,25 @@ export const flipBookList = [
       ImgImposicion6,
       ImgImposicion7,
       ImgImposicion8,
-
+    ],
+  },
+  {
+    type: "NationalHolidays",
+    images: [
+      almuerzo1,
+      almuerzo2,
+      almuerzo3,
+      almuerzo4,
+      almuerzo5,
+      almuerzo6,
+      almuerzo7,
+      almuerzo8,
+      almuerzo9,
+      almuerzo10,
+      almuerzo11,
+      almuerzo12,
+      almuerzo13,
+      almuerzo14,
     ],
   },
 ];

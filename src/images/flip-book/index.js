@@ -45,3 +45,20 @@ export { default as ImgImposicion6 } from "./event-imposicion-medalla/7.webp";
 export { default as ImgImposicion7 } from "./event-imposicion-medalla/8.webp";
 export { default as ImgImposicion8 } from "./event-imposicion-medalla/9.webp";
 export { default as ImgImposicionCard } from "./event-imposicion-medalla/imposicionCard1.webp";
+
+//img Fiestas Patrias
+export { default as almuerzo1 } from "./fiestas-patrias/almuerzo1.webp";
+export { default as almuerzo2 } from "./fiestas-patrias/almuerzo2.webp";
+export { default as almuerzo3 } from "./fiestas-patrias/almuerzo3.webp";
+export { default as almuerzo4 } from "./fiestas-patrias/4.webp";
+export { default as almuerzo5 } from "./fiestas-patrias/5.webp";
+export { default as almuerzo6 } from "./fiestas-patrias/6.webp";
+export { default as almuerzo7 } from "./fiestas-patrias/7.webp";
+export { default as almuerzo8 } from "./fiestas-patrias/almuerzo9.webp";
+export { default as almuerzo9 } from "./fiestas-patrias/almuerzo10.webp";
+export { default as almuerzo10 } from "./fiestas-patrias/almuerzo11.webp";
+export { default as almuerzo11 } from "./fiestas-patrias/almuerzo12.webp";
+export { default as almuerzo12 } from "./fiestas-patrias/almuerzo13.webp";
+export { default as almuerzo13 } from "./fiestas-patrias/almuerzo14.webp";
+export { default as almuerzo14 } from "./fiestas-patrias/almuerzo15.webp";
+export { default as portadaFiestas } from "./fiestas-patrias/portadaFiestas.webp";
