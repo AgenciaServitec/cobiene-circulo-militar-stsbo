@@ -81,6 +81,13 @@ export { default as PdfNovely } from "./others/captura-pdf.webp";
 export { default as FacebookSede } from "./others/captura-facebook-sede.webp";
 export { default as ImgDayMother } from "./others/dia-madre.webp";
 export { default as ImgDayFather } from "./others/dia-padre.webp";
+export { default as ImgcallGeneralMeeting } from "./others/imgcallGeneralMeeting.webp";
+export { default as ImgSwearingBoardDirectorsAfSurvelillance } from "./others/imgSwearingBoardDirectorsAfSurvelillance.webp";
+export { default as ImgGalaDinnerStsStaffDay } from "./others/imgGalaDinnerStsStaffDay.webp";
+export { default as ImgLaborDay } from "./others/imgLaborDay.webp";
+export { default as ImgPersonnelTraining } from "./others/imgPersonnelTraining.webp";
+export { default as ImgInterpromotionsOpeningChampionship } from "./others/img-interpromotions-opening-championship.webp";
+export { default as ImgWorks } from "./others/works.webp";
 //-----Gallery of home ------
 
 export { default as ImageGalleyHome1 } from "./others/imghomesedes.webp";

@@ -1,10 +1,18 @@
 import {
   CobieneAppNovelty,
   CobieneWebNovelty,
+  ImgcallGeneralMeeting,
   ImgCard,
   ImgDayFather,
   ImgDayMother,
+  ImgFootballFieldInauguration,
+  ImgGalaDinnerStsStaffDay,
   ImgImposicionCard,
+  ImgInterpromotionsOpeningChampionship,
+  ImgLaborDay,
+  ImgPersonnelTraining,
+  ImgSwearingBoardDirectorsAfSurvelillance,
+  ImgWorks,
   portadaFiestas,
   TramitesNovely,
 } from "../images";
@@ -41,8 +49,8 @@ export const novelties = [
     image: ImgDayFather,
   },
   {
-    title: "Dia de la Madre",
-    date: "14 de Mayo del 2023",
+    title: "Día De La Madre",
+    date: "12 de Mayo del 2024",
     content: "Se realizó evento por el día de la Madre",
     linkRouter: "/flip-book/motherDay",
     image: ImgDayMother,
@@ -68,6 +76,62 @@ export const novelties = [
     link: "https://tramites.cobiene.mil.pe/",
     content: "Ya esta disponible la nueva pagina de tramites del cobiene.",
   },
+  {
+    title: "Convocatoria de Asamblea General",
+    date: "02 de marzo del 2024",
+    content:
+      "Se llevó a cabo la Convocatoria de Asamblea General del AF-2024 al AF-2025",
+    linkRouter: "/flip-book/callGeneralmeeting",
+    image: ImgcallGeneralMeeting,
+  },
+  {
+    title: "Juramentación del Consejo Directivo y Vigilancia AF 2024 - 2025",
+    date: "02 de marzo del 2024",
+    content: "Juramentación del Consejo Directivo y Vigilancia AF 2024 - 2025",
+    linkRouter: "/flip-book/swearingBoardDirectorsAfSurvelillance",
+    image: ImgSwearingBoardDirectorsAfSurvelillance,
+  },
+  {
+    title:
+      "Cena de Gala , por el Dia Del Personal De Supervisores, Técnicos y Suboficiales",
+    date: "02 de marzo del 2024",
+    content:
+      "Cena de Gala , por el Dia Del Personal De Supervisores, Técnicos y Suboficiales",
+    linkRouter: "/flip-book/galaDinnerStsStaffDay1",
+    image: ImgGalaDinnerStsStaffDay,
+  },
+  {
+    title: "Dia del Trabajo",
+    date: "29 de abril del 2024",
+    content: "Celebración del Dia del Trabajo",
+    linkRouter: "/flip-book/laborDay",
+    image: ImgLaborDay,
+  },
+  {
+    title:
+      "Capacitación a todo el personal del CM - STS sobre el Manejo De Extintores - Abril 2024",
+    date: "02 de marzo del 2024",
+    content:
+      "Capacitación a todo el personal del CM - STS sobre el Manejo De Extintores - Abril 2024",
+    linkRouter: "/flip-book/personnel-training",
+    image: ImgPersonnelTraining,
+  },
+  {
+    title:
+      "Campeonato Apertura Inter Promociones, con motivo de la conmemoración el “Día De Los Supervisores, Técnicos Y Suboficiales”.",
+    date: "20 de abril del 2024",
+    content:
+      "Campeonato Apertura Inter Promociones, con motivo de la conmemoración el “Día De Los Supervisores, Técnicos Y Suboficiales.",
+    linkRouter: "/flip-book/interpromotions-opening-championship",
+    image: ImgInterpromotionsOpeningChampionship,
+  },
+  {
+    title: "Obras de la ACM STS",
+    date: "02 de marzo del 2024",
+    content: "Obras de la ACM STS",
+    linkRouter: "/flip-book/works",
+    image: ImgWorks,
+  }
   /*{
     title: "Cobiene Catalogo",
     image: CatalogoNovely,

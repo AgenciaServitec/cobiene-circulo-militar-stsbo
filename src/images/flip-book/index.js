@@ -15,6 +15,15 @@ export { default as ImgMotherDay1 } from "./mother-day/diadelamadre1.webp";
 export { default as ImgMotherDay2 } from "./mother-day/diadelamadre2.webp";
 export { default as ImgMotherDay3 } from "./mother-day/diadelamadre3.webp";
 export { default as ImgMotherDay4 } from "./mother-day/diadelamadre4.webp";
+export { default as ImgMotherDay5 } from "./mother-day/diadelamadre5.webp";
+export { default as ImgMotherDay6 } from "./mother-day/diadelamadre6.webp";
+export { default as ImgMotherDay7 } from "./mother-day/diadelamadre7.webp";
+export { default as ImgMotherDay8 } from "./mother-day/diadelamadre8.webp";
+export { default as ImgMotherDay9 } from "./mother-day/diadelamadre9.webp";
+export { default as ImgMotherDay10 } from "./mother-day/diadelamadre10.webp";
+export { default as ImgMotherDay11 } from "./mother-day/diadelamadre11.webp";
+export { default as ImgMotherDay12 } from "./mother-day/diadelamadre12.webp";
+export { default as ImgMotherDay13 } from "./mother-day/diadelamadre13.webp";
 
 //img portada
 export { default as ImgFirstBookCover } from "./portada1.webp";
@@ -62,3 +71,28 @@ export { default as almuerzo12 } from "./fiestas-patrias/almuerzo13.webp";
 export { default as almuerzo13 } from "./fiestas-patrias/almuerzo14.webp";
 export { default as almuerzo14 } from "./fiestas-patrias/almuerzo15.webp";
 export { default as portadaFiestas } from "./fiestas-patrias/portadaFiestas.webp";
+
+// img Convocatoria Asamblea General
+export { default as ImgCallGeneralMeeting1 } from "./call-general-meeting/convocatoriaAsamGen1.webp";
+export { default as ImgCallGeneralMeeting2 } from "./call-general-meeting/convocatoriaAsamGen2.webp";
+
+// img Juramentación del Consejo Directivo y Vigilancia AF
+export { default as ImgSwearingBoardDirectorsAfSurvelillance1 } from "./swearing-board-directors-af-survelillance/swearingBoardDirectorsAfSurvelillance1.webp";
+export { default as ImgSwearingBoardDirectorsAfSurvelillance2 } from "./swearing-board-directors-af-survelillance/swearingBoardDirectorsAfSurvelillance2.webp";
+
+// img Cena de Gala por el día del persona STS
+export { default as ImgGalaDinnerStsStaffDay1 } from "./gala-dinner-sts-staff-day/galaDinnerStsStaffDay1.webp";
+
+// img Día del Trabajo
+export { default as ImgLaborDay1 } from "./labor-day/laborDay1.webp";
+
+// img Capacitación del Personal
+export { default as ImgPersonnelTraining1 } from "./personnel-training/personnelTraining1.webp";
+
+// img Campeonato Apertura Inter Promociones
+export { default as ImgInterpromotionsOpeningChampionship1 } from "./interpromotions-opening-championship/interpromotions-opening-championship-1.webp";
+export { default as ImgInterpromotionsOpeningChampionship2 } from "./interpromotions-opening-championship/interpromotions-opening-championship-2.webp";
+
+// img Obras del ACM STS
+export { default as ImgWorks1 } from "./works/image1.webp";
+export { default as ImgWorks2 } from "./works/image2.webp";

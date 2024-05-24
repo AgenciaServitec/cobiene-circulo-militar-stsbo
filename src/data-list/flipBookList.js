@@ -45,6 +45,17 @@ import {
   almuerzo12,
   almuerzo13,
   almuerzo14,
+  ImgCallGeneralMeeting2,
+  ImgCallGeneralMeeting1,
+  ImgSwearingBoardDirectorsAfSurvelillance2,
+  ImgSwearingBoardDirectorsAfSurvelillance1,
+  ImgGalaDinnerStsStaffDay1,
+  ImgLaborDay1,
+  ImgPersonnelTraining1,
+  ImgInterpromotionsOpeningChampionship1,
+  ImgInterpromotionsOpeningChampionship2,
+  ImgWorks1,
+  ImgWorks2,
 } from "../images";
 
 export const flipBookList = [
@@ -114,5 +125,39 @@ export const flipBookList = [
       almuerzo13,
       almuerzo14,
     ],
+  },
+  {
+    type: "callGeneralmeeting",
+    images: [ImgCallGeneralMeeting1, ImgCallGeneralMeeting2],
+  },
+  {
+    type: "swearingBoardDirectorsAfSurvelillance",
+    images: [
+      ImgSwearingBoardDirectorsAfSurvelillance1,
+      ImgSwearingBoardDirectorsAfSurvelillance2,
+    ],
+  },
+  {
+    type: "laborDay",
+    images: [ImgLaborDay1],
+  },
+  {
+    type: "personnel-training",
+    images: [ImgPersonnelTraining1],
+  },
+  {
+    type: "interpromotions-opening-championship",
+    images: [
+      ImgInterpromotionsOpeningChampionship1,
+      ImgInterpromotionsOpeningChampionship2,
+    ],
+  },
+  {
+    type: "works",
+    images: [ImgWorks1, ImgWorks2],
+  },
+  {
+    type: "galaDinnerStsStaffDay1",
+    images: [ImgGalaDinnerStsStaffDay1],
   },
 ];
