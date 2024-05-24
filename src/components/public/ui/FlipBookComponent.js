@@ -3,8 +3,8 @@ import HTMLFlipBook from "react-pageflip";
 import styled from "styled-components";
 import {
   ImgBlankImage,
-  ImgEndBookCover,
-  ImgFirstBookCover,
+  ImgEndBookCover, ImgEndingCoverCurrent,
+  ImgFirstBookCover, ImgInitialCoverCurrent
 } from "../../../images";
 import { useParams } from "react-router";
 import { flipBookList } from "../../../data-list";
@@ -26,7 +26,10 @@ export const FlipBookComponent = () => {
       >
         <div className="demoPage"></div>
         <div className="demoPage">
-          <img src={ImgFirstBookCover} alt="blankPage" loading="lazy" />
+          {
+            type === "mother-day" || type === "activities-acm-sts" || type === "works-acm-sts" ? <img src={ImgInitialCoverCurrent} alt="blankPage" loading="lazy" /> :
+              <img src={ImgFirstBookCover} alt="blankPage" loading="lazy" />
+          }
         </div>
 
         {sheetTypes.images?.map((sheet, index) => (
@@ -36,7 +39,10 @@ export const FlipBookComponent = () => {
         ))}
 
         <div className="demoPage">
-          <img src={ImgEndBookCover} alt="blankPage" loading="lazy" />
+          {
+            type === "mother-day" || type === "activities-acm-sts" || type === "works-acm-sts" ? <img src={ImgEndingCoverCurrent} alt="blankPage" loading="lazy" /> :
+              <img src={ImgEndBookCover} alt="blankPage" loading="lazy" />
+          }
         </div>
       </HTMLFlipBook>
     </Container>

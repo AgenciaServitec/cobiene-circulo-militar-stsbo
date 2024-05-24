@@ -22,7 +22,7 @@ export const Novelty = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,

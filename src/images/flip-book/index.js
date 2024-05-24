@@ -11,25 +11,29 @@ export { default as ImgFatherDay9 } from "./father-day/diaDelPadre9.webp";
 export { default as ImgFatherDay10 } from "./father-day/diaDelPadre10.webp";
 
 //img mother day
-export { default as ImgMotherDay1 } from "./mother-day/diadelamadre1.webp";
-export { default as ImgMotherDay2 } from "./mother-day/diadelamadre2.webp";
-export { default as ImgMotherDay3 } from "./mother-day/diadelamadre3.webp";
-export { default as ImgMotherDay4 } from "./mother-day/diadelamadre4.webp";
-export { default as ImgMotherDay5 } from "./mother-day/diadelamadre5.webp";
-export { default as ImgMotherDay6 } from "./mother-day/diadelamadre6.webp";
-export { default as ImgMotherDay7 } from "./mother-day/diadelamadre7.webp";
-export { default as ImgMotherDay8 } from "./mother-day/diadelamadre8.webp";
-export { default as ImgMotherDay9 } from "./mother-day/diadelamadre9.webp";
-export { default as ImgMotherDay10 } from "./mother-day/diadelamadre10.webp";
-export { default as ImgMotherDay11 } from "./mother-day/diadelamadre11.webp";
-export { default as ImgMotherDay12 } from "./mother-day/diadelamadre12.webp";
-export { default as ImgMotherDay13 } from "./mother-day/diadelamadre13.webp";
+export { default as ImgMotherDay1 } from "./mother-day/image1.webp";
+export { default as ImgMotherDay2 } from "./mother-day/image2.webp";
+export { default as ImgMotherDay3 } from "./mother-day/image3.webp";
+export { default as ImgMotherDay4 } from "./mother-day/image4.webp";
+export { default as ImgMotherDay5 } from "./mother-day/image5.webp";
+export { default as ImgMotherDay6 } from "./mother-day/image6.webp";
+export { default as ImgMotherDay7 } from "./mother-day/image7.webp";
+export { default as ImgMotherDay8 } from "./mother-day/image8.webp";
+export { default as ImgMotherDay9 } from "./mother-day/image9.webp";
+export { default as ImgMotherDay10 } from "./mother-day/image10.webp";
+export { default as ImgMotherDay11 } from "./mother-day/image11.webp";
+export { default as ImgMotherDay12 } from "./mother-day/image12.webp";
+export { default as ImgMotherDay13 } from "./mother-day/image13.webp";
 
 //img portada
 export { default as ImgFirstBookCover } from "./portada1.webp";
 export { default as ImgEndBookCover } from "./portada2.webp";
-
 export { default as ImgBlankImage } from "./blank-page.webp";
+
+export { default as ImgCampusAdministrators } from "./campus-administrators.webp";
+
+export { default as ImgInitialCoverCurrent } from "./initial-cover-current.webp";
+export { default as ImgEndingCoverCurrent } from "./ending-cover-current.webp";
 
 // img socios
 export { default as ImgSocios1 } from "./new-socios/EventDeportivo1.webp";
@@ -72,27 +76,18 @@ export { default as almuerzo13 } from "./fiestas-patrias/almuerzo14.webp";
 export { default as almuerzo14 } from "./fiestas-patrias/almuerzo15.webp";
 export { default as portadaFiestas } from "./fiestas-patrias/portadaFiestas.webp";
 
-// img Convocatoria Asamblea General
-export { default as ImgCallGeneralMeeting1 } from "./call-general-meeting/convocatoriaAsamGen1.webp";
-export { default as ImgCallGeneralMeeting2 } from "./call-general-meeting/convocatoriaAsamGen2.webp";
+// img Actividades de la ACM STS AF
+export { default as ImgActivities1 } from "./activities-acm-sts/image1.webp";
+export { default as ImgActivities2 } from "./activities-acm-sts/image2.webp";
+export { default as ImgActivities3 } from "./activities-acm-sts/image3.webp";
+export { default as ImgActivities4 } from "./activities-acm-sts/image4.webp";
+export { default as ImgActivities5 } from "./activities-acm-sts/image5.webp";
+export { default as ImgActivities6 } from "./activities-acm-sts/image6.webp";
+export { default as ImgActivities7 } from "./activities-acm-sts/image7.webp";
+export { default as ImgActivities8 } from "./activities-acm-sts/image8.webp";
+export { default as ImgActivities9 } from "./activities-acm-sts/image9.webp";
 
-// img Juramentación del Consejo Directivo y Vigilancia AF
-export { default as ImgSwearingBoardDirectorsAfSurvelillance1 } from "./swearing-board-directors-af-survelillance/swearingBoardDirectorsAfSurvelillance1.webp";
-export { default as ImgSwearingBoardDirectorsAfSurvelillance2 } from "./swearing-board-directors-af-survelillance/swearingBoardDirectorsAfSurvelillance2.webp";
-
-// img Cena de Gala por el día del persona STS
-export { default as ImgGalaDinnerStsStaffDay1 } from "./gala-dinner-sts-staff-day/galaDinnerStsStaffDay1.webp";
-
-// img Día del Trabajo
-export { default as ImgLaborDay1 } from "./labor-day/laborDay1.webp";
-
-// img Capacitación del Personal
-export { default as ImgPersonnelTraining1 } from "./personnel-training/personnelTraining1.webp";
-
-// img Campeonato Apertura Inter Promociones
-export { default as ImgInterpromotionsOpeningChampionship1 } from "./interpromotions-opening-championship/interpromotions-opening-championship-1.webp";
-export { default as ImgInterpromotionsOpeningChampionship2 } from "./interpromotions-opening-championship/interpromotions-opening-championship-2.webp";
 
 // img Obras del ACM STS
-export { default as ImgWorks1 } from "./works/image1.webp";
-export { default as ImgWorks2 } from "./works/image2.webp";
+export { default as ImgWorks1 } from "./works-acm-sts/image2.webp";
+export { default as ImgWorks2 } from "./works-acm-sts/image1.webp";
