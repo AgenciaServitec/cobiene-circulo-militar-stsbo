@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutUs, Gallery, VideosSedes } from "../../components/public/home";
+import { AboutUs, Gallery, VideosSedes } from "../../components/public";
 import styled from "styled-components";
 import {
   BackgroundChorrillos2,
@@ -16,7 +16,6 @@ import {
   Chorrillos6,
   Chorrillos7,
   Chorrillos8,
-  Chorrillos9,
   VideoChorrillos1,
   VideoChorrillos10,
   VideoChorrillos11,
@@ -47,7 +46,6 @@ export const PageSedeChorrillos = ({ videosSedes }) => {
     { src: Chorrillos7, title: "Areas de Eventos" },
     { src: Chorrillos3, title: "Áreas de la Sede" },
     { src: Chorrillos8, title: "Áreas Deportivas" },
-    { src: Chorrillos9, title: "Áreas de Eventos" },
     { src: Chorrillos10, title: "Áreas Sociales" },
     { src: Chorrillos11, title: "Áreas Sociales" },
     { src: Chorrillos12, title: "Áreas de la Sede" },
