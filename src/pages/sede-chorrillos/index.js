@@ -47,7 +47,6 @@ export const PageSedeChorrillos = ({ videosSedes }) => {
     { src: Chorrillos7, title: "Areas de Eventos" },
     { src: Chorrillos3, title: "Áreas de la Sede" },
     { src: Chorrillos8, title: "Áreas Deportivas" },
-    { src: Chorrillos9, title: "Áreas de Eventos" },
     { src: Chorrillos10, title: "Áreas Sociales" },
     { src: Chorrillos11, title: "Áreas Sociales" },
     { src: Chorrillos12, title: "Áreas de la Sede" },
