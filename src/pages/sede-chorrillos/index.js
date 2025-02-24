@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutUs, Gallery, VideosSedes } from "../../components/public/home";
+import { AboutUs, Gallery, VideosSedes } from "../../components/public";
 import styled from "styled-components";
 import {
   BackgroundChorrillos2,
@@ -16,7 +16,6 @@ import {
   Chorrillos6,
   Chorrillos7,
   Chorrillos8,
-  Chorrillos9,
   VideoChorrillos1,
   VideoChorrillos10,
   VideoChorrillos11,
