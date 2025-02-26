@@ -59,7 +59,7 @@ export const PageSedeRimac = () => {
     { src: Rimac17, title: "Areas Deportivas" },
     { src: Rimac18, title: "Piscinas" },
     { src: Rimac19, title: "Talleres Recreacionales" },
-    { src: Rimac20, title: "Areas Sociales" },
+    // { src: Rimac20, title: "Areas Sociales" },
     { src: Rimac21, title: "Areas Sociales" },
     { src: Rimac22, title: "Talleres Recreacionales" },
   ];
