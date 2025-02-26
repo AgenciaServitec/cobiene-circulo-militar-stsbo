@@ -13,7 +13,6 @@ import {
   Rimac18,
   Rimac19,
   Rimac2,
-  Rimac20,
   Rimac21,
   Rimac22,
   Rimac3,
@@ -25,8 +24,12 @@ import {
   Rimac9,
   VideoChorrillos18,
 } from "../../images";
-import { AboutUs, Contact, InitialComponent } from "../../components/public";
-import { Gallery } from "../../components/public/home/Gallery";
+import {
+  AboutUs,
+  Contact,
+  Gallery,
+  InitialComponent,
+} from "../../components/public";
 import styled from "styled-components";
 
 export const PageSedeRimac = () => {
