@@ -3,6 +3,7 @@ export { default as LogoCobiene } from "./others/circulosts.webp";
 export { default as ImgCongratulation } from "./others/congratulation.webp";
 export { default as Linea } from "./others/lineu.webp";
 export { default as NewLogoCobiene } from "./default-images/newlogosts.webp";
+export { default as ImagePdfInformative } from "./default-images/asamblea_general_mar_25.jpg";
 
 // ------Img Servitec Servicios ALL IN ONE-------
 export { default as Services1 } from "./others/fondoChorrillos.webp";

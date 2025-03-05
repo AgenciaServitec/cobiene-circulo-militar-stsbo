@@ -11,3 +11,4 @@ export * from "./GalleryHome";
 export * from "./VideosSedes";
 export * from "./Gallery";
 export * from "./CardSede";
+export * from "./PdfInformative";
