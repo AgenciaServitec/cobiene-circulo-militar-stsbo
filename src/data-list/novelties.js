@@ -7,12 +7,18 @@ import {
   ImgImposicionCard,
   ImgInterpromotionsOpeningChampionship,
   ImgWorks,
-  portadaFiestas,
+  portadaFiestas, Swearing9,
   TramitesNovely
 } from "../images";
 
 export const novelties = [
   {
+    title: "Juramentación",
+    date: "13 de Marzo del 2025",
+    content: "Juramentación del nuevo consejo directivo y consejo de vigilancia",
+    linkRouter: "/flip-book/swearing-military-circle",
+    image: Swearing9,
+  },{
     title: "Almuerzo",
     date: "23 de Julio del 2023",
     content: "Almuerzo de Camaderia por Fiestas Patrias",
@@ -53,14 +59,14 @@ export const novelties = [
     title: "CobieneWeb",
     image: CobieneWebNovelty,
     date: "02 de diciembre del 2022",
-    link: "https://cobiene-mil-pe.web.app/",
+    link: "https://cobiene.com/",
     content: "Se lanzo la pagina web de cobiene.",
   },
   {
     title: "Cobiene Tramites",
     image: TramitesNovely,
     date: "10 de octubre del 2022",
-    link: "https://tramites.cobiene.mil.pe/",
+    link: "https://tramites.cobiene.com/",
     content: "Ya esta disponible la nueva pagina de tramites del cobiene.",
   },
   {
