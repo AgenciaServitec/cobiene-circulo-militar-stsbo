@@ -87,6 +87,17 @@ export { default as ImgActivities7 } from "./activities-acm-sts/image7.webp";
 export { default as ImgActivities8 } from "./activities-acm-sts/image8.webp";
 export { default as ImgActivities9 } from "./activities-acm-sts/image9.webp";
 
+// img Juramentación del nuevo consejo directivo y de vigilancia
+export {default as Swearing1} from "./swearing-military-circle/swearing1.jpeg";
+export {default as Swearing2} from "./swearing-military-circle/swearing2.jpeg";
+export {default as Swearing3} from "./swearing-military-circle/swearing3.jpeg";
+export {default as Swearing4} from "./swearing-military-circle/swearing4.jpeg";
+export {default as Swearing5} from "./swearing-military-circle/swearing5.jpeg";
+export {default as Swearing6} from "./swearing-military-circle/swearing6.jpeg";
+export {default as Swearing7} from "./swearing-military-circle/swearing7.jpeg";
+export {default as Swearing8} from "./swearing-military-circle/swearing8.jpeg";
+export {default as Swearing9} from "./swearing-military-circle/swearing9.jpeg";
+
 
 // img Obras del ACM STS
 export { default as ImgWorks1 } from "./works-acm-sts/image2.webp";
