@@ -23,8 +23,6 @@ export const Home = ({ onClickVisibleFormContact, visibleFormContact }) => {
         <GalleryHome />
 
         <Services />
-
-        <PdfInformative visibleModal={visibleModal} setVisibleModal={setVisibleModal} />
       </Container>
     </>
   );
