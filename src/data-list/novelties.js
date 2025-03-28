@@ -1,21 +1,20 @@
 import {
   CobieneAppNovelty,
   CobieneWebNovelty,
-  ImgCard,
   ImgDayFather,
   ImgDayMother,
-  ImgImposicionCard,
   ImgInterpromotionsOpeningChampionship,
   ImgWorks,
-  portadaFiestas, Swearing9,
-  TramitesNovely
+  Swearing9,
+  TramitesNovely,
 } from "../images";
 
 export const novelties = [
   {
     title: "Juramentación",
     date: "13 de Marzo del 2025",
-    content: "Juramentación del nuevo consejo directivo y consejo de vigilancia",
+    content:
+      "Juramentación del nuevo consejo directivo y consejo de vigilancia",
     linkRouter: "/flip-book/swearing-military-circle",
     image: Swearing9,
   },
@@ -78,11 +77,9 @@ export const novelties = [
     image: ImgDayMother,
   },
   {
-    title:
-      "Actividades de la ACM AF - 2024",
+    title: "Actividades de la ACM AF - 2024",
     date: "24 de Mayo 2024",
-    content:
-      "Actividades de la ACM AF - 2024",
+    content: "Actividades de la ACM AF - 2024",
     linkRouter: "/flip-book/activities-acm-sts",
     image: ImgInterpromotionsOpeningChampionship,
   },
@@ -92,7 +89,7 @@ export const novelties = [
     content: "Obras de la ACM STS",
     linkRouter: "/flip-book/works-acm-sts",
     image: ImgWorks,
-  }
+  },
   /*{
     title: "Cobiene Catalogo",
     image: CatalogoNovely,
