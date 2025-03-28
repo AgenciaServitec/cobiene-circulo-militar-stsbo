@@ -18,28 +18,29 @@ export const novelties = [
     content: "Juramentación del nuevo consejo directivo y consejo de vigilancia",
     linkRouter: "/flip-book/swearing-military-circle",
     image: Swearing9,
-  },{
-    title: "Almuerzo",
-    date: "23 de Julio del 2023",
-    content: "Almuerzo de Camaderia por Fiestas Patrias",
-    linkRouter: "/flip-book/NationalHolidays",
-    image: portadaFiestas,
   },
-  {
-    title: "Evento Imposicion",
-    date: "Julio del 2023",
-    content:
-      "Imposición de medalla del presidente del consejo directivo TCOJS Caminada Medina Segundo Emilio",
-    linkRouter: "/flip-book/imposicionMedalla",
-    image: ImgImposicionCard,
-  },
-  {
-    title: "Evento Socios",
-    date: "24 de Junio del 2023",
-    content: "Difusión para la inscripción de socios del circulo militar.",
-    linkRouter: "/flip-book/eventDeportivo",
-    image: ImgCard,
-  },
+  // {
+  //   title: "Almuerzo",
+  //   date: "23 de Julio del 2023",
+  //   content: "Almuerzo de Camaderia por Fiestas Patrias",
+  //   linkRouter: "/flip-book/NationalHolidays",
+  //   image: portadaFiestas,
+  // },
+  // {
+  //   title: "Evento Imposicion",
+  //   date: "Julio del 2023",
+  //   content:
+  //     "Imposición de medalla del presidente del consejo directivo TCOJS Caminada Medina Segundo Emilio",
+  //   linkRouter: "/flip-book/imposicionMedalla",
+  //   image: ImgImposicionCard,
+  // },
+  // {
+  //   title: "Evento Socios",
+  //   date: "24 de Junio del 2023",
+  //   content: "Difusión para la inscripción de socios del circulo militar.",
+  //   linkRouter: "/flip-book/eventDeportivo",
+  //   image: ImgCard,
+  // },
   {
     title: "Dia del padre",
     date: "18 de Junio del 2023",

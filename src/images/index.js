@@ -76,7 +76,7 @@ export { default as SliderHom5 } from "./others/3newbackgroundsts.webp";
 
 export { default as CobieneAppNovelty } from "./others/noveltycobiene.webp";
 export { default as CobieneWebNovelty } from "./others/noveltycobieneweb.webp";
-export { default as TramitesNovely } from "./others/noveltycobienetramites.webp";
+export { default as TramitesNovely } from "./others/login_page_korekenke.webp";
 export { default as CatalogoNovely } from "./others/noveltycatalogo.webp";
 export { default as PdfNovely } from "./others/captura-pdf.webp";
 export { default as FacebookSede } from "./others/captura-facebook-sede.webp";
