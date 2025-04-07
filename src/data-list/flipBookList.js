@@ -66,7 +66,7 @@ import {
   ImgSocios8,
   ImgSocios9,
   ImgWorks1,
-  ImgWorks2, Swearing1, Swearing2, Swearing3, Swearing4, Swearing5, Swearing6, Swearing7, Swearing8, Swearing9
+  ImgWorks2, Swearing1, Swearing2, Swearing3
 } from "../images";
 
 export const flipBookList = [
@@ -142,12 +142,6 @@ export const flipBookList = [
       Swearing1,
       Swearing2,
       Swearing3,
-      Swearing4,
-      Swearing5,
-      Swearing6,
-      Swearing7,
-      Swearing8,
-      Swearing9,
     ],
   },
   {
