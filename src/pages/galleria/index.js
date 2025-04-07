@@ -1,5 +1,4 @@
 import React from 'react';
-import { VideosSedes} from "../../components/public/home";
 import styled from "styled-components";
 import {
     BackgroundChorrillos,
@@ -22,7 +21,7 @@ import {
     VideoChorrillos17,
     VideoChorrillos18,
 } from '../../images';
-import {Contact, InitialComponent} from "../../components/public";
+import { Contact, InitialComponent, VideosSedes } from "../../components/public";
 
 export const GalleryPage = () => {
 
