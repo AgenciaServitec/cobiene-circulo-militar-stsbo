@@ -1,7 +1,6 @@
 import {
   CobieneAppNovelty,
   CobieneWebNovelty,
-  ImgDayFather,
   ImgDayMother,
   ImgInterpromotionsOpeningChampionship,
   ImgWorks,
