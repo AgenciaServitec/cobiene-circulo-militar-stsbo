@@ -40,32 +40,32 @@ export const novelties = [
   //   linkRouter: "/flip-book/eventDeportivo",
   //   image: ImgCard,
   // },
-  {
-    title: "Dia del padre",
-    date: "18 de Junio del 2023",
-    content:
-      "Supervisores Técnicos y SubOficiales del Ejercito disfrutaron evento por el día del padre.",
-    linkRouter: "/flip-book/fatherDay",
-    image: ImgDayFather,
-  },
+  // {
+  //   title: "Dia del padre",
+  //   date: "18 de Junio del 2023",
+  //   content:
+  //     "Supervisores Técnicos y SubOficiales del Ejercito disfrutaron evento por el día del padre.",
+  //   linkRouter: "/flip-book/fatherDay",
+  //   image: ImgDayFather,
+  // },
   {
     title: "CobieneApp",
     image: CobieneAppNovelty,
-    date: "12 de Diciembre del 2022",
+    // date: "12 de Diciembre del 2022",
     link: "https://play.google.com/store/apps/details?id=com.servitec.cobiene",
     content: "Se lanzo la aplicacion del cobiene.",
   },
   {
     title: "CobieneWeb",
     image: CobieneWebNovelty,
-    date: "02 de diciembre del 2022",
+    // date: "02 de diciembre del 2022",
     link: "https://cobiene.com/",
     content: "Se lanzo la pagina web de cobiene.",
   },
   {
     title: "Cobiene Tramites",
     image: TramitesNovely,
-    date: "10 de octubre del 2022",
+    // date: "10 de octubre del 2022",
     link: "https://tramites.cobiene.com/",
     content: "Ya esta disponible la nueva pagina de tramites del cobiene.",
   },
