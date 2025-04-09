@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2
+      class="relative text-5xl md:text-6xl font-black uppercase tracking-tight bg-clip-text
+      bg-gradient-to-r from-[#FBBF24] to-[#D97706] text-transparent mb-16"
+    >
+      Nuestros Servicios
+    </h2>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 justify-center"
+    >
+      {
+        [
+          { name: "Hoteles", icon: "tabler:building-community" },
+          { name: "Restaurantes", icon: "tabler:tools-kitchen-2" },
+          { name: "Deportes", icon: "tabler:ball-football" },
+          { name: "Gimnasio", icon: "tabler:barbell" },
+          { name: "Recreación", icon: "tabler:pool" },
+        ].map((service) => (
+          <div class="flex flex-col items-center group">
+            <div
+              class="w-32 h-32 flex items-center justify-center rounded-full transition-all duration-300
+            bg-gradient-to-tr from-gray-700 to-gray-900 group-hover:scale-110 group-hover:shadow-xl"
+            >
+              <Icon
+                name={service.icon}
+                class="text-white text-6xl transition-transform duration-300 group-hover:rotate-12"
+              />
+            </div>
+            <p class="mt-5 text-gray-700 font-semibold text-xl transition-colors duration-300 group-hover:text-[#D97706]">
+              {service.name}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

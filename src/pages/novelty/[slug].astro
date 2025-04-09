@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getNovelties, getNoveltyBySlug } from "../../lib/wp";
+import Magazine from "../../components/magazine/Magazine.astro";
+
+export async function getStaticPaths() {
+  const novelties = await getNovelties();
+  return novelties.map((n) => ({ params: { slug: n.slug } }));
+}
+
+const { slug } = Astro.params;
+const { title, carousel_gallery } = await getNoveltyBySlug(slug);
+const images = Object.values(carousel_gallery);
+---
+
+<Layout>
+  <Magazine title={title} images={images} />
+</Layout>

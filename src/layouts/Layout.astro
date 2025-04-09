@@ -1,0 +1,36 @@
+---
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/iconFooter.webp" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Circulo Militar</title>
+  </head>
+
+  <body class="relative min-h-screen">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-200 via-blue-10"></div>
+    <div class="absolute inset-0 bg-[url('flipped-diamonds.svg')] bg-repeat opacity-10"></div>
+    <div class="relative z-10">
+      <Header />
+      <main class="pt-24">
+        <slot />
+      </main>
+      <Footer id="contacto" />
+    </div>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

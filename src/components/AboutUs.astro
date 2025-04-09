@@ -1,0 +1,60 @@
+---
+export interface Props {
+  title: string;
+  textContent: string;
+  videoContent: string;
+}
+
+const { title, textContent, videoContent } = Astro.props;
+---
+
+<section id="nosotros" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-20 items-start">
+      <div class="relative">
+        <h2
+          class="text-5xl font-extrabold text-gray-900 pb-6
+                  bg-gradient-to-r from-[#FBBF24] to-[#D97706] bg-clip-text text-transparent
+                   relative mb-4"
+        >
+          {title}
+          <span
+            class="block w-32 h-1 bg-gradient-to-r from-[#FBBF24] to-[#D97706] mt-4 rounded-full"
+          ></span>
+        </h2>
+
+        <div
+          set:html={textContent}
+          class="prose prose-lg text-gray-700 max-w-none text-justify
+                [&>p]:mb-8 [&>p:last-child]:mb-0 [&>p]:leading-relaxed [&>p]:tracking-wide
+                [&>p]:text-lg [&>p]:font-medium [&>p]:text-gray-600
+                [&>p]:drop-shadow-sm [&>strong]:text-blue-600 [&>strong]:font-semibold"
+        />
+      </div>
+
+      <div class="relative mt-12 lg:mt-0">
+        <div class="lg:sticky lg:top-24">
+          <div class="relative group">
+            <div
+              class="lg:hidden rounded-xl overflow-hidden shadow-2xl
+                      border-4 border-white [&_video]:w-full [&_video]:h-64"
+            >
+              <div set:html={videoContent} />
+            </div>
+
+            <div
+              class="hidden lg:block aspect-w-16 aspect-h-9 bg-gray-800
+                      rounded-2xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.3)]
+                      border-4 border-white transform group-hover:scale-[1.02] transition-all duration-300"
+            >
+              <div
+                set:html={videoContent}
+                class="[&_video]:w-full [&_video]:h-full [&_video]:object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

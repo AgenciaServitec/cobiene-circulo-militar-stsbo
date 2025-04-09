@@ -1,0 +1,207 @@
+<header
+  id="navbar"
+  class="fixed top-0 w-full z-50 bg-gradient-to-r from-gray-900 to-black text-white shadow-lg transition-transform duration-300 h-24"
+>
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <a href="/" class="flex items-center">
+      <div class="bg-white px-5 py-2 rounded-full">
+        <img
+          src="/icon-circulo-militar-sts.webp"
+          alt="Logo"
+          class="w-48 md:w-80 transition-transform duration-300 ease-in-out"
+        />
+      </div>
+    </a>
+
+    <nav class="hidden md:flex space-x-8 text-lg font-medium">
+      <a
+        href="/"
+        class="relative group transition-colors duration-300 ease-in-out hover:text-slate-400"
+      >
+        Inicio
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-slate-400 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </a>
+      <a
+        href="#nosotros"
+        class="relative group transition-colors duration-300 ease-in-out hover:text-slate-400"
+      >
+        Nosotros
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-slate-400 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </a>
+      <a
+        href="#sedes"
+        class="relative group transition-colors duration-300 ease-in-out hover:text-slate-400"
+      >
+        Sedes
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-slate-400 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </a>
+      <a
+        href="/galeria"
+        class="relative group transition-colors duration-300 ease-in-out hover:text-slate-400"
+      >
+        Galería
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-slate-400 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </a>
+      <a
+        href="#"
+        class="relative group transition-colors duration-300 ease-in-out hover:text-slate-400"
+      >
+        Socio
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-slate-400 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </a>
+      <a
+        href="#contacto"
+        class="relative group transition-colors duration-300 ease-in-out hover:text-slate-400"
+      >
+        Contacto
+        <span
+          class="absolute left-0 -bottom-1 w-0 h-0.5 bg-slate-400 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg
+        id="menu-icon"
+        class="w-8 h-8 transition-transform duration-300 ease-in-out"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div
+    id="mobile-overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 hidden transition-opacity duration-300"
+  >
+  </div>
+  <div
+    id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-gray-800 to-gray-900 shadow-2xl transform translate-x-full transition-transform duration-300 rounded-l-xl"
+  >
+    <nav class="flex flex-col p-6 space-y-6">
+      <button id="close-menu" class="self-end text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <a href="/" class="text-white hover:text-slate-400 transition-colors duration-300 text-xl"
+        >Inicio</a
+      >
+      <a
+        href="#nosotros"
+        class="text-white hover:text-slate-400 transition-colors duration-300 text-xl">Nosotros</a
+      >
+      <a
+        href="#sedes"
+        class="text-white hover:text-slate-400 transition-colors duration-300 text-xl">Sedes</a
+      >
+      <a
+        href="/galeria"
+        class="text-white hover:text-slate-400 transition-colors duration-300 text-xl">Galería</a
+      >
+      <a href="#" class="text-white hover:text-slate-400 transition-colors duration-300 text-xl"
+        >Socio</a
+      >
+      <a
+        href="#contacto"
+        class="text-white hover:text-slate-400 transition-colors duration-300 text-xl">Contacto</a
+      >
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbar = document.getElementById("navbar");
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
+      const mobileOverlay = document.getElementById("mobile-overlay");
+
+      const closeMobileMenu = () => {
+        mobileMenu.classList.add("translate-x-full");
+        mobileOverlay.classList.remove("opacity-100");
+        mobileOverlay.classList.add("hidden");
+      };
+
+      const handleHashLinks = () => {
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const hash = this.getAttribute("href");
+            const isHomePage =
+              window.location.pathname === "/" || window.location.pathname === "/index.html";
+
+            if (!isHomePage) {
+              window.location.href = `/${hash}`;
+            } else {
+              const target = document.querySelector(hash);
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              }
+              closeMobileMenu();
+            }
+          });
+        });
+      };
+
+      handleHashLinks();
+
+      let lastScroll = 0;
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScroll && currentScroll > 50) {
+          navbar.classList.add("-translate-y-full");
+        } else {
+          navbar.classList.remove("-translate-y-full");
+        }
+        lastScroll = currentScroll;
+      });
+
+      const openMenu = () => {
+        mobileMenu.classList.remove("translate-x-full");
+        mobileOverlay.classList.remove("hidden");
+        mobileOverlay.classList.add("opacity-100");
+      };
+
+      menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        openMenu();
+      });
+
+      closeMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeMobileMenu();
+      });
+
+      mobileOverlay.addEventListener("click", closeMobileMenu);
+
+      document.addEventListener("click", (event) => {
+        if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+          closeMobileMenu();
+        }
+      });
+    });
+  </script>
+</header>

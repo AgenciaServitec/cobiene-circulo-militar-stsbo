@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutUs from "../components/AboutUs.astro";
+
+import Layout from "../layouts/Layout.astro";
+import { getPageInfo } from "../lib/wp";
+import SedesGallery from "../components/SedesGallery.astro";
+import InitialComponent from "../components/sedes/InitialComponent.astro";
+
+const { carousel_gallery, content, title, featured_image } = await getPageInfo("sede-tarapaca");
+
+const videoSedeTarapaca = content.match(/<figure class="wp-block-video">.*?<\/figure>/s)?.[0] || "";
+
+const textSedeTarapaca = content.replace(videoSedeTarapaca, "");
+const images = Object.values(carousel_gallery);
+---
+
+<Layout>
+  <InitialComponent background={featured_image} />
+  <AboutUs
+    id="nosotros"
+    title={title}
+    textContent={textSedeTarapaca}
+    videoContent={videoSedeTarapaca}
+  />
+  <SedesGallery title="Areas Recreacionales" images={images} />
+</Layout>
