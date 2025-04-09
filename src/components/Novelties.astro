@@ -1,0 +1,88 @@
+---
+import { getMediaUrl, getPostBySlug } from "../lib/wp";
+
+const { acf, title } = await getPostBySlug("novedades-cmsts");
+const novelties = Object.values(acf.novelties);
+
+const processedNovelties = await Promise.all(
+  novelties.map(async (novelty: any) => {
+    const slug = novelty?.link_router?.replace(/^\/+|\/+$/g, "") || "sin-slug";
+    const isExternal = !!novelty?.link && !novelty.link_router;
+
+    return {
+      ...novelty,
+      slug,
+      imageUrl: await getMediaUrl(novelty?.image),
+      link: isExternal ? novelty.link : `/novelty/${slug}`,
+      isExternal,
+    };
+  })
+);
+---
+
+<section class="py-20 bg-gradient-to-b from-gray-200 to-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-16 text-center">
+      <h1
+        class="relative text-center mb-16 text-5xl md:text-6xl font-black text-[#0A192F] uppercase tracking-tight font-military bg-clip-text bg-gradient-to-r from-[#FBBF24] to-[#D97706] text-transparent"
+      >
+        {title}
+      </h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+      {
+        processedNovelties.map((novelty) => (
+          <article class="group bg-gray-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out overflow-hidden hover:-translate-y-2 border border-gray-200">
+            {novelty.imageUrl && (
+              <figure class="relative aspect-video overflow-hidden">
+                <img
+                  src={novelty.imageUrl}
+                  alt={novelty.title}
+                  class="w-full h-full object-cover rounded-t-2xl transition-transform duration-300 group-hover:scale-105 brightness-95 hover:brightness-100"
+                  loading="lazy"
+                />
+              </figure>
+            )}
+
+            <div class="p-6 lg:p-8 space-y-4">
+              <div class="flex items-center justify-between text-sm text-gray-600">
+                <span class="font-semibold">{novelty.date}</span>
+              </div>
+
+              <h3 class="text-xl font-extrabold text-gray-800 line-clamp-2">{novelty.title}</h3>
+
+              <p class="text-gray-700 leading-relaxed line-clamp-3">{novelty.content}</p>
+
+              <div class="pt-2">
+                <a
+                  href={novelty.link}
+                  class="inline-flex items-center gap-2 text-amber-600 hover:text-amber-700 font-semibold transition-colors"
+                  target={novelty.isExternal ? "_blank" : "_self"}
+                  rel={novelty.isExternal ? "noopener noreferrer" : ""}
+                >
+                  {novelty.isExternal ? "Visitar sitio" : "Ver más"}
+                  {novelty.isExternal && (
+                    <svg
+                      class="w-5 h-5 transform transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                      />
+                    </svg>
+                  )}
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

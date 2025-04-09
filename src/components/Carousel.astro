@@ -1,0 +1,97 @@
+---
+import { getPostBySlug } from "../lib/wp";
+const { carousel_gallery } = await getPostBySlug("carousel-items");
+const images = Object.values(carousel_gallery);
+---
+
+<section id="carousel" class="relative w-full mx-auto overflow-hidden h-64 md:h-[530px]">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-10"></div>
+
+  {
+    images?.map((image, index) => (
+      <img
+        key={index}
+        src={image.url}
+        alt={image.name}
+        class="carousel-img absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out opacity-0 scale-105"
+      />
+    ))
+  }
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+    {
+      images.map((_, index) => (
+        <button
+          key={index}
+          class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+          data-index={index}
+        />
+      ))
+    }
+  </div>
+  <button
+    id="prev"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/40 p-2 rounded-full text-white z-20 hover:bg-black/60"
+  >
+    ❮
+  </button>
+  <button
+    id="next"
+    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/40 p-2 rounded-full text-white z-20 hover:bg-black/60"
+  >
+    ❯
+  </button>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll("#carousel .carousel-img");
+    const indicators = document.querySelectorAll(".indicator");
+    let currentIndex = 0;
+    let interval;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("opacity-100", i === index);
+        img.classList.toggle("scale-100", i === index);
+        img.classList.toggle("opacity-0", i !== index);
+        img.classList.toggle("scale-105", i !== index);
+      });
+
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle("bg-white", i === index);
+        dot.classList.toggle("bg-gray-300", i !== index);
+      });
+
+      currentIndex = index;
+    }
+
+    function startCarousel() {
+      interval = setInterval(() => {
+        showImage((currentIndex + 1) % images.length);
+      }, 4000);
+    }
+
+    document.getElementById("prev").addEventListener("click", () => {
+      clearInterval(interval);
+      showImage((currentIndex - 1 + images.length) % images.length);
+      startCarousel();
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+      clearInterval(interval);
+      showImage((currentIndex + 1) % images.length);
+      startCarousel();
+    });
+
+    indicators.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        clearInterval(interval);
+        showImage(parseInt(dot.dataset.index));
+        startCarousel();
+      });
+    });
+
+    showImage(0);
+    startCarousel();
+  });
+</script>

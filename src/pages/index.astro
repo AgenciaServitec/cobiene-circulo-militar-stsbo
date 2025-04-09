@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Carousel from "../components/Carousel.astro";
+import Sedes from "../components/Sedes.astro";
+import AboutUs from "../components/AboutUs.astro";
+import SedesGallery from "../components/SedesGallery.astro";
+import Novelties from "../components/Novelties.astro";
+import Services from "../components/Services.astro";
+import { getPageInfo, getPostBySlug } from "../lib/wp";
+
+const sobreNosotros = await getPageInfo("sobre-nosotros");
+
+const videoSobreNosotros =
+  sobreNosotros.content.match(/<figure class="wp-block-video">.*?<\/figure>/s)?.[0] || "";
+const textoSobreNosotros = sobreNosotros.content.replace(videoSobreNosotros, "");
+
+const { carousel_gallery, title } = await getPostBySlug("galeria-sedes");
+const images = Object.values(carousel_gallery);
+---
+
+<Layout>
+  <Carousel id="inicio" />
+  <Sedes id="sedes" />
+  <Novelties id="novedades" />
+  <AboutUs
+    id="nosotros"
+    title={sobreNosotros.title}
+    textContent={textoSobreNosotros}
+    videoContent={videoSobreNosotros}
+  />
+  <SedesGallery title={title} images={images} />
+  <Services />
+</Layout>
