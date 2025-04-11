@@ -6,14 +6,14 @@ export interface Props {
 const { background } = Astro.props;
 ---
 
-<section class="relative overflow-hidden md:h-[33em]">
+<section class="relative overflow-hidden md:h-[100svh] h-64">
   <img
     src={background}
     alt="Fondo"
     loading="lazy"
     width="400"
     height="300"
-    class="w-full h-full transform transition-all duration-500"
+    class="w-full h-full transform transition-all duration-500 brightness-90 contrast-125"
   />
   <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-transparent to-transparent">
   </div>
