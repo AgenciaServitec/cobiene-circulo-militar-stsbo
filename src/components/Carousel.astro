@@ -4,94 +4,136 @@ const { carousel_gallery } = await getPostBySlug("carousel-items");
 const images = Object.values(carousel_gallery);
 ---
 
-<section id="carousel" class="relative w-full mx-auto overflow-hidden h-64 md:h-[530px]">
-  <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-10"></div>
+<section id="carousel" class="relative w-full mx-auto overflow-hidden h-64 md:h-[530px] group">
+  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10"></div>
 
   {
     images?.map((image, index) => (
-      <img
-        key={index}
-        src={image.url}
-        alt={image.name}
-        class="carousel-img absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out opacity-0 scale-105"
-      />
+      <div class="carousel-slide absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out opacity-0 scale-105 z-20">
+        <img
+          key={index}
+          src={image.url}
+          alt={image.name}
+          class="w-full h-full object-cover brightness-90 contrast-125"
+        />
+        <div class="absolute bottom-11 left-1/2 -translate-x-1/2 w-full px-4 text-center space-y-3">
+          <h2 class="text-white text-3xl md:text-5xl font-bold tracking-tight transform transition-all duration-500 translate-y-4 group-hover:translate-y-0
+                     [text-shadow:_0_2px_8px_rgba(0,0,0,0.8),_0_0_12px_rgba(0,0,0,0.6),_0_0_24px_rgba(0,0,0,0.4)]
+                     hover:[text-shadow:_0_4px_16px_rgba(0,0,0,0.9),_0_0_24px_rgba(0,0,0,0.7)]
+                     before:absolute before:-bottom-4 before:left-1/2 before:-translate-x-1/2 before:w-24 before:h-1 before:bg-gradient-to-r before:from-transparent before:via-white/50 before:to-transparent before:opacity-0 before:transition-all before:duration-500
+                     hover:before:opacity-100 hover:before:-bottom-6">
+            {image.title}
+          </h2>
+        </div>
+      </div>
     ))
   }
+
   <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
     {
       images.map((_, index) => (
         <button
           key={index}
-          class="indicator w-3 h-3 rounded-full bg-gray-300 transition-all duration-300"
+          class="indicator w-3 h-3 rounded-full bg-gray-300/80 transition-all duration-300 hover:scale-125 hover:bg-white border border-white/20"
           data-index={index}
         />
       ))
     }
   </div>
+
   <button
     id="prev"
-    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/40 p-2 rounded-full text-white z-20 hover:bg-black/60"
+    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/40 p-3 rounded-full text-white z-20 hover:bg-black/60 transition-all duration-300 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100"
   >
     ❮
   </button>
   <button
     id="next"
-    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/40 p-2 rounded-full text-white z-20 hover:bg-black/60"
+    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/40 p-3 rounded-full text-white z-20 hover:bg-black/60 transition-all duration-300 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100"
   >
     ❯
   </button>
 </section>
 
+<style>
+    .carousel-slide[style*="opacity: 1"] h2 {
+        animation: slideUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll("#carousel .carousel-img");
-    const indicators = document.querySelectorAll(".indicator");
-    let currentIndex = 0;
-    let interval;
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = {
+      images: document.querySelectorAll(".carousel-slide"),
+      indicators: document.querySelectorAll(".indicator"),
+      currentIndex: 0,
+      interval: null,
 
-    function showImage(index) {
-      images.forEach((img, i) => {
-        img.classList.toggle("opacity-100", i === index);
-        img.classList.toggle("scale-100", i === index);
-        img.classList.toggle("opacity-0", i !== index);
-        img.classList.toggle("scale-105", i !== index);
-      });
+      init() {
+        this.setupEventListeners();
+        this.showImage(0);
+        this.startCarousel();
+      },
 
-      indicators.forEach((dot, i) => {
-        dot.classList.toggle("bg-white", i === index);
-        dot.classList.toggle("bg-gray-300", i !== index);
-      });
+      showImage(index) {
+        this.images.forEach((img, i) => {
+          img.classList.toggle("opacity-100", i === index);
+          img.classList.toggle("scale-100", i === index);
+          img.classList.toggle("opacity-0", i !== index);
+          img.classList.toggle("scale-105", i !== index);
+        });
 
-      currentIndex = index;
-    }
+        this.indicators.forEach((dot, i) => {
+          dot.classList.toggle("bg-white", i === index);
+          dot.classList.toggle("w-3", i !== index);
+          dot.classList.toggle("w-6", i === index);
+        });
 
-    function startCarousel() {
-      interval = setInterval(() => {
-        showImage((currentIndex + 1) % images.length);
-      }, 4000);
-    }
+        this.currentIndex = index;
+      },
 
-    document.getElementById("prev").addEventListener("click", () => {
-      clearInterval(interval);
-      showImage((currentIndex - 1 + images.length) % images.length);
-      startCarousel();
-    });
+      startCarousel() {
+        this.interval = setInterval(() => {
+          this.showImage((this.currentIndex + 1) % this.images.length);
+        }, 6000);
+      },
 
-    document.getElementById("next").addEventListener("click", () => {
-      clearInterval(interval);
-      showImage((currentIndex + 1) % images.length);
-      startCarousel();
-    });
+      setupEventListeners() {
+        document.getElementById("prev").addEventListener("click", () => this.navigate(-1));
+        document.getElementById("next").addEventListener("click", () => this.navigate(1));
 
-    indicators.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        clearInterval(interval);
-        showImage(parseInt(dot.dataset.index));
-        startCarousel();
-      });
-    });
+        this.indicators.forEach(dot => {
+          dot.addEventListener("click", () => {
+            this.showImage(parseInt(dot.dataset.index));
+            this.restartCarousel();
+          });
+        });
+      },
 
-    showImage(0);
-    startCarousel();
+      navigate(direction) {
+        clearInterval(this.interval);
+        const newIndex = (this.currentIndex + direction + this.images.length) % this.images.length;
+        this.showImage(newIndex);
+        this.startCarousel();
+      },
+
+      restartCarousel() {
+        clearInterval(this.interval);
+        this.startCarousel();
+      }
+    };
+
+    carousel.init();
   });
 </script>
