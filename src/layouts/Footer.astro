@@ -6,7 +6,7 @@ const { acf } = await getPageInfo("contact-data");
 
 const telefono = acf.numbers?.telefono_circuloMilitar || "No disponible";
 const email = acf.emails?.email_cobiene || "no@disponible.com";
-const direccion = acf.directions?.google_maps_circuloMilitar || "#";
+const direccion = acf.directions?.google_maps_circulo_militar || "#";
 const direccionName = acf.directions?.circulo_militar || "Dirección no disponible";
 const siteName = acf.name || "Círculo Militar";
 const whatsappURL = acf.socialLinks?.whatsapp_cobiene || "#";
