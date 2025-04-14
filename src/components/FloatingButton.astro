@@ -2,23 +2,34 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<a href="https://api.whatsapp.com/send/?phone=+51979535860&text=I&app_absent=0"
-   target="_blank"
-   class="fixed bottom-5 right-5 group flex items-center gap-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#128C7E] hover:to-[#25D366] px-2 py-2 md:px-4 md:py-2 rounded-xl shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl z-50
+<a
+  href="https://api.whatsapp.com/send/?phone=+51979535860&text=I&app_absent=0"
+  target="_blank"
+  class="fixed bottom-5 left-5 group flex items-center gap-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#128C7E] hover:to-[#25D366] px-2 py-2 md:px-4 md:py-2 rounded-xl shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-2xl z-50
           animate-pulse hover:animate-none focus:outline-none focus:ring-2 focus:ring-white/50"
-   id="whatsappButton"
-   aria-label="Contactar por WhatsApp">
-  <div class="absolute -inset-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+  id="whatsappButton"
+  aria-label="Contactar por WhatsApp"
+>
+  <div
+    class="absolute -inset-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  >
     <div class="absolute inset-0 bg-white/20 rounded-xl animate-ping"></div>
   </div>
 
   <div class="relative flex items-center gap-2">
-    <Icon name="tabler:brand-whatsapp"
-          class="w-12 h-12 md:w-10 md:h-10 text-white transform transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" />
-    <span class="text-white text-sm md:text-base font-semibold hidden sm:block transition-all duration-300 group-hover:tracking-wide">
+    <Icon
+      name="tabler:brand-whatsapp"
+      class="w-12 h-12 md:w-10 md:h-10 text-white transform transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
+    />
+    <span
+      class="text-white text-sm md:text-base font-semibold hidden sm:block transition-all duration-300 group-hover:tracking-wide"
+    >
       979 535 860
     </span>
   </div>
 
-  <div class="absolute -inset-1 rounded-xl border-2 border-white/20 opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+  <div
+    class="absolute -inset-1 rounded-xl border-2 border-white/20 opacity-0 group-hover:opacity-40 transition-opacity duration-300"
+  >
+  </div>
 </a>
