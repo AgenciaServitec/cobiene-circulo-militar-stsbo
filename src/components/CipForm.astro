@@ -1,11 +1,7 @@
----
-import "notyf/notyf.min.css";
----
-
 <section class="flex items-center justify-center min-h-screen bg-blue-200">
   <form
     id="cip-form"
-    class="bg-white p-10 rounded-3xl shadow-xl w-full max-w-md space-y-8 transform transition-all duration-300 hover:shadow-2xl"
+    class="bg-white md:p-10 p-6 mx-4 rounded-3xl shadow-xl w-full max-w-md space-y-8 transform transition-all duration-300 hover:shadow-2xl"
   >
     <h2 class="text-3xl font-extrabold text-center text-gray-800">Verifica si eres Socio</h2>
 
@@ -30,41 +26,98 @@ import "notyf/notyf.min.css";
       Verificar
     </button>
   </form>
+  <div
+    id="custom-modal"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm flex px-5 items-center justify-center z-50 hidden transition-all duration-300"
+  >
+    <div
+      class="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl text-center border border-gray-200 relative animate-fade-in"
+    >
+      <div id="modal-icon" class="flex justify-center mb-4"></div>
+      <h2 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2 capitalize">Título</h2>
+      <p id="modal-message" class="text-gray-600 text-lg mb-6">Mensaje</p>
+      <button
+        id="close-modal"
+        class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all font-medium"
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
 </section>
 
 <script>
-  import { Notyf } from "notyf";
   import apiResponse from "../data-list/api-response.json";
 
-  const notyf = new Notyf();
-  const button = document.getElementById("button");
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("button");
+    const form = document.getElementById("cip-form");
+    const cipInput = document.getElementById("cip");
 
-  document.getElementById("cip-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
+    const modal = document.getElementById("custom-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalMessage = document.getElementById("modal-message");
+    const modalIconContainer = document.getElementById("modal-icon");
+    const closeModal = document.getElementById("close-modal");
 
-    const cip = document.getElementById("cip");
+    const icons = {
+      success: `<svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">  <circle cx="12" cy="12" r="11" class="stroke-green-600 fill-green-100" stroke-width="1"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`,
+      error: `<svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>`,
+      warning: `<svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M4.93 19h14.14a2 2 0 001.74-3l-7.07-12a2 2 0 00-3.48 0l-7.07 12a2 2 0 001.74 3z"/></svg>`,
+    };
 
-    button.disabled = true;
-    button.textContent = "Cargando...";
-    button.classList.add("opacity-60", "cursor-not-allowed");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    try {
-      const response = await fetch(`https://api-korekenke-dev.web.app/consult/cmsts/${cip.value}`);
-      const message = await response.text();
+      button.disabled = true;
+      button.textContent = "Cargando...";
+      button.classList.add("opacity-60", "cursor-not-allowed");
 
-      if (response.ok) {
-        notyf.success(apiResponse[message]);
-      } else {
-        notyf.error(apiResponse[message]);
+      try {
+        const response = await fetch(
+          `https://api-korekenke-dev.web.app/consult/cmsts/${cipInput.value}`
+        );
+        const data = await response.json();
+        const userMessage = apiResponse[data.message] || "Respuesta desconocida.";
+        if (response.ok) {
+          modalTitle.textContent = `¡Bienvenido! ${data.firstName}`;
+          modalMessage.textContent = userMessage;
+          modalIconContainer.innerHTML = icons.success;
+        } else {
+          modalTitle.textContent = "No eres socio";
+          modalMessage.textContent = userMessage;
+          modalIconContainer.innerHTML = icons.error;
+        }
+        modal.classList.remove("hidden");
+      } catch (error) {
+        console.error(error);
+      } finally {
+        button.disabled = false;
+        button.textContent = "Verificar";
+        button.classList.remove("opacity-60", "cursor-not-allowed");
+        cipInput.value = "";
       }
-    } catch (error) {
-      notyf.error("Error al conectar con el servidor.");
-      console.error(error);
-    } finally {
-      button.disabled = false;
-      button.textContent = "Verificar";
-      button.classList.remove("opacity-60", "cursor-not-allowed");
-      cip.value = "";
-    }
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
   });
 </script>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+</style>
